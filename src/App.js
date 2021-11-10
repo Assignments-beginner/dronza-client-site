@@ -9,6 +9,7 @@ import Registration from "./Components/Registration/Registration";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NotFound from "./Components/NotFound/NotFound";
 import Greetings from "./Components/Greetings/Greetings";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
               </Route>
               <Route path="/home">
                 <Home></Home>
+              </Route>
+              <Route path="/dashboard">
+                <Dashboard></Dashboard>
               </Route>
               <Route path="/signin">
                 <LogIn></LogIn>

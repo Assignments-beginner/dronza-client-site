@@ -20,6 +20,15 @@ const Header = () => {
             >
               Home
             </NavLink>
+
+            <NavLink
+              activeClassName="navs-active"
+              className="navs me-5 text-decoration-none"
+              to="/dashboard"
+            >
+              Dashboard
+            </NavLink>
+
           </Nav>
           {/* User Profile */}
           <Nav className="d-flex align-items-center">
