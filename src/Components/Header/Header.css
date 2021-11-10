@@ -1,0 +1,17 @@
+.nav-font {
+  font-size: 18px;
+  background-color: #0B114A;
+}
+.navs {
+  color: white;
+}
+.navs:hover {
+  color: #3EBBC4;
+}
+.navs-active {
+  color: #3EBBC4;
+}
+
+.user-img{
+  background-image: url('../../Images/user.png');
+}
