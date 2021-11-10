@@ -51,7 +51,7 @@ const Footer = () => {
 
           <span>
             {" "}
-            <i style={{ color: "#0B114A" }} class="fas fa-phone"></i> +1
+            <i style={{ color: "#0B114A" }} className="fas fa-phone"></i> +1
             209-507-5152
           </span>
         </div>
