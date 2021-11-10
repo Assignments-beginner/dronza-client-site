@@ -5,19 +5,19 @@ const Home = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("https://morning-badlands-81993.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);
   return (
     <div>
-      <h1 className="my-5 text-center text-dark">Users : {users.length}</h1>
+      <h1 className="my-5 text-center text-dark text-uppercase">Users ( {users.length} )</h1>
       <Container>
-        <Row>
+        <Row className="border border-danger">
           {users.map((user) => (
             <Col key={user._id} users={user}>
               {" "}
-              <p className="text-dark">{user.email}</p>
+              <p className="text-dark text-center text-uppercase">{user.email}</p>
             </Col>
           ))}
         </Row>
