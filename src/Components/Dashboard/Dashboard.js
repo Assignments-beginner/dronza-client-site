@@ -14,18 +14,22 @@ import YourOrders from "./YourOrders/YourOrders";
 import AddReview from "./AddReview/AddReview";
 import AddNewProduct from "./AddNewProduct/AddNewProduct";
 import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
+import MakeAdmin from "./MakeAdmin/MakeAdmin";
 
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
   return (
     <div>
-      <h1 className="text-center text-uppercase my-5 display-6">
-        dash<strong style={{ color: "#ea3c23" }}>board</strong>
-      </h1>
+      <div>
+        <h1 className="text-center text-uppercase mt-3 display-6">
+          dash<strong style={{ color: "#ea3c23" }}>board</strong>
+        </h1>
+      </div>
+      <hr />
       <Container className="my-5">
         <Row>
           <Col sm={3}>
-            <div className="menubar pt-2 px-3">
+            <div className="menubar pt-5 px-3">
               <Nav className="d-grid me-auto">
                 <NavLink
                   activeClassName="dashboard-active"
@@ -57,6 +61,14 @@ const Dashboard = () => {
                 >
                   Manage All Orders
                 </NavLink>
+
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none"
+                  to={`${url}/makeadmin`}
+                >
+                  Make Admin
+                </NavLink>
               </Nav>
             </div>
           </Col>
@@ -64,7 +76,7 @@ const Dashboard = () => {
             <div className="px-5">
               <Switch>
                 <Route exact path={path}>
-                  <h3>Please select a topic.</h3>
+                  <YourOrders></YourOrders>
                 </Route>
 
                 <Route exact path={`${path}/yourorders`}>
@@ -81,6 +93,10 @@ const Dashboard = () => {
 
                 <Route path={`${path}/manageallorders`}>
                   <ManageAllOrders></ManageAllOrders>
+                </Route>
+
+                <Route path={`${path}/makeadmin`}>
+                  <MakeAdmin></MakeAdmin>
                 </Route>
               </Switch>
             </div>
