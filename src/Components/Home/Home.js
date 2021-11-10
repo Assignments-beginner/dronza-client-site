@@ -7,6 +7,7 @@ const Home = () => {
 
   const settings = {
     className: "center",
+    dots: true,
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
@@ -41,7 +42,7 @@ const Home = () => {
           <h2 className="my-5 text-center text-dark text-uppercase">React Slick</h2>
           <Slider {...settings}>
           {users.map((user) => (
-            <div key={user._id} users={user}>
+            <div className="p-5" key={user._id} users={user}>
               {" "}
               <p className="text-dark text-center text-uppercase">
                 {user.email}
