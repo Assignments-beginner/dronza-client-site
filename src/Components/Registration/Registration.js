@@ -43,7 +43,8 @@ const Registration = () => {
 
   const addUserToDatabase = (email , displayName) => {
     const user = { email, displayName };
-    fetch("http://localhost:5000/users", {
+    fetch("https://morning-badlands-81993.herokuapp.com/users", {
+    // fetch("http://localhost:5000/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),
