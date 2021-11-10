@@ -21,11 +21,11 @@ const Registration = () => {
   // console.log(location.state?.from);
   const redirect_uri = location.state?.from || "/greetings";
 
-/*-------------------------------------------------------------------------------*\
+  /*-------------------------------------------------------------------------------*\
   /////////////////////////////// REGISTER HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const registrationHandler = (e) => {
-    e.preventDefault();    
+    e.preventDefault();
     registerNewUser(email, password)
       .then((result) => {
         history.push(redirect_uri);
@@ -33,11 +33,23 @@ const Registration = () => {
         console.log(user);
         setError("");
         setUserName();
+        addUserToDatabase(result.user.email, result.user.displayName);        
         window.location.reload();
       })
       .catch((error) => {
         setError(error.message);
       });
+  };
+
+  const addUserToDatabase = (email , displayName) => {
+    const user = { email, displayName };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
   };
 
   //For Remove Error
