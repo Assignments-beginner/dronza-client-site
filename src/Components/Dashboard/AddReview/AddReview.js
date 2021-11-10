@@ -9,16 +9,12 @@ const AddReview = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios
-      .post("https://boiling-anchorage-22873.herokuapp.com/packages", data)
-      .then((res) => {
-        // console.log(res);
-        if (res.data.insertedId) {
-          // alert("Package Addeded Successfully!");
-          reset();
-          setSuccess("Package Added Successfully!");
-        }
-      });
+    axios.post("http://localhost:5000/reviews", data).then((res) => {
+      if (res.data.insertedId) {
+        reset();
+        setSuccess("Review Added Successfully!");
+      }
+    });
   };
 
   //Remove Success Text
@@ -58,12 +54,12 @@ const AddReview = () => {
           placeholder="Review 50 Characters Only"
           {...register("userReview")}
         />
-        
+
         <Button className="w-25" variant="danger" type="submit">
           ADD
         </Button>
       </Form>
-      <p className="text-center text-white text-uppercase mt-4 mb-5 pb-5 fs-4">
+      <p className="text-center text-dark text-uppercase mt-4 mb-5 pb-5 fs-4">
         {success}
       </p>
     </div>
