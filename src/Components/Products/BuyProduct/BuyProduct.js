@@ -61,7 +61,7 @@ const BuyProduct = () => {
                 height="250"
                 src={singleProduct.productImg}
                 alt=""
-              />              
+              />
             </div>
           </div>
         </Container>
@@ -73,23 +73,30 @@ const BuyProduct = () => {
           {singleProduct.productName && (
             <input
               style={{ outline: "none" }}
-              className="mb-3 py-2 px-3"
+              className="mb-3 py-2 px-3 "
               defaultValue={singleProduct.productName}
               {...register("singleProductName")}
+            />
+          )}
+
+          {singleProduct.productModel && (
+            <input
+              style={{ outline: "none" }}
+              className="mb-3 py-2 px-3 "
+              defaultValue={singleProduct.productModel}
+              {...register("singleProductModel")}
             />
           )}
 
           <input
             style={{ outline: "none" }}
             className="mb-3 py-2 px-3"
-            disabled
             defaultValue={user.displayName}
             {...register("userName")}
           />
           <input
             style={{ outline: "none" }}
             className="mb-3 py-2 px-3"
-            disabled
             defaultValue={user.email}
             {...register("userEmail")}
           />
@@ -103,11 +110,11 @@ const BuyProduct = () => {
             />
           )}
 
-          {singleProduct.productCost && (
+          {singleProduct.productPrice && (
             <input
-              className="mb-3 p-2 d-none"
-              defaultValue={singleProduct.productCost}
-              {...register("singleProductCost")}
+              className="mb-3 py-2 px-3"
+              defaultValue={singleProduct.productPrice}
+              {...register("singleProductPrice")}
             />
           )}
 
@@ -120,7 +127,7 @@ const BuyProduct = () => {
           />
 
           <Button variant="danger" type="submit">
-            Book Now
+            Order Now
           </Button>
         </Form>
       </div>
