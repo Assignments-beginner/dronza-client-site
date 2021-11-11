@@ -56,11 +56,11 @@ const Registration = () => {
   //For Remove Error
   const removeError = () => {
     setError("");
-  };
+  }; 
 
   return (
     <Container className="mt-4 w-25">
-      <p className="text-primary fs-1">Registration</p>
+      <p className="text-danger text-uppercase fs-2">Registration</p>
       <Form>
         {/* Name Field */}
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -96,7 +96,7 @@ const Registration = () => {
         <div className="mb-3">
           <span>Already have an account?</span>
           &nbsp; &nbsp;
-          <Link onClick={removeError} to="/signin">
+          <Link className="text-danger" onClick={removeError} to="/signin">
             Sign In
           </Link>
         </div>
@@ -110,10 +110,10 @@ const Registration = () => {
 
         {/* Register Button */}
         <div className="mb-5">
-          <Button onClick={registrationHandler} variant="primary" type="submit">
+          <Button onClick={registrationHandler} variant="danger" type="submit">
             Sign Up
           </Button>
-        </div>
+        </div>        
       </Form>
     </Container>
   );

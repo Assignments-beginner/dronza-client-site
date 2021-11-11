@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import google from "../../Images/google.png";
+import "./Login.css";
 
 const LogIn = () => {
   const {
@@ -20,6 +22,9 @@ const LogIn = () => {
   const history = useHistory();
   // console.log(location.state?.from);
   const redirect_uri = location.state?.from || "/home";
+  /*-------------------------------------------------------------------------------*\
+  /////////////////////////////// Google HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
 
   const googleLoginHandler = () => {
     signInWithGoogle()
@@ -29,7 +34,7 @@ const LogIn = () => {
       .finally(() => setIsLoading(false));
   };
 
-/*-------------------------------------------------------------------------------*\
+  /*-------------------------------------------------------------------------------*\
   /////////////////////////////// SIGN IN HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const signInHandler = (e) => {
@@ -54,7 +59,9 @@ const LogIn = () => {
 
   return (
     <Container className="mt-4 w-25">
-      <p className="text-primary fs-1">Please Sign In</p>
+      <p className="text-uppercase fs-2">
+        Please <span className="text-danger">Sign In</span>{" "}
+      </p>
       <Form>
         {/* Email Field */}
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -80,28 +87,32 @@ const LogIn = () => {
         <div className="mb-3">
           <span>Don't have an account?</span>
           &nbsp; &nbsp;
-          <Link onClick={removeError} to="/registration">
+          <Link
+            className="text-danger"
+            onClick={removeError}
+            to="/registration"
+          >
             Create One
           </Link>
         </div>
         {/* Display Error */}
         <p className="text-danger">{error}</p>
         {/* Register Button */}
-        <Button onClick={signInHandler} variant="primary" type="submit">
+        <Button onClick={signInHandler} variant="danger" type="submit">
           Sign In
         </Button>
       </Form>
 
-      <div className="mt-5 mb-5">
-        <p className="text-secondary">Or, you can also sign in with</p>
-
-        <Button
-          onClick={googleLoginHandler}
-          variant="outline-secondary px-5"
-          size="sm"
-        >
-          Google
-        </Button>
+      <div className="mt-3 mb-5 d-grid justify-items-center">
+        <p className="text-secondary mb-3 text-center">Or you can also</p>
+        {/* Button */}
+        <button onClick={googleLoginHandler} className="signin-btn">
+          <div className="d-flex align-items-center justify-content-between">
+            <img height="32" width="32" src={google} alt="" />{" "}
+            <span>Continue With Google</span>{" "}
+            <span className="text-white">G</span>
+          </div>
+        </button>
       </div>
     </Container>
   );

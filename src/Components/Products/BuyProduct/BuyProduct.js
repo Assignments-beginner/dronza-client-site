@@ -29,7 +29,7 @@ const BuyProduct = () => {
           Swal.fire({
             position: "top-center",
             icon: "success",
-            title: "Order Placed Succesfully!",
+            title: "Thank You ! Order Placed Succesfully!",
             showConfirmButton: false,
             timer: 2500,
           });
