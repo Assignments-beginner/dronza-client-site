@@ -39,8 +39,13 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
 
   return (
     <div style={{ backgroundColor }}>
-      <div className="d-flex align-items-baseline px-5">
-        <Container className="w-50 m-5 p-5">
+      <div className="pt-5">
+        <h3 className="text-center text-uppercase">
+          product <span className="text-danger">details</span>
+        </h3>
+      </div>
+      <div className="d-flex p-5">
+        <Container className="w-50 mx-5 px-5">
           <div className="d-grid align-items-center">
             {/* Drone Image */}
             <div>
@@ -60,40 +65,47 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
                   {singleProduct.productDescription}
                 </p>
               </div>
+              {/* Price */}
+              <h1 className="display-4 mb-3">{singleProduct.productPrice}</h1>
               {/* Specifications */}
               <div className="mb-5">
-                <span className="fs-4 mb-3">Specifications</span>
+                <span className="fs-4 mt-3 mb-3">Specifications</span>
                 <div className="mt-3">
                   <p>
-                    <strong>Name :</strong>
+                    <strong>Name :</strong> &nbsp;{singleProduct.productName}
                   </p>
                   <p>
-                    <strong>Model No. :</strong>
+                    <strong>Model No. :</strong> &nbsp;
+                    {singleProduct.productModel}
                   </p>
                   <p>
-                    <strong>Camera :</strong>
+                    <strong>Camera :</strong> &nbsp;
+                    {singleProduct.productResolution}
                   </p>
                   <p>
-                    <strong>Range :</strong>
+                    <strong>Range :</strong> &nbsp;{singleProduct.productRange}
                   </p>
                   <p>
-                    <strong>Battery Backup :</strong>
+                    <strong>Battery Backup :</strong> &nbsp;
+                    {singleProduct.productBatteries}
                   </p>
                 </div>
               </div>
+              <div className="mb-5">
               <Link
                 to="/products"
                 style={{ color: "#d9534f", textDecoration: "none" }}
               >
                 Back to All Products
               </Link>
+              </div>
             </div>
             {/* Drone Details  */}
           </div>
         </Container>
 
         <Form
-          className="d-flex flex-column w-25 mx-auto"
+          className="d-flex flex-column w-25 mx-auto mt-5 pt-4"
           onSubmit={handleSubmit(onSubmit)}
         >
           {singleProduct.productName && (
