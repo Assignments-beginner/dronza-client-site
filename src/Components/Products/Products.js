@@ -22,19 +22,23 @@ const Products = () => {
           {products.map((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
             <Card>
-              <Card.Img variant="top" src={product.productImg} />
+              <Card.Img width="340" height="200" variant="top" src={product.productImg} />
               <Card.Body className="p-4">
                 <Card.Text className="d-flex justify-content-between align-items-center">
                   {" "}
                   <div className="d-flex align-items-center">
                     <strong style={{ fontSize: "18px", color: "#ea3c23" }}>
-                      {}
+                      {product.productName}
                     </strong>
-                    <span>/Per Person</span>
                   </div>
                   <span>
-                    <i className="far fa-calendar-minus"></i>&nbsp;{}
+                    {product.productModel}
                   </span>{" "}
+                </Card.Text>
+
+                <Card.Text>
+                    <h3>$ {product.productPrice}</h3>
+                    <h5 className="text-danger">{product.productControlType}</h5>
                 </Card.Text>
       
                 <Card.Title>
