@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 
-const BuyProduct = () => {
+const BuyProduct = ({ backgroundColor = '#F6F6F6', children }) => {
   const { id } = useParams();
   const [singleProduct, setSingleProduct] = useState([]);
   const { register, handleSubmit } = useForm();
@@ -38,33 +38,36 @@ const BuyProduct = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor }}>
       <div className="d-flex align-items-baseline px-5">
         <Container className="w-50 m-5 p-5">
-          <div className="d-flex align-items-center">
+          <div className="d-grid align-items-center">            
+            {/* Drone Image */}
+            <div>
+              <img
+                class="rounded-circle custom-border"
+                width="530"
+                height="280"
+                src={singleProduct.productImg}
+                alt=""
+              />
+            </div>
+            {/* Drone Details  */}
             <div className="me-5">
               <div>
-                <h3>{singleProduct.productName}</h3>
+                <h3 className="text-danger">{singleProduct.productName}</h3>
                 <p className="text-justify mt-3">
                   {singleProduct.productDescription}
                 </p>
               </div>
               <Link
                 to="/products"
-                style={{ color: "#ea3c23", textDecoration: "none" }}
+                style={{ color: "#d9534f", textDecoration: "none" }}
               >
                 Back to All Products
               </Link>
             </div>
-            <div>
-              <img
-                class="rounded-circle custom-border"
-                width="250"
-                height="250"
-                src={singleProduct.productImg}
-                alt=""
-              />
-            </div>
+            {/* Drone Details  */}
           </div>
         </Container>
 
