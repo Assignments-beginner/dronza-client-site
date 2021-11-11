@@ -15,6 +15,7 @@ import AddReview from "./AddReview/AddReview";
 import AddNewProduct from "./AddNewProduct/AddNewProduct";
 import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
+import Payment from "./Payment/Payment";
 
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
@@ -37,6 +38,14 @@ const Dashboard = () => {
                   to={`${url}/yourorders`}
                 >
                   Your Orders
+                </NavLink>
+
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none"
+                  to={`${url}/payment`}
+                >
+                  Payment
                 </NavLink>
 
                 <NavLink
@@ -73,14 +82,6 @@ const Dashboard = () => {
                 <NavLink
                   activeClassName="dashboard-active"
                   className="dashboard mb-3 text-decoration-none"
-                  to={`${url}/payment`}
-                >
-                  Payment
-                </NavLink>
-
-                <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
                   to={`${url}/logout`}
                 >
                   Log Out
@@ -99,13 +100,17 @@ const Dashboard = () => {
                   <YourOrders></YourOrders>
                 </Route>
 
-                <Route path={`${path}/addnewproduct`}>
-                  <AddNewProduct></AddNewProduct>
-                </Route>
-
                 <Route path={`${path}/addreview`}>
                   <AddReview></AddReview>
                 </Route>
+
+                <Route path={`${path}/payment`}>
+                  <Payment></Payment>
+                </Route>
+
+                <Route path={`${path}/addnewproduct`}>
+                  <AddNewProduct></AddNewProduct>
+                </Route> 
 
                 <Route path={`${path}/manageallorders`}>
                   <ManageAllOrders></ManageAllOrders>
