@@ -34,7 +34,7 @@ const Dashboard = () => {
               <Nav className="d-grid me-auto">
                 <NavLink
                   activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/yourorders`}
                 >
                   Your Orders
@@ -42,7 +42,7 @@ const Dashboard = () => {
 
                 <NavLink
                   activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/payment`}
                 >
                   Payment
@@ -50,14 +50,14 @@ const Dashboard = () => {
 
                 <NavLink
                   activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/addreview`}
                 >
                   Add Review
                 </NavLink>
                 <NavLink
                   activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/addnewproduct`}
                 >
                   Add New Product
@@ -65,7 +65,7 @@ const Dashboard = () => {
 
                 <NavLink
                   activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/manageallorders`}
                 >
                   Manage All Orders
@@ -73,7 +73,7 @@ const Dashboard = () => {
 
                 <NavLink
                   activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/makeadmin`}
                 >
                   Make Admin
@@ -81,7 +81,7 @@ const Dashboard = () => {
 
                 <NavLink
                   activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/logout`}
                 >
                   Log Out

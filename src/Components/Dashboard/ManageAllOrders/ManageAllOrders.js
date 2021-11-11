@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form, Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 
 const ManageAllOrders = () => {
   const [allorders, setAllOrders] = useState([]);
@@ -11,19 +11,20 @@ const ManageAllOrders = () => {
   }, []);
   return (
     <div>
-      <h3 className="text-center text-uppercase mb-5">
+      <h3 className="text-center text-uppercase">
         Manage All <strong style={{ color: "#ea3c23" }}>orders</strong>
       </h3>
+      <h5 className="text-center text-uppercase mt-3 mb-4">Total <strong style={{ color: "#ea3c23" }}>{allorders.length}</strong> orders</h5>
       <div>
         <Table bordered hover>
-          <thead>
+          <thead className="text-uppercase">
             <tr>
-              <th className="text-center">SL</th>
-              <th className="text-center">Drone Name</th>
-              <th className="text-center">Price</th>
-              <th className="text-center">Ordered By</th>
-              <th className="text-center">Status</th>
-              <th className="text-center">Approve / Cancel</th>
+              <th className="text-center p-3">SL</th>
+              <th className="text-center p-3">Drone Name</th>
+              <th className="text-center p-3">Price</th>
+              <th className="text-center p-3">Ordered By</th>
+              <th className="text-center p-3">Status</th>
+              <th className="text-center p-3">Approve / Cancel</th>
             </tr>
           </thead>
           <tbody>
@@ -36,12 +37,12 @@ const ManageAllOrders = () => {
                 <td className="text-center">{orders.bookedproductStatus}</td>
                 <td className="text-center">
                   <div className="d-flex">
-                  <Button variant="outline-success w-100 me-2" size="sm">
-                    Approve
-                  </Button>
-                  <Button variant="danger w-100" size="sm">
-                    Cancel
-                  </Button>
+                    <Button variant="outline-success w-100 me-2" size="sm">
+                      Approve
+                    </Button>
+                    <Button variant="danger w-100" size="sm">
+                      Cancel
+                    </Button>
                   </div>
                 </td>
               </tr>
