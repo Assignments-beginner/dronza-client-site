@@ -3,11 +3,13 @@ import React from "react";
 const Payment = () => {
   return (
     <div>
-      <h3 className="text-center text-dark mb-3 text-uppercase">
-        <span className="text-danger">Payment</span>
-      </h3>
-      <p className="text-uppercase text-center">choose your payment method</p>
-      <div style={{fontSize:'100px'}} className="text-center">
+      <div>
+        <h3 className="text-center text-dark mb-3 text-uppercase">
+          <span className="text-danger">Payment</span>
+        </h3>
+      </div>
+      <p className="text-uppercase text-center mt-5">choose your payment method</p>
+      <div style={{ fontSize: "100px" }} className="text-center">
         <div>
           <i class="fab fa-cc-visa text-danger p-2"></i>
           <i class="fab fa-google-pay text-danger p-2"></i>

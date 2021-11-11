@@ -16,8 +16,10 @@ import AddNewProduct from "./AddNewProduct/AddNewProduct";
 import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
 import Payment from "./Payment/Payment";
+import useAuth from "../../Hooks/useAuth";
 
 const Dashboard = () => {
+  const { logOut } = useAuth();
   let { path, url } = useRouteMatch();
   return (
     <div>
@@ -81,6 +83,7 @@ const Dashboard = () => {
 
                 <NavLink
                   activeClassName="dashboard-active"
+                  onClick={logOut}
                   className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/logout`}
                 >
@@ -110,7 +113,7 @@ const Dashboard = () => {
 
                 <Route path={`${path}/addnewproduct`}>
                   <AddNewProduct></AddNewProduct>
-                </Route> 
+                </Route>
 
                 <Route path={`${path}/manageallorders`}>
                   <ManageAllOrders></ManageAllOrders>
