@@ -14,7 +14,7 @@ const Products = () => {
     <div>
       <div>
         <h2 className="my-5 text-center text-dark text-uppercase">
-          all products
+          all <span className="text-danger">products</span>
         </h2>
       </div>
       <Container className="w-100 mb-5">
@@ -26,24 +26,28 @@ const Products = () => {
                   width="340"
                   height="200"
                   variant="top"
+                  className="p-3"
                   src={product.productImg}
                 />
                 <Card.Body className="p-4">
                   <Card.Text className="d-flex justify-content-between align-items-center">
                     {" "}
                     <div className="d-flex align-items-center">
-                      <strong style={{ fontSize: "18px", color: "#ea3c23" }}>
+                      <strong className="text-danger text-uppercase" style={{ fontSize: "18px"}}>
                         {product.productName}
                       </strong>
                     </div>
+                    <div className="text-center">
+                    <span className="text-secondary">Model</span> <br />
                     <span>{product.productModel}</span>{" "}
+                    </div>
                   </Card.Text>
 
                   <Card.Text>
-                    <h3>$ {product.productPrice}</h3>
-                    <h5 className="text-danger">
+                    <h3>{product.productPrice}</h3>
+                    <span className="text-secondary fs-5">
                       {product.productControlType}
-                    </h5>
+                    </span>
                   </Card.Text>
 
                   <Card.Title>

@@ -50,7 +50,6 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
             {/* Drone Image */}
             <div>
               <img
-                class="rounded-circle custom-border"
                 width="530"
                 height="280"
                 src={singleProduct.productImg}
@@ -88,6 +87,10 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
                   <p>
                     <strong>Battery Backup :</strong> &nbsp;
                     {singleProduct.productBatteries}
+                  </p>
+                  <p>
+                    <strong>Control :</strong> &nbsp;
+                    {singleProduct.productControlType}
                   </p>
                 </div>
               </div>
