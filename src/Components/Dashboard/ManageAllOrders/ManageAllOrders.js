@@ -9,12 +9,39 @@ const ManageAllOrders = () => {
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
+
+  const deleteHandler = (id) => {
+    console.log(id);
+    const proceed = window.confirm(
+      "Are you sure, you want to delete this order?"
+    );
+    if (proceed) {
+      fetch(`http://localhost:5000/myorders/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            const remainingOrders = allorders.filter(
+              (orders) => orders._id !== id
+            );
+            console.log(remainingOrders);
+            setAllOrders(remainingOrders);
+          }
+        });
+    }
+  };
+
   return (
     <div>
       <h3 className="text-center text-uppercase">
         Manage All <strong style={{ color: "#ea3c23" }}>orders</strong>
       </h3>
-      <h5 className="text-center text-uppercase mt-3 mb-4">Total <strong style={{ color: "#ea3c23" }}>{allorders.length}</strong> orders</h5>
+      <h5 className="text-center text-uppercase mt-3 mb-4">
+        Total <strong style={{ color: "#ea3c23" }}>{allorders.length}</strong>{" "}
+        orders
+      </h5>
       <div>
         <Table bordered hover>
           <thead className="text-uppercase">
@@ -40,7 +67,11 @@ const ManageAllOrders = () => {
                     <Button variant="outline-success w-100 me-2" size="sm">
                       Approve
                     </Button>
-                    <Button variant="danger w-100" size="sm">
+                    <Button
+                      onClick={() => deleteHandler(orders._id)}
+                      variant="danger w-100"
+                      size="sm"
+                    >
                       Cancel
                     </Button>
                   </div>

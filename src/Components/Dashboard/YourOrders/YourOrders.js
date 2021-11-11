@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 
 const YourOrders = () => {
@@ -15,7 +16,7 @@ const YourOrders = () => {
   const deleteHandler = (id) => {
     console.log(id);
     const proceed = window.confirm(
-      "Are you sure, you want to delete this package?"
+      "Are you sure, you want to delete this order?"
     );
     if (proceed) {
       fetch(`http://localhost:5000/myorders/${id}`, {
@@ -50,7 +51,12 @@ const YourOrders = () => {
         {orders.map((order) => (
           <Col key={order._id} xl={4} lg={4}>
             <Card>
-              <Card.Img width="250" height="175" variant="top" src={order.singleProductImg} />
+              <Card.Img
+                width="250"
+                height="175"
+                variant="top"
+                src={order.singleProductImg}
+              />
               <Card.Body className="text-center">
                 <Card.Title>
                   {" "}
@@ -58,7 +64,7 @@ const YourOrders = () => {
                     {order.singleProductName}
                   </span>{" "}
                 </Card.Title>
-                <span className="fs-3">$ {order.singleProductPrice}</span>
+                <span className="fs-5">$ {order.singleProductPrice}</span>
                 <Card.Text>
                   BOOKED BY <br /> <i className="fas fa-user"></i>{" "}
                   {order.userName}
