@@ -83,7 +83,7 @@ const ManageAllOrders = () => {
               <tr key={orders._id} orders={orders}>
                 <td className="text-center"></td>
                 <td className="text-center">{orders.singleProductName}</td>
-                <td className="text-center">$ {orders.singleProductPrice}</td>
+                <td className="text-center">{orders.singleProductPrice}</td>
                 <td className="text-center">{orders.userName}</td>
                 <td className="text-center">{orders.bookedproductStatus}</td>
                 <td className="text-center">

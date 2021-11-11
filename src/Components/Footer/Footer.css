@@ -4,3 +4,8 @@
   bottom: 0;
 }
 
+hr.new {
+  border: 1px solid grey;
+  width: 50%;
+  margin: auto;
+}

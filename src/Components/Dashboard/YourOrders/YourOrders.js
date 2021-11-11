@@ -65,7 +65,7 @@ const YourOrders = () => {
                     {order.singleProductName}
                   </span>{" "}
                 </Card.Title>
-                <span className="fs-5">$ {order.singleProductPrice}</span>
+                <span className="fs-5">{order.singleProductPrice}</span>
                 <Card.Text>
                   <span className="text-danger">BOOKED BY</span> <br />{" "}
                   <i className="fas fa-user"></i> {order.userName}
