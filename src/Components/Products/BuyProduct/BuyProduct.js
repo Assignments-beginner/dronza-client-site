@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 
-const BuyProduct = ({ backgroundColor = '#F6F6F6', children }) => {
+const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
   const { id } = useParams();
   const [singleProduct, setSingleProduct] = useState([]);
   const { register, handleSubmit } = useForm();
@@ -41,7 +41,7 @@ const BuyProduct = ({ backgroundColor = '#F6F6F6', children }) => {
     <div style={{ backgroundColor }}>
       <div className="d-flex align-items-baseline px-5">
         <Container className="w-50 m-5 p-5">
-          <div className="d-grid align-items-center">            
+          <div className="d-grid align-items-center">
             {/* Drone Image */}
             <div>
               <img
@@ -59,6 +59,27 @@ const BuyProduct = ({ backgroundColor = '#F6F6F6', children }) => {
                 <p className="text-justify mt-3">
                   {singleProduct.productDescription}
                 </p>
+              </div>
+              {/* Specifications */}
+              <div className="mb-5">
+                <span className="fs-4 mb-3">Specifications</span>
+                <div className="mt-3">
+                  <p>
+                    <strong>Name :</strong>
+                  </p>
+                  <p>
+                    <strong>Model No. :</strong>
+                  </p>
+                  <p>
+                    <strong>Camera :</strong>
+                  </p>
+                  <p>
+                    <strong>Range :</strong>
+                  </p>
+                  <p>
+                    <strong>Battery Backup :</strong>
+                  </p>
+                </div>
               </div>
               <Link
                 to="/products"

@@ -78,7 +78,7 @@ const AddNewProduct = () => {
         <input
           style={{ outline: "none" }}
           className="mb-3 py-2 px-3"
-          placeholder="Batter Backup"
+          placeholder="Battery Backup"
           {...register("productBatteries")}
         />
 
