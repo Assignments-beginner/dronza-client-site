@@ -2,21 +2,49 @@ import React, { useEffect, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 
 const ManageAllOrders = () => {
-  const [allorders, setAllOrders] = useState([]);
+  const [allorders, setAllOrders] = useState([]);  
+  const [status, setStatus] = useState("Approved");
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:5000/allorders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
-  }, []);
+  }, [reload]);
 
+  //Approve Order Change Status
+  const handleUpdate = (id) => {
+    const proceed = window.confirm(
+      "Are you sure, you want to approve this order?"
+    );
+    if (proceed) {
+      setStatus(status);
+      fetch(
+        `http://localhost:5000/updateStatus/${id}`,
+        {
+          method: "PUT",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ status }),
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.matchedCount) {
+            setReload(!reload);
+          }
+        });
+    }
+  };
+
+  //Delete Orders
   const deleteHandler = (id) => {
     console.log(id);
     const proceed = window.confirm(
       "Are you sure, you want to delete this order?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/myorders/${id}`, {
+      fetch(`http://localhost:5000/allorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -64,7 +92,9 @@ const ManageAllOrders = () => {
                 <td className="text-center">{orders.bookedproductStatus}</td>
                 <td className="text-center">
                   <div className="d-flex">
-                    <Button variant="outline-success w-100 me-2" size="sm">
+                    <Button 
+                    onClick={() => handleUpdate(orders._id)}
+                    variant="outline-success w-100 me-2" size="sm">
                       Approve
                     </Button>
                     <Button
