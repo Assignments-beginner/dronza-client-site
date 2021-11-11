@@ -26,11 +26,11 @@ const Dashboard = () => {
           dash<strong className="text-danger">board</strong>
         </h1>
       </div>
-      <hr />
-      <Container className="my-5">
+      <hr class="new" />
+      <Container className="mt-4 mb-5 pb-5">
         <Row>
-          <Col sm={3}>
-            <div className="menubar pt-5 px-3">
+          <Col sm={2} xl={2} lg={2}>
+            <div className="pt-5 px-2">
               <Nav className="d-grid me-auto">
                 <NavLink
                   activeClassName="dashboard-active"
@@ -89,8 +89,8 @@ const Dashboard = () => {
               </Nav>
             </div>
           </Col>
-          <Col sm={9}>
-            <div className="px-3">
+          <Col sm={10} xl={10} lg={10}>
+            <div className="menubar px-5 w-100">
               <Switch>
                 <Route exact path={path}>
                   <YourOrders></YourOrders>

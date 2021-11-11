@@ -26,7 +26,7 @@ const AddReview = () => {
   };
 
   return (
-    <div>
+    <div className="pb-5">
       <h3 className="text-center text-dark mb-5 text-uppercase">
         add <span className="text-danger">review</span>
       </h3>

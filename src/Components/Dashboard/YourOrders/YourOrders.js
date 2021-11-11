@@ -37,7 +37,7 @@ const YourOrders = () => {
   };
 
   return (
-    <Container className="mb-5 pb-5">
+    <Container>
       <div>
         <h3 className="text-center text-uppercase">
           Your <span className="text-danger">orders</span>

@@ -12,6 +12,11 @@
 }
 
 .menubar {
-    height: 800px;
-    border-right: 1px solid gray;
+    border-left: 2px solid lightgray;
+}
+
+hr.new {
+  border: 1px solid grey;
+  width: 90%;
+  margin: auto;
 }

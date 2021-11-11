@@ -21,14 +21,19 @@ const Products = () => {
         <Row className="g-5">
           {products.map((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
-              <Card style={{borderStyle:'none'}}>
-                <Card.Img
+              <Card
                 style={{
-                  borderWidth:'5px',
-                  borderStyle: 'solid',
-                  borderImage:
-                    "linear-gradient(75deg, #d9534f, #4d0000) 1",
+                  borderStyle: "none",
+                  boxShadow:
+                    "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
                 }}
+              >
+                <Card.Img
+                  style={{
+                    borderWidth: "5px",
+                    borderStyle: "solid",
+                    borderImage: "linear-gradient(75deg, #d9534f, #4d0000) 1",
+                  }}
                   width="340"
                   height="200"
                   variant="top"
