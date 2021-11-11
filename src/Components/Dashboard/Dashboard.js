@@ -90,7 +90,7 @@ const Dashboard = () => {
             </div>
           </Col>
           <Col sm={9}>
-            <div className="px-5">
+            <div className="px-3">
               <Switch>
                 <Route exact path={path}>
                   <YourOrders></YourOrders>

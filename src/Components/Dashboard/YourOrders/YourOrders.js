@@ -36,34 +36,32 @@ const YourOrders = () => {
   return (
     <Container className="mb-5 pb-5">
       <div>
-        <h3 className="text-center text-uppercase mb-5">
+        <h3 className="text-center text-uppercase">
           Your <strong style={{ color: "#ea3c23" }}>orders</strong>
         </h3>
       </div>
       <div>
-        <p className="fs-4 text-center text-dark mb-5 text-uppercase">
+        <p className="fs-5 text-center text-dark mb-4 text-uppercase">
           total <strong style={{ color: "#ea3c23" }}>{orders.length}</strong>{" "}
           orders
         </p>
       </div>
-      <Row className="g-5">
+      <Row className="g-4">
         {orders.map((order) => (
-          <Col key={order._id} xl={3} lg={3}>
+          <Col key={order._id} xl={4} lg={4}>
             <Card>
-              <Card.Img variant="top" src={order.singleServiceImg} />
+              <Card.Img width="250" height="175" variant="top" src={order.singleProductImg} />
               <Card.Body className="text-center">
                 <Card.Title>
                   {" "}
                   <span style={{ color: "#ea3c23" }}>
-                    {order.singleServiceName}
+                    {order.singleProductName}
                   </span>{" "}
                 </Card.Title>
-                <span className="fs-3">{order.ButtonsingleServiceCost}</span>
+                <span className="fs-3">$ {order.singleProductPrice}</span>
                 <Card.Text>
                   BOOKED BY <br /> <i className="fas fa-user"></i>{" "}
                   {order.userName}
-                  <br />
-                  <span className="text-danger">{order.userEmail}</span>
                 </Card.Text>
                 <Button
                   onClick={() => deleteHandler(order._id)}
@@ -78,7 +76,7 @@ const YourOrders = () => {
                 className="text-center"
               >
                 <small className="text-muted">
-                  {order.bookedServiceStatus}
+                  {order.bookedproductStatus}
                 </small>
               </Card.Footer>
             </Card>
