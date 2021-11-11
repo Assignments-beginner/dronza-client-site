@@ -21,8 +21,14 @@ const Products = () => {
         <Row className="g-5">
           {products.map((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
-              <Card>
+              <Card style={{borderStyle:'none'}}>
                 <Card.Img
+                style={{
+                  borderWidth:'5px',
+                  borderStyle: 'solid',
+                  borderImage:
+                    "linear-gradient(75deg, #d9534f, #4d0000) 1",
+                }}
                   width="340"
                   height="200"
                   variant="top"
@@ -33,13 +39,16 @@ const Products = () => {
                   <Card.Text className="d-flex justify-content-between align-items-center">
                     {" "}
                     <div className="d-flex align-items-center">
-                      <strong className="text-danger text-uppercase" style={{ fontSize: "18px"}}>
+                      <strong
+                        className="text-danger text-uppercase"
+                        style={{ fontSize: "18px" }}
+                      >
                         {product.productName}
                       </strong>
                     </div>
                     <div className="text-center">
-                    <span className="text-secondary">Model</span> <br />
-                    <span>{product.productModel}</span>{" "}
+                      <span className="text-secondary">Model</span> <br />
+                      <span>{product.productModel}</span>{" "}
                     </div>
                   </Card.Text>
 
