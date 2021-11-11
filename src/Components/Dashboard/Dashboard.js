@@ -69,6 +69,22 @@ const Dashboard = () => {
                 >
                   Make Admin
                 </NavLink>
+
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none"
+                  to={`${url}/payment`}
+                >
+                  Payment
+                </NavLink>
+
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none"
+                  to={`${url}/logout`}
+                >
+                  Log Out
+                </NavLink>
               </Nav>
             </div>
           </Col>
