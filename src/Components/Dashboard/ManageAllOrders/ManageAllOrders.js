@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
 const ManageAllOrders = () => {
+  const [allorders, setAllOrders] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/allorders")
+      .then((res) => res.json())
+      .then((data) => setAllOrders(data));
+  }, []);
   return (
     <div>
       <h3 className="text-center text-uppercase mb-5">
@@ -19,13 +26,15 @@ const ManageAllOrders = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="text-center">1</td>
-              <td className="text-center">Mark</td>
-              <td className="text-center">$</td>
-              <td className="text-center">@mdo</td>
-              <td className="text-center">@mdo</td>
-            </tr>            
+            {allorders.map((orders) => (
+              <tr key={orders._id} orders={orders}>
+                <td className="text-center">{orders.index}</td>
+                <td className="text-center">{orders.singleProductName}</td>
+                <td className="text-center">$ {orders.singleProductPrice}</td>
+                <td className="text-center">{orders.userName}</td>
+                <td className="text-center">{orders.bookedproductStatus}</td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </div>
