@@ -48,7 +48,7 @@ const AddReview = () => {
 
         <textarea
           style={{ outline: "none" }}
-          maxlength="50"
+          maxlength="150"
           onClick={successTextRemover}
           className="mb-3 py-2 px-3"
           placeholder="Review 50 Characters Only"
