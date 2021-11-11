@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import userImg from "../../Images/user.png";
 import useAuth from "../../Hooks/useAuth";
 
 const Header = () => {
@@ -19,6 +18,14 @@ const Header = () => {
               to="/home"
             >
               Home
+            </NavLink>
+
+            <NavLink
+              activeClassName="navs-active"
+              className="navs me-5 text-decoration-none"
+              to="/products"
+            >
+              Products
             </NavLink>
 
             <NavLink

@@ -1,26 +1,28 @@
 import axios from "axios";
-import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const AddReview = () => {
   const { register, handleSubmit, reset } = useForm();
-  const [success, setSuccess] = useState();
 
   const onSubmit = (data) => {
     console.log(data);
     axios.post("http://localhost:5000/reviews", data).then((res) => {
       if (res.data.insertedId) {
         reset();
-        setSuccess("Review Added Successfully!");
+        // setSuccess("Review Added Successfully!");
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Your review has been posted",
+          showConfirmButton: false,
+          timer: 2500,
+        });
       }
     });
   };
 
-  //Remove Success Text
-  const successTextRemover = () => {
-    setSuccess("");
-  };
   return (
     <div>
       <h3 className="text-center text-dark mb-5 text-uppercase">
@@ -33,14 +35,12 @@ const AddReview = () => {
       >
         <input
           style={{ outline: "none" }}
-          onClick={successTextRemover}
           className="mb-3 py-2 px-3"
           placeholder="Name"
           {...register("userName")}
         />
         <input
           style={{ outline: "none" }}
-          onClick={successTextRemover}
           className="mb-3 py-2 px-3"
           placeholder="Image URL"
           {...register("userImg")}
@@ -49,7 +49,6 @@ const AddReview = () => {
         <textarea
           style={{ outline: "none" }}
           maxlength="150"
-          onClick={successTextRemover}
           className="mb-3 py-2 px-3"
           placeholder="Review 50 Characters Only"
           {...register("userReview")}
@@ -59,9 +58,6 @@ const AddReview = () => {
           ADD
         </Button>
       </Form>
-      <p className="text-center text-dark text-uppercase mt-4 mb-5 pb-5 fs-4">
-        {success}
-      </p>
     </div>
   );
 };
