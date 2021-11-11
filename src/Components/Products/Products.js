@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -21,27 +22,27 @@ const Products = () => {
           {products.map((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
             <Card>
-              <Card.Img variant="top" src={productImg} />
+              <Card.Img variant="top" src={product.productImg} />
               <Card.Body className="p-4">
                 <Card.Text className="d-flex justify-content-between align-items-center">
                   {" "}
                   <div className="d-flex align-items-center">
                     <strong style={{ fontSize: "18px", color: "#ea3c23" }}>
-                      {serviceCost}
+                      {}
                     </strong>
                     <span>/Per Person</span>
                   </div>
                   <span>
-                    <i className="far fa-calendar-minus"></i>&nbsp;{serviceTime}
+                    <i className="far fa-calendar-minus"></i>&nbsp;{}
                   </span>{" "}
                 </Card.Text>
       
                 <Card.Title>
                   {" "}
-                  <h3>{serviceName}</h3>{" "}
+                  <h3>{}</h3>{" "}
                 </Card.Title>
       
-                <Link to={`/services/${_id}`} className="mt-auto">
+                <Link to="#" className="mt-auto">
                   <Button className="mt-3 px-4" variant="danger">
                     Details
                   </Button>
