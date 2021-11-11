@@ -68,13 +68,13 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
               <h1 className="display-4 mb-3">{singleProduct.productPrice}</h1>
               {/* Specifications */}
               <div className="mb-5">
-                <span className="fs-4 mt-3 mb-3">Specifications</span>
+                <span className="fs-4 mt-3 mb-3">Specification</span>
                 <div className="mt-3">
                   <p>
                     <strong>Name :</strong> &nbsp;{singleProduct.productName}
                   </p>
                   <p>
-                    <strong>Model No. :</strong> &nbsp;
+                    <strong>Model :</strong> &nbsp;
                     {singleProduct.productModel}
                   </p>
                   <p>

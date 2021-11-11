@@ -22,7 +22,7 @@ const Dashboard = () => {
   return (
     <div>
       <div>
-        <h1 className="text-center text-uppercase mt-3 display-6">
+        <h1 className="text-center text-uppercase mt-3 mb-3 display-6">
           dash<strong className="text-danger">board</strong>
         </h1>
       </div>
