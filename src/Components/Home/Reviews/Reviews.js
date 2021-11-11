@@ -24,16 +24,16 @@ const Reviews = () => {
     <Container>
       <div className="py-5 my-5">
         <h2 className="my-5 text-center text-dark text-uppercase">
-          React Slick
+          our beloved clients
         </h2>
         <Slider {...settings}>
           {reviews.map((review) => (
             <div className="text-center p-5" key={review._id} review={review}>
-              <div>
+              <div className="d-flex justify-content-center">
                 <img
-                  width="128"
-                  height="128"
-                  className="rounded-circle mb-4 shadow"
+                  width="100"
+                  height="100"
+                  className="rounded-circle mb-4 shadow border border-white"
                   src={review.userImg}
                   alt=""
                 />
