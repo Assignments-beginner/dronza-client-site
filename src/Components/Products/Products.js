@@ -46,7 +46,7 @@ const Products = () => {
                   <h3>{}</h3>{" "}
                 </Card.Title>
       
-                <Link to="#" className="mt-auto">
+                <Link to={`/singleproduct/${product._id}`} className="mt-auto">
                   <Button className="mt-3 px-4" variant="danger">
                     Details
                   </Button>
