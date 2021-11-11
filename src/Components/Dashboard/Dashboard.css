@@ -5,10 +5,10 @@
   color: black;
 }
 .dashboard:hover {
-  color: #ea3c23;
+  color: #d9534f;
 }
 .dashboard-active {
-  color: #ea3c23;
+  color: #d9534f;
 }
 
 .menubar {

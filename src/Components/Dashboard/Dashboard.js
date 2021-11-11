@@ -23,7 +23,7 @@ const Dashboard = () => {
     <div>
       <div>
         <h1 className="text-center text-uppercase mt-3 display-6">
-          dash<strong style={{ color: "#ea3c23" }}>board</strong>
+          dash<strong className="text-danger">board</strong>
         </h1>
       </div>
       <hr />

@@ -26,7 +26,7 @@ const AddReview = () => {
   return (
     <div>
       <h3 className="text-center text-dark mb-5 text-uppercase">
-        add <span style={{ color: "#ea3c23" }}>review</span>
+        add <span className="text-danger">review</span>
       </h3>
 
       <Form

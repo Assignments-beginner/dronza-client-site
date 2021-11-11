@@ -38,12 +38,12 @@ const YourOrders = () => {
     <Container className="mb-5 pb-5">
       <div>
         <h3 className="text-center text-uppercase">
-          Your <strong style={{ color: "#ea3c23" }}>orders</strong>
+          Your <span className="text-danger">orders</span>
         </h3>
       </div>
       <div>
         <p className="fs-5 text-center text-dark mb-4 text-uppercase">
-          total <strong style={{ color: "#ea3c23" }}>{orders.length}</strong>{" "}
+          total <strong className="text-danger">{orders.length}</strong>{" "}
           orders
         </p>
       </div>
@@ -60,13 +60,13 @@ const YourOrders = () => {
               <Card.Body className="text-center">
                 <Card.Title>
                   {" "}
-                  <span style={{ color: "#ea3c23" }}>
+                  <span className="text-danger">
                     {order.singleProductName}
                   </span>{" "}
                 </Card.Title>
                 <span className="fs-5">$ {order.singleProductPrice}</span>
                 <Card.Text>
-                  BOOKED BY <br /> <i className="fas fa-user"></i>{" "}
+                  <span className="text-danger">BOOKED BY</span> <br /> <i className="fas fa-user"></i>{" "}
                   {order.userName}
                 </Card.Text>
                 <Button

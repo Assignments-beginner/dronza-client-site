@@ -26,7 +26,7 @@ const AddNewProduct = () => {
   return (
     <div>
       <h3 className="text-center text-dark mb-5 text-uppercase">
-        add new <span style={{ color: "#ea3c23" }}>product</span>
+        add new <span className="text-danger">product</span>
       </h3>
 
       <Form

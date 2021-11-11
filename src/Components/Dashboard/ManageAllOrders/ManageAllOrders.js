@@ -64,10 +64,10 @@ const ManageAllOrders = () => {
   return (
     <div>
       <h3 className="text-center text-uppercase">
-        Manage All <strong style={{ color: "#ea3c23" }}>orders</strong>
+        Manage All <span className="text-danger">orders</span>
       </h3>
       <h5 className="text-center text-uppercase mt-3 mb-4">
-        Total <strong style={{ color: "#ea3c23" }}>{allorders.length}</strong>{" "}
+        Total <strong className="text-danger">{allorders.length}</strong>{" "}
         orders
       </h5>
       <div>

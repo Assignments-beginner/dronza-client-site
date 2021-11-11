@@ -24,7 +24,7 @@ const Reviews = () => {
     <Container>
       <div className="py-5 my-5">
         <h2 className="my-5 text-center text-dark text-uppercase">
-          our beloved clients
+          our beloved <span className="text-danger">clients</span>
         </h2>
         <Slider {...settings}>
           {reviews.map((review) => (
