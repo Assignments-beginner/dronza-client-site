@@ -14,25 +14,27 @@ const BuyProduct = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://morning-badlands-81993.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleProduct(data));
   }, []);
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/allorders", data).then((res) => {
-      // console.log(res);
-      if (res.data.insertedId) {
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "Order Placed Succesfully!",
-          showConfirmButton: false,
-          timer: 2500,
-        });
-      }
-    });
+    axios
+      .post("https://morning-badlands-81993.herokuapp.com/allorders", data)
+      .then((res) => {
+        // console.log(res);
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Order Placed Succesfully!",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        }
+      });
   };
 
   return (

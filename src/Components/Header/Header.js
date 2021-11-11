@@ -7,7 +7,7 @@ import useAuth from "../../Hooks/useAuth";
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
-    <Navbar className="nav-font bg-dark p-3" collapseOnSelect expand="lg">
+    <Navbar className="nav-font bg-dark p-4" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

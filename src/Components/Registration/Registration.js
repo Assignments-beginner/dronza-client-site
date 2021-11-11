@@ -33,7 +33,7 @@ const Registration = () => {
         console.log(user);
         setError("");
         setUserName();
-        addUserToDatabase(result.user.email, result.user.displayName);        
+        addUserToDatabase(result.user.email, result.user.displayName);
         window.location.reload();
       })
       .catch((error) => {
@@ -41,9 +41,9 @@ const Registration = () => {
       });
   };
 
-  const addUserToDatabase = (email , displayName) => {
+  const addUserToDatabase = (email, displayName) => {
     const user = { email, displayName };
-    // fetch("http://localhost:5000/users", {
+    // fetch("https://morning-badlands-81993.herokuapp.com/users", {
     fetch("https://morning-badlands-81993.herokuapp.com/users", {
       method: "POST",
       headers: { "content-type": "application/json" },

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 
 const ManageAllOrders = () => {
-  const [allorders, setAllOrders] = useState([]);  
+  const [allorders, setAllOrders] = useState([]);
   const [status, setStatus] = useState("Approved");
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allorders")
+    fetch("https://morning-badlands-81993.herokuapp.com/allorders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, [reload]);
@@ -19,14 +19,11 @@ const ManageAllOrders = () => {
     );
     if (proceed) {
       setStatus(status);
-      fetch(
-        `http://localhost:5000/updateStatus/${id}`,
-        {
-          method: "PUT",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ status }),
-        }
-      )
+      fetch(`https://morning-badlands-81993.herokuapp.com/updateStatus/${id}`, {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ status }),
+      })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
@@ -44,7 +41,7 @@ const ManageAllOrders = () => {
       "Are you sure, you want to delete this order?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/allorders/${id}`, {
+      fetch(`https://morning-badlands-81993.herokuapp.com/allorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -67,8 +64,7 @@ const ManageAllOrders = () => {
         Manage All <span className="text-danger">orders</span>
       </h3>
       <h5 className="text-center text-uppercase mt-3 mb-4">
-        Total <strong className="text-danger">{allorders.length}</strong>{" "}
-        orders
+        Total <strong className="text-danger">{allorders.length}</strong> orders
       </h5>
       <div>
         <Table bordered hover>
@@ -92,9 +88,11 @@ const ManageAllOrders = () => {
                 <td className="text-center">{orders.bookedproductStatus}</td>
                 <td className="text-center">
                   <div className="d-flex">
-                    <Button 
-                    onClick={() => handleUpdate(orders._id)}
-                    variant="outline-success w-100 me-2" size="sm">
+                    <Button
+                      onClick={() => handleUpdate(orders._id)}
+                      variant="outline-success w-100 me-2"
+                      size="sm"
+                    >
                       Approve
                     </Button>
                     <Button

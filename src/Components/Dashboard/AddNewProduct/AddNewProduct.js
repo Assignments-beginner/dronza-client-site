@@ -9,18 +9,20 @@ const AddNewProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/products", data).then((res) => {
-      if (res.data.insertedId) {
-        reset();
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "New product added succesfully!",
-          showConfirmButton: false,
-          timer: 2500,
-        });
-      }
-    });
+    axios
+      .post("https://morning-badlands-81993.herokuapp.com/products", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          reset();
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "New product added succesfully!",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        }
+      });
   };
 
   return (

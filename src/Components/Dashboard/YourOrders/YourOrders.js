@@ -7,7 +7,9 @@ const YourOrders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useAuth();
   useEffect(() => {
-    fetch(`http://localhost:5000/myorders?email=${user.email}`)
+    fetch(
+      `https://morning-badlands-81993.herokuapp.com/myorders?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setOrders(data));
     // .then((data) => console.log(data))
@@ -19,7 +21,7 @@ const YourOrders = () => {
       "Are you sure, you want to delete this order?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/myorders/${id}`, {
+      fetch(`https://morning-badlands-81993.herokuapp.com/myorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -43,8 +45,7 @@ const YourOrders = () => {
       </div>
       <div>
         <p className="fs-5 text-center text-dark mb-4 text-uppercase">
-          total <strong className="text-danger">{orders.length}</strong>{" "}
-          orders
+          total <strong className="text-danger">{orders.length}</strong> orders
         </p>
       </div>
       <Row className="g-4">
@@ -66,8 +67,8 @@ const YourOrders = () => {
                 </Card.Title>
                 <span className="fs-5">$ {order.singleProductPrice}</span>
                 <Card.Text>
-                  <span className="text-danger">BOOKED BY</span> <br /> <i className="fas fa-user"></i>{" "}
-                  {order.userName}
+                  <span className="text-danger">BOOKED BY</span> <br />{" "}
+                  <i className="fas fa-user"></i> {order.userName}
                 </Card.Text>
                 <Button
                   onClick={() => deleteHandler(order._id)}

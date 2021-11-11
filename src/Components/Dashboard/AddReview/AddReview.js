@@ -8,19 +8,21 @@ const AddReview = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/reviews", data).then((res) => {
-      if (res.data.insertedId) {
-        reset();
-        // setSuccess("Review Added Successfully!");
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "Your review has been posted",
-          showConfirmButton: false,
-          timer: 2500,
-        });
-      }
-    });
+    axios
+      .post("https://morning-badlands-81993.herokuapp.com/reviews", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          reset();
+          // setSuccess("Review Added Successfully!");
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Your review has been posted",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        }
+      });
   };
 
   return (
