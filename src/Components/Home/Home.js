@@ -8,6 +8,7 @@ import DisplayProducts from "./DisplayProducts/DisplayProducts";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Contact from "./Pages/Contact/Contact";
+import About from "./Pages/About/About";
 
 const Home = () => {
   return (
@@ -98,6 +99,8 @@ const Home = () => {
         </InputGroup>
       </Container>
       {/* NewsLetter  */}
+
+      <About></About>
 
       <Contact></Contact>
     </div>
