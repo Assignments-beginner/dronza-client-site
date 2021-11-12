@@ -15,10 +15,10 @@ const Contact = () => {
             <strong className="text-dark text-uppercase">CONTACT Us</strong>
             <span className="mb-3">We are open Friday to Wednesday</span>
             <span>
-              <i class="fas fa-phone text-danger"></i> +1 209-507-5152
+              <i className="fas fa-phone text-danger"></i> +1 209-507-5152
             </span>
             <span>
-              <i class="fas fa-envelope text-danger"></i>
+              <i className="fas fa-envelope text-danger"></i>
               &nbsp;&nbsp;dronza@gmail.com
             </span>
           </div>
@@ -40,7 +40,7 @@ const Contact = () => {
             <span>California St, Stockton, United States</span>
 
             <div className="mt-4">
-              <i class="fas fa-truck text-danger"></i>&nbsp;&nbsp;
+              <i className="fas fa-truck text-danger"></i>&nbsp;&nbsp;
               <strong className="text-dark text-uppercase">Delivery</strong>
             </div>
             <span>Under City 1Week</span>

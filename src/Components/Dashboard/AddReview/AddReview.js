@@ -49,7 +49,7 @@ const AddReview = () => {
 
         <textarea
           style={{ outline: "none" }}
-          maxlength="150"
+          maxLength="150"
           className="mb-3 py-2 px-3"
           placeholder="Review 150 Characters Only"
           {...register("userReview")}

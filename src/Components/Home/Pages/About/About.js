@@ -38,19 +38,19 @@ const About = () => {
           {/* Controls  */}
           <div className="mt-5">
             <div className="d-flex align-items-center mb-3">
-              <i class="fas fa-mobile-alt text-danger fs-1 me-2"></i>{" "}
+              <i className="fas fa-mobile-alt text-danger fs-1 me-2"></i>{" "}
               <span className="text-danger fs-5">
                 Mobile Device Supported
               </span>
             </div>
             <div className="d-flex align-items-center mb-3">
-              <i class="fas fa-gamepad text-danger fs-1 me-2"></i>{" "}
+              <i className="fas fa-gamepad text-danger fs-1 me-2"></i>{" "}
               <span className="text-danger fs-5">
               Easy integrative control
               </span>
             </div>
             <div className="d-flex align-items-center mb-3">
-              <i class="fas fa-headset text-danger fs-1 me-2"></i>{" "}
+              <i className="fas fa-headset text-danger fs-1 me-2"></i>{" "}
               <span className="text-danger fs-5">
               Customized Commands
               </span>
