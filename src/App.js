@@ -14,6 +14,7 @@ import Greetings from "./Components/Greetings/Greetings";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Products from "./Components/Products/Products";
 import BuyProduct from "./Components/Products/BuyProduct/BuyProduct";
+import Contact from "./Components/Home/Pages/Contact/Contact";
 
 function App() {
   return (
@@ -29,8 +30,13 @@ function App() {
               <Route path="/home">
                 <Home></Home>
               </Route>
+
               <Route path="/products">
                 <Products></Products>
+              </Route>
+
+              <Route path="/contactus">
+                <Contact></Contact>
               </Route>
 
               <PrivateRoute path="/singleproduct/:id">

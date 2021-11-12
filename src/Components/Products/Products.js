@@ -11,7 +11,7 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-    <div>
+    <div className="pb-5">
       <div>
         <h2 className="my-5 text-center text-dark text-uppercase">
           all <span className="text-danger">products</span>
@@ -19,7 +19,7 @@ const Products = () => {
       </div>
       <Container className="w-100 mb-5">
         <Row className="g-5">
-          {products.slice(0, 5).forEach((product) => (
+          {products.map((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
               <Card
                 style={{
