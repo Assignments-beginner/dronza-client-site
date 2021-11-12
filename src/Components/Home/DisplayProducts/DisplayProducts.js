@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Container } from "react-bootstrap";
+import "./DisplayProducts.css";
 
 const DisplayProducts = () => {
   const [products, setProducts] = useState([]);
@@ -22,6 +23,9 @@ const DisplayProducts = () => {
   }, []);
   return (
     <Container className="mt-5">
+      <h2 className="text-center text-dark text-uppercase">
+        our top <span className="text-danger">products</span>
+      </h2>
       <div>
         <Slider {...settings}>
           {/* Dynamic Data */}
@@ -47,12 +51,12 @@ const DisplayProducts = () => {
 
               {/* Details Box */}
               <div className="d-flex justify-content-end">
-                <div
-                  style={{ marginTop: "-10%" }}
-                  className=" p-3 w-50 shadow bg-white"
-                >
-                  <strong>{product.productName}</strong>
-                  <p>{product.productModel}</p>
+                <div className="p-3 shadow details-box bg-white">
+                  <strong className="text-danger">{product.productName}</strong>
+                  <br />
+                  <span>{product.productModel}</span>
+                  <br />
+                  <strong className="fs-5">{product.productPrice}</strong>
                 </div>
               </div>
 
