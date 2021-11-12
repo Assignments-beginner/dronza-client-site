@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Container } from "react-bootstrap";
 import "./DisplayProducts.css";
+import { Link } from "react-router-dom";
 
 const DisplayProducts = () => {
   const [products, setProducts] = useState([]);
@@ -10,7 +11,7 @@ const DisplayProducts = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     speed: 1800,
     autoplaySpeed: 1800,
     cssEase: "linear",
@@ -56,7 +57,16 @@ const DisplayProducts = () => {
                   <br />
                   <span>{product.productModel}</span>
                   <br />
-                  <strong className="fs-5">{product.productPrice}</strong>
+                  <div className="d-flex align-items-center justify-content-between">
+                    <strong className="fs-5">{product.productPrice}</strong>
+                    <Link
+                      style={{ fontSize: "12px" }}
+                      className="text-decoration-none text-uppercase text-danger"
+                      to={`/singleproduct/${product._id}`}
+                    >
+                      Check here
+                    </Link>
+                  </div>
                 </div>
               </div>
 
