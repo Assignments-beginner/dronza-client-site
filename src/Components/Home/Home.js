@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
+import Guideline from "./Pages/Guideline/Guideline";
 
 const Home = () => {
   return (
@@ -101,6 +102,8 @@ const Home = () => {
       {/* NewsLetter  */}
 
       <About></About>
+
+      <Guideline></Guideline>
 
       <Contact></Contact>
     </div>

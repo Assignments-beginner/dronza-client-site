@@ -30,7 +30,7 @@ const DisplayProducts = () => {
       <div>
         <Slider {...settings}>
           {/* Dynamic Data */}
-          {products.map((product) => (
+          {products.slice(0,6).map((product) => (
             <div
               className="d-grid justify-content-end p-5"
               key={product._id}

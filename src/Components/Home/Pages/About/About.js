@@ -5,11 +5,11 @@ import drone from "../../../../Images/drone.png";
 
 const About = () => {
   return (
-    <div className="my-5 pt-5">
+    <div className="mt-5 mb-5 pb-5">
       <h2 className="text-center text-dark text-uppercase">
         about <span className="text-danger">us</span>
       </h2>
-      <Container className="d-flex align-items-center mt-5 pt-3">
+      <Container className="d-flex align-items-center mt-5">
         {/* Drone Animation  */}
         <div className="drone-div">
           <div className="object">

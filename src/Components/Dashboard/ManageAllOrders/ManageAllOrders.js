@@ -70,7 +70,6 @@ const ManageAllOrders = () => {
         <Table bordered hover>
           <thead className="text-uppercase">
             <tr>
-              <th className="text-center p-3">SL</th>
               <th className="text-center p-3">Drone Name</th>
               <th className="text-center p-3">Price</th>
               <th className="text-center p-3">Ordered By</th>
@@ -81,10 +80,9 @@ const ManageAllOrders = () => {
           <tbody>
             {allorders.map((orders) => (
               <tr key={orders._id} orders={orders}>
-                <td className="text-center"></td>
                 <td className="text-center">{orders.singleProductName}</td>
                 <td className="text-center">{orders.singleProductPrice}</td>
-                <td className="text-center">{orders.userName}</td>
+                <td className="text-center text-danger">{orders.userName}</td>
                 <td className="text-center">{orders.bookedproductStatus}</td>
                 <td className="text-center">
                   <div className="d-flex">

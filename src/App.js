@@ -15,6 +15,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Products from "./Components/Products/Products";
 import BuyProduct from "./Components/Products/BuyProduct/BuyProduct";
 import Contact from "./Components/Home/Pages/Contact/Contact";
+import About from "./Components/Home/Pages/About/About";
 
 function App() {
   return (
@@ -27,8 +28,13 @@ function App() {
               <Route exact path="/">
                 <Home></Home>
               </Route>
+
               <Route path="/home">
                 <Home></Home>
+              </Route>
+
+              <Route path="/about">
+                <About></About>
               </Route>
 
               <Route path="/products">
