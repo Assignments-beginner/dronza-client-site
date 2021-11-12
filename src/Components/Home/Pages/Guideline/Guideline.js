@@ -37,8 +37,8 @@ const Guideline = () => {
                 />
               </div>
               <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text className="text-start">
+                <Card.Title>Controller</Card.Title>
+                <Card.Text className="text-center">
                   Correctly connecting a drone to the controller ensures a
                   smooth flight of the drone as it goes about its job of
                   monitoring, performing inspections and other jobs.
@@ -59,8 +59,8 @@ const Guideline = () => {
               </div>
 
               <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text className="text-start">
+                <Card.Title>Flying</Card.Title>
+                <Card.Text className="text-center">
                   Mount your electronic speed controllers. Attach the landing
                   gear. Connect LibrePilot to your drone. Take your drone for a
                   spin!
@@ -80,8 +80,8 @@ const Guideline = () => {
                 />
               </div>
               <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text className="text-start">
+                <Card.Title>Camera</Card.Title>
+                <Card.Text className="text-center">
                   For distances between the camera and the scene center shorter
                   than 120 meters, FULL HD (1920x1200) resolution will be
                   sufficient, but it is better to use a higher resolution
@@ -103,15 +103,15 @@ const Guideline = () => {
               </div>
 
               <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text className="text-start">
+                <Card.Title>Battery</Card.Title>
+                <Card.Text className="text-center">
                   It comes with a USB cable that you can plug into your computer
                   USB port to charge it or you can use a USB wall charger.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <strong className="text-danger text-center">
-                  How To Use Battery
+                  How To Charge Battery
                 </strong>
               </Card.Footer>
             </Card>
