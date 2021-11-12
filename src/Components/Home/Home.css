@@ -1,5 +1,11 @@
+.positioting {
+  margin-bottom: 12%;
+}
 
 .tiny-shadow {
-  text-shadow: 2px 2px #0B114A ;
-  font-size: 70px;
+  text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.1), 2px 2px 2px rgba(0,0,0,.5);
+}
+
+.header {
+  font-size: 50px;
 }
