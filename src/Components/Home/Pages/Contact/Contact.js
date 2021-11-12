@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import map from '../../../../Images/location.jpg'
+import map from "../../../../Images/location.jpg";
 
 const Contact = () => {
   return (
@@ -10,15 +10,16 @@ const Contact = () => {
       </h2>
       <div style={{ backgroundColor: "#F6F6F6" }} className="main-footer w-100">
         <Container className="d-flex align-items-center justify-content-between py-4">
-          {/* ////////////////////// Connect With Us ////////////////////// */}
-          <div className="text-center d-grid">
+          {/* ////////////////////// Contact Us ////////////////////// */}
+          <div className="text-center d-grid me-3">
             <strong className="text-dark text-uppercase">CONTACT Us</strong>
             <span className="mb-3">We are open Friday to Wednesday</span>
             <span>
               <i class="fas fa-phone text-danger"></i> +1 209-507-5152
             </span>
             <span>
-              <i class="fas fa-envelope text-danger"></i>&nbsp;&nbsp;dronza@gmail.com
+              <i class="fas fa-envelope text-danger"></i>
+              &nbsp;&nbsp;dronza@gmail.com
             </span>
           </div>
 
@@ -28,17 +29,15 @@ const Contact = () => {
               <strong>Our Locations</strong>
             </p>
             <div>
-                <img width="355" height="255" src={map} alt="" />
+              <img width="355" height="255" src={map} alt="" />
             </div>
           </div>
 
           {/*////////////////////// ADDRESS //////////////////////*/}
           <div className="text-center d-grid">
-            <strong style={{ color: "#0B114A" }}>ADDRESS</strong>
-
+            <strong className="text-dark text-uppercase">address</strong>
+            <span>2859 Wilkinson Street</span>
             <span>California St, Stockton, United States</span>
-
-            
           </div>
         </Container>
       </div>
