@@ -14,6 +14,10 @@ const About = () => {
           <div className="object">
               <img src={drone} alt="" />
           </div>
+          <div className="hd-div">
+              <h1 className="hd">4K HD</h1>
+              <h2 className="text-center">RESOLUTION</h2>
+          </div>
         </div>
       </Container>
     </div>
