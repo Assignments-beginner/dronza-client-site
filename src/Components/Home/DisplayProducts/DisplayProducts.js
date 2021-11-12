@@ -3,44 +3,63 @@ import Slider from "react-slick";
 import { Container } from "react-bootstrap";
 
 const DisplayProducts = () => {
-  const [reviews, setReviews] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const settings = {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    // autoplay: true,
+    speed: 1800,
+    autoplaySpeed: 1800,
     cssEase: "linear",
   };
 
   useEffect(() => {
-    fetch("https://morning-badlands-81993.herokuapp.com/reviews")
+    fetch("https://morning-badlands-81993.herokuapp.com/products")
       .then((res) => res.json())
-      .then((data) => setReviews(data));
+      .then((data) => setProducts(data));
   }, []);
   return (
-    <Container className="border border-dark">
+    <Container className="mt-5">
       <div>
         <Slider {...settings}>
-          {reviews.map((review) => (
-            <div className="text-center p-5" key={review._id} review={review}>
-              <div className="d-flex justify-content-center">
+          {/* Dynamic Data */}
+          {products.map((product) => (
+            <div className="p-5" key={product._id} product={product}>
+              {/* Display Product Content Start  */}
+
+              {/* Images  */}
+              <div>
                 <img
-                  width="100"
-                  height="100"
-                  className="rounded-circle mb-4 shadow border border-white"
-                  src={review.userImg}
+                  style={{
+                    borderWidth: "5px",
+                    borderStyle: "solid",
+                    borderImage: "linear-gradient(45deg, #d9534f, #4d0000) 1",
+                  }}
+                  width="340"
+                  height="230"
+                  className="p-2"
+                  src={product.productImg}
                   alt=""
                 />
               </div>
-              <div>
-                <strong>{review.userName}</strong>
-                <p>{review.userReview}</p>
+
+              {/* Details Box */}
+              <div className="d-flex justify-content-end">
+                <div
+                  style={{ marginTop: "-10%" }}
+                  className=" p-3 w-50 shadow bg-white"
+                >
+                  <strong>{product.productName}</strong>
+                  <p>{product.productModel}</p>
+                </div>
               </div>
+
+              {/* Display Product Content End  */}
             </div>
           ))}
+          {/* Dynamic Data */}
         </Slider>
       </div>
     </Container>
