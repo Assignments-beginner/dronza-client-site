@@ -12,8 +12,8 @@ const DisplayProducts = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1800,
-    autoplaySpeed: 1800,
+    speed: 2000,
+    autoplaySpeed: 2000,
     cssEase: "linear",
   };
 
@@ -31,7 +31,11 @@ const DisplayProducts = () => {
         <Slider {...settings}>
           {/* Dynamic Data */}
           {products.map((product) => (
-            <div className="p-5" key={product._id} product={product}>
+            <div
+              className="d-grid justify-content-end p-5"
+              key={product._id}
+              product={product}
+            >
               {/* Display Product Content Start  */}
 
               {/* Images  */}
