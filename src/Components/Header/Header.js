@@ -43,6 +43,14 @@ const Header = () => {
             <NavLink
               activeClassName="navs-active"
               className="navs me-3 text-decoration-none"
+              to="/guideline"
+            >
+              Guideline
+            </NavLink>
+
+            <NavLink
+              activeClassName="navs-active"
+              className="navs me-3 text-decoration-none"
               to="/contactus"
             >
               Contact Us

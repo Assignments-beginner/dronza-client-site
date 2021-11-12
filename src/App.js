@@ -16,6 +16,7 @@ import Products from "./Components/Products/Products";
 import BuyProduct from "./Components/Products/BuyProduct/BuyProduct";
 import Contact from "./Components/Home/Pages/Contact/Contact";
 import About from "./Components/Home/Pages/About/About";
+import Guideline from "./Components/Home/Pages/Guideline/Guideline";
 
 function App() {
   return (
@@ -39,6 +40,10 @@ function App() {
 
               <Route path="/products">
                 <Products></Products>
+              </Route>
+
+              <Route path="/guideline">
+                <Guideline></Guideline>
               </Route>
 
               <Route path="/contactus">
