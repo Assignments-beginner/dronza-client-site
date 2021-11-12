@@ -2,6 +2,10 @@ import React from "react";
 import { Card, CardGroup, Container } from "react-bootstrap";
 import Drone from "./Drone/Drone";
 import "./Guideline.css";
+import battery from "../../../../Images/battery.png";
+import dronefly from "../../../../Images/dronefly.png";
+import controller from "../../../../Images/controller.png";
+import camera from "../../../../Images/camera.png";
 
 const Guideline = () => {
   return (
@@ -26,7 +30,7 @@ const Guideline = () => {
         <div className="how">
           <CardGroup>
             <Card className="text-center">
-              <Card.Img variant="top" src="holder.js/100px160" />
+              <Card.Img  style={{height:'70px', width:'70px'}} src={controller} />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
@@ -42,7 +46,7 @@ const Guideline = () => {
               </Card.Footer>
             </Card>
             <Card className="text-center">
-              <Card.Img variant="top" src="holder.js/100px160" />
+              <Card.Img  style={{height:'70px', width:'70px'}} src={dronefly} />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
@@ -57,7 +61,7 @@ const Guideline = () => {
               </Card.Footer>
             </Card>
             <Card className="text-center">
-              <Card.Img variant="top" src="holder.js/100px160" />
+              <Card.Img  style={{height:'70px', width:'70px'}} src={camera} />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
@@ -73,7 +77,7 @@ const Guideline = () => {
               </Card.Footer>
             </Card>
             <Card className="text-center">
-              <Card.Img variant="top" src="holder.js/100px160" />
+              <Card.Img style={{height:'70px', width:'70px'}} src={battery} />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
