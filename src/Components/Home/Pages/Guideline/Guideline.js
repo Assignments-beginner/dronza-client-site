@@ -30,7 +30,12 @@ const Guideline = () => {
         <div className="how">
           <CardGroup>
             <Card className="text-center">
-              <Card.Img  style={{height:'70px', width:'70px'}} src={controller} />
+            <div className="d-flex justify-content-center mt-3">
+            <Card.Img
+                style={{ height: "70px", width: "70px" }}
+                src={controller}
+              />
+              </div>
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
@@ -46,7 +51,13 @@ const Guideline = () => {
               </Card.Footer>
             </Card>
             <Card className="text-center">
-              <Card.Img  style={{height:'70px', width:'70px'}} src={dronefly} />
+            <div className="d-flex justify-content-center mt-3">
+            <Card.Img
+                style={{ height: "70px", width: "70px" }}
+                src={dronefly}
+              />
+              </div>
+              
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
@@ -61,7 +72,12 @@ const Guideline = () => {
               </Card.Footer>
             </Card>
             <Card className="text-center">
-              <Card.Img  style={{height:'70px', width:'70px'}} src={camera} />
+              <div className="d-flex justify-content-center mt-3">
+                <Card.Img
+                  style={{ height: "70px", width: "70px" }}
+                  src={camera}
+                />
+              </div>
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
@@ -77,7 +93,13 @@ const Guideline = () => {
               </Card.Footer>
             </Card>
             <Card className="text-center">
-              <Card.Img style={{height:'70px', width:'70px'}} src={battery} />
+              <div className="d-flex justify-content-center mt-3">
+                <Card.Img
+                  style={{ height: "70px", width: "70px" }}
+                  src={battery}
+                />
+              </div>
+
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
