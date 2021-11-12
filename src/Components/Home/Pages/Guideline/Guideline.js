@@ -30,18 +30,18 @@ const Guideline = () => {
         <div className="how">
           <CardGroup>
             <Card className="text-center">
-            <div className="d-flex justify-content-center mt-3">
-            <Card.Img
-                style={{ height: "70px", width: "70px" }}
-                src={controller}
-              />
+              <div className="d-flex justify-content-center mt-3">
+                <Card.Img
+                  style={{ height: "70px", width: "70px" }}
+                  src={controller}
+                />
               </div>
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                <Card.Text className="text-start">
+                  Correctly connecting a drone to the controller ensures a
+                  smooth flight of the drone as it goes about its job of
+                  monitoring, performing inspections and other jobs.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -51,23 +51,24 @@ const Guideline = () => {
               </Card.Footer>
             </Card>
             <Card className="text-center">
-            <div className="d-flex justify-content-center mt-3">
-            <Card.Img
-                style={{ height: "70px", width: "70px" }}
-                src={dronefly}
-              />
+              <div className="d-flex justify-content-center mt-3">
+                <Card.Img
+                  style={{ height: "70px", width: "70px" }}
+                  src={dronefly}
+                />
               </div>
-              
+
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This card has supporting text below as a natural lead-in to
-                  additional content.{" "}
+                <Card.Text className="text-start">
+                  Mount your electronic speed controllers. Attach the landing
+                  gear. Connect LibrePilot to your drone. Take your drone for a
+                  spin!
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <strong className="text-danger text-center">
-                  How To Use Battery
+                  How To Fly Ready
                 </strong>
               </Card.Footer>
             </Card>
@@ -80,10 +81,11 @@ const Guideline = () => {
               </div>
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This card has even longer
-                  content than the first to show that equal height action.
+                <Card.Text className="text-start">
+                  For distances between the camera and the scene center shorter
+                  than 120 meters, FULL HD (1920x1200) resolution will be
+                  sufficient, but it is better to use a higher resolution
+                  (2k/4k).
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -102,15 +104,14 @@ const Guideline = () => {
 
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This card has even longer
-                  content than the first to show that equal height action.
+                <Card.Text className="text-start">
+                  It comes with a USB cable that you can plug into your computer
+                  USB port to charge it or you can use a USB wall charger.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <strong className="text-danger text-center">
-                  How To Fly Ready
+                  How To Use Battery
                 </strong>
               </Card.Footer>
             </Card>
