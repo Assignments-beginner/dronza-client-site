@@ -29,7 +29,7 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
           Swal.fire({
             position: "top-center",
             icon: "success",
-            title: "Thank You ! Order Placed Succesfully!",
+            title: "Thank You ! Order Placed Successfully!",
             showConfirmButton: false,
             timer: 2500,
           });

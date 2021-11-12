@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Container } from "react-bootstrap";
 
-const Reviews = () => {
+const DisplayProducts = () => {
   const [reviews, setReviews] = useState([]);
 
   const settings = {
-    className: "center",
-    dots: true,
-    centerMode: true,
     infinite: true,
-    centerPadding: "40px",
     slidesToShow: 3,
-    speed: 500,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
   };
 
   useEffect(() => {
@@ -21,11 +21,8 @@ const Reviews = () => {
       .then((data) => setReviews(data));
   }, []);
   return (
-    <Container>
-      <div className="mt-5 mb-5">
-        <h2 className="mb-3 text-center text-dark text-uppercase">
-          our beloved <span className="text-danger">clients</span>
-        </h2>
+    <Container className="border border-dark">
+      <div>
         <Slider {...settings}>
           {reviews.map((review) => (
             <div className="text-center p-5" key={review._id} review={review}>
@@ -50,4 +47,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default DisplayProducts;

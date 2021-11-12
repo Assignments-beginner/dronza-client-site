@@ -17,7 +17,7 @@ const AddNewProduct = () => {
           Swal.fire({
             position: "top-center",
             icon: "success",
-            title: "New product added succesfully!",
+            title: "New product added successfully!",
             showConfirmButton: false,
             timer: 2500,
           });

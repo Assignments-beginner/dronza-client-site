@@ -13,11 +13,10 @@ const AddReview = () => {
       .then((res) => {
         if (res.data.insertedId) {
           reset();
-          // setSuccess("Review Added Successfully!");
           Swal.fire({
             position: "top-center",
             icon: "success",
-            title: "Your review has been posted",
+            title: "Your review has been posted.",
             showConfirmButton: false,
             timer: 2500,
           });
