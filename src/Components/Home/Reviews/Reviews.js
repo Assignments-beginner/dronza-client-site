@@ -22,7 +22,7 @@ const Reviews = () => {
   }, []);
   return (
     <Container>
-      <div className="mt-5 mb-5">
+      <div className="mt-5 mb-5 pb-5">
         <h2 className="mb-3 text-center text-dark text-uppercase">
           our beloved <span className="text-danger">clients</span>
         </h2>
