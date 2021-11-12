@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 
 const YourOrders = () => {
