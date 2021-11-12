@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import Reviews from "./Reviews/Reviews";
 import slide1 from "../../Images/slide1.png";
 import slide2 from "../../Images/slide2.png";
-// import slide3 from "../../Images/slide3.png";
+import slide3 from "../../Images/slide3.png";
 import DisplayProducts from "./DisplayProducts/DisplayProducts";
 
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src="" alt="Third slide" />
+          <img className="d-block w-100" src={slide3} alt="Third slide" />
           <Carousel.Caption>
             <h5>Third slide label</h5>
             <p>
