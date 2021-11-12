@@ -7,6 +7,7 @@ import slide3 from "../../Images/slide3.png";
 import DisplayProducts from "./DisplayProducts/DisplayProducts";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Contact from "./Pages/Contact/Contact";
 
 const Home = () => {
   return (
@@ -69,6 +70,7 @@ const Home = () => {
       </Carousel>
       <DisplayProducts></DisplayProducts>
       <Reviews></Reviews>
+      <Contact></Contact>
     </div>
   );
 };

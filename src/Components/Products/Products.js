@@ -19,7 +19,7 @@ const Products = () => {
       </div>
       <Container className="w-100 mb-5">
         <Row className="g-5">
-          {products.map((product) => (
+          {products.slice(0, 5).forEach((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
               <Card
                 style={{
