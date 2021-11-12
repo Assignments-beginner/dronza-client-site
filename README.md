@@ -2,9 +2,9 @@
 
 <a href="https://drone-za-999.netlify.app/">Check Here...</a>
 
-<li>Check out our awesome drones</li>
+<li>Check out our awesome drones.</li>
 <br />
-<li>We have the best camera resolution for your great vlog videos</li>
+<li>We have the best camera resolution for your great vlog videos.</li>
 <br />
 <li>The best powerful battery backup you will ever have.</li>
 <br />

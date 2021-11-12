@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
-import { Col, Container, Nav, Row } from "react-bootstrap";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Button, Col, Container, Nav, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Dashboard.css";
 import YourOrders from "./YourOrders/YourOrders";
@@ -87,7 +80,9 @@ const Dashboard = () => {
                   className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/logout`}
                 >
-                  Log Out
+                  <Button size="sm" variant="danger px-4">
+                    Log Out
+                  </Button>
                 </NavLink>
               </Nav>
             </div>
