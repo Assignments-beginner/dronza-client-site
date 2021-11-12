@@ -38,6 +38,13 @@ const Contact = () => {
             <strong className="text-dark text-uppercase">address</strong>
             <span>2859 Wilkinson Street</span>
             <span>California St, Stockton, United States</span>
+
+            <div className="mt-4">
+              <i class="fas fa-truck text-danger"></i>&nbsp;&nbsp;
+              <strong className="text-dark text-uppercase">Delivery</strong>
+            </div>
+            <span>Under City 1Week</span>
+            <span>Under Province 2Weeks</span>
           </div>
         </Container>
       </div>
