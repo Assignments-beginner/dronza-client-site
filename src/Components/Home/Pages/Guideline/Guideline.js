@@ -9,23 +9,23 @@ const Guideline = () => {
       <h2 className="text-center text-dark text-uppercase mb-5">
         smart <span className="text-danger">guidance</span>
       </h2>
-      <div className="text-center">
-          <h4 className="text-uppercase">How it works</h4>
-          <p>
-            Drone controller basically works by sending a radio signal from the
-            remote control to the drone, which tells the drone what to do. Radio
-            signals are sent from the radio transmitter in the drone controller
-            and received by the drone's receiver
-          </p>
-        </div>
+      <Container className="text-center w-50">
+        <h4 className="text-uppercase">How it works</h4>
+        <p>
+          Drone controller basically works by sending a radio signal from the
+          remote control to the drone, which tells the drone what to do. Radio
+          signals are sent from the radio transmitter in the drone controller
+          and received by the drone's receiver
+        </p>
+      </Container>
       <Container>
         <div className="m-5 w-25 d-flex justify-content-center">
           <Drone></Drone>
-        </div> 
+        </div>
 
         <div className="how">
           <CardGroup>
-            <Card>
+            <Card className="text-center">
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
@@ -36,10 +36,12 @@ const Guideline = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <strong className="text-danger text-center">
+                  How To Use Controller
+                </strong>
               </Card.Footer>
             </Card>
-            <Card>
+            <Card className="text-center">
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
@@ -49,10 +51,12 @@ const Guideline = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <strong className="text-danger text-center">
+                  How To Use Battery
+                </strong>
               </Card.Footer>
             </Card>
-            <Card>
+            <Card className="text-center">
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
@@ -63,10 +67,12 @@ const Guideline = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <strong className="text-danger text-center">
+                  How To Record Video
+                </strong>
               </Card.Footer>
             </Card>
-            <Card>
+            <Card className="text-center">
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
@@ -77,7 +83,9 @@ const Guideline = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <strong className="text-danger text-center">
+                  How To Fly Ready
+                </strong>
               </Card.Footer>
             </Card>
           </CardGroup>
