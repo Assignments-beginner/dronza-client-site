@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
@@ -44,11 +45,14 @@ const Registration = () => {
       });
   };
 
+  //Heroku
   //add user to mongoDB
+  /* 
+  //Lock
   const addUserToDatabase = (email) => {
     //Heroku_Problem
-    // fetch("https://morning-badlands-81993.herokuapp.com/users", {
-    fetch("http://localhost:5000/users", {
+    // fetch("http://localhost:5000/users", {      
+    fetch("https://morning-badlands-81993.herokuapp.com/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),
@@ -56,6 +60,18 @@ const Registration = () => {
       .then((res) => res.json())
       .then((result) => console.log(result));
   };
+  //Lock
+ */
+
+  //Axios
+  const addUserToDatabase = (email) => {
+    axios
+      .post("https://morning-badlands-81993.herokuapp.com/users", email)
+      // .post("http://localhost:5000/users", email)
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+  };
+  //Axios
 
   //For Remove Error
   const removeError = () => {
