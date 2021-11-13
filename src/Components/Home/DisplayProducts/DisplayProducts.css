@@ -4,3 +4,10 @@
     width: 190px;
     height: 108px;
 }
+
+.buy-btn {
+    background-color: #d9534f;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+}

@@ -30,7 +30,7 @@ const DisplayProducts = () => {
       <div>
         <Slider {...settings}>
           {/* Dynamic Data */}
-          {products.slice(0,6).map((product) => (
+          {products.slice(0, 6).map((product) => (
             <div
               className="d-grid justify-content-end p-5"
               key={product._id}
@@ -57,7 +57,9 @@ const DisplayProducts = () => {
               {/* Details Box */}
               <div className="d-flex justify-content-end">
                 <div className="p-3 shadow details-box bg-white">
-                  <strong className="text-danger text-uppercase">{product.productName}</strong>
+                  <strong className="text-danger text-uppercase">
+                    {product.productName}
+                  </strong>
                   <br />
                   <span>{product.productModel}</span>
                   <br />
@@ -65,10 +67,10 @@ const DisplayProducts = () => {
                     <strong className="fs-5">{product.productPrice}</strong>
                     <Link
                       style={{ fontSize: "12px" }}
-                      className="text-decoration-none text-uppercase text-danger"
+                      className="text-decoration-none text-danger"
                       to={`/singleproduct/${product._id}`}
                     >
-                      Check here
+                      <button className="buy-btn">buy now</button>
                     </Link>
                   </div>
                 </div>

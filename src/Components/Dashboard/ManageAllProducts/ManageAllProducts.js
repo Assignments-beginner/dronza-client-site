@@ -15,7 +15,7 @@ const ManageAllProducts = () => {
   const deleteHandler = (id) => {
     console.log(id);
     const proceed = window.confirm(
-      "Are you sure, you want to delete this order?"
+      "Are you sure, you want to delete this Product?"
     );
     if (proceed) {
       fetch(`https://morning-badlands-81993.herokuapp.com/products/${id}`, {
@@ -36,7 +36,7 @@ const ManageAllProducts = () => {
   };
 
   return (
-    <div>
+    <div className="pb-5">
       <h3 className="text-center text-uppercase">
         Manage All <span className="text-danger">Products</span>
       </h3>
@@ -48,6 +48,7 @@ const ManageAllProducts = () => {
           <thead className="text-uppercase">
             <tr>
               <th className="text-center p-3">Product Name</th>
+              <th className="text-center p-3">Product Model</th>
               <th className="text-center p-3">Price</th>
               <th className="text-center p-3">Delete</th>
             </tr>
@@ -56,6 +57,7 @@ const ManageAllProducts = () => {
             {products.map((product) => (
               <tr key={product._id} product={product}>
                 <td className="text-center">{product.productName}</td>
+                <td className="text-center">{product.productModel}</td>
                 <td className="text-center">{product.productPrice}</td>
                 <td className="text-center">
                   <div className="text-center">

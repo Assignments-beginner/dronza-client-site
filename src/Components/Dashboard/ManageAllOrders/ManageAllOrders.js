@@ -59,7 +59,7 @@ const ManageAllOrders = () => {
   };
 
   return (
-    <div>
+    <div className="pb-5">
       <h3 className="text-center text-uppercase">
         Manage All <span className="text-danger">orders</span>
       </h3>
