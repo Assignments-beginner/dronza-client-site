@@ -32,12 +32,12 @@ const Registration = () => {
       .then((result) => {
         //Redirect Path
         history.push(redirect_uri);
-        console.log(result.user);
+        const user = result.user;
         setError("");
-        //displayName Update
+        //Update displayName 
         setUserName();
         //add user to mongoDB
-        addUserToDatabase(result.user.email);
+        addUserToDatabase(user.email);
         window.location.reload();
       })
       .catch((error) => {
@@ -45,10 +45,9 @@ const Registration = () => {
       });
   };
 
-  //Heroku
+  //Heroku_Problem
   //add user to mongoDB
-  /* 
-  //Lock
+ 
   const addUserToDatabase = (email) => {
     //Heroku_Problem
     // fetch("http://localhost:5000/users", {      
@@ -60,19 +59,7 @@ const Registration = () => {
       .then((res) => res.json())
       .then((result) => console.log(result));
   };
-  //Lock
- */
-
-  //Axios
-  const addUserToDatabase = (email) => {
-    axios
-      .post("https://morning-badlands-81993.herokuapp.com/users", email)
-      // .post("http://localhost:5000/users", email)
-      .then((res) => res.json())
-      .then((result) => console.log(result));
-  };
-  //Axios
-
+  
   //For Remove Error
   const removeError = () => {
     setError("");
