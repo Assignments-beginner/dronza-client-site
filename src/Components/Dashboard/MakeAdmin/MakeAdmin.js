@@ -45,14 +45,17 @@ const MakeAdmin = () => {
           onSubmit={handleAdminSubmit}
           className="mt-5 w-50 d-flex justify-content-center"
         >
-          <input
-            placeholder="Enter Email"
-            type="email"
-            onBlur={handleOnBlur}
-          />
-          <button className="btn btn-danger" type="submit" >
-            Approve
-          </button>
+          <div class="input-group mb-3">
+            <input
+              className="form-control"
+              placeholder="Enter Email"
+              type="email"
+              onBlur={handleOnBlur}
+            />
+            <button className="btn btn-danger" type="submit">
+              Approve
+            </button>
+          </div>
         </form>
       </Container>
     </div>
