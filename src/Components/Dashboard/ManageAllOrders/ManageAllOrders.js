@@ -3,7 +3,7 @@ import { Button, Table } from "react-bootstrap";
 
 const ManageAllOrders = () => {
   const [allorders, setAllOrders] = useState([]);
-  const [status, setStatus] = useState("Approved");
+  const [status, setStatus] = useState("Shipped");
   const [reload, setReload] = useState(false);
 
   useEffect(() => {

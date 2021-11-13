@@ -23,7 +23,7 @@ const Guideline = () => {
         </p>
       </Container>
       <Container>
-        <div className="m-5 w-25 d-flex justify-content-center">
+        <div className="mx-5 w-25 d-flex justify-content-center">
           <Drone></Drone>
         </div>
 
