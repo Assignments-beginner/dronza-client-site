@@ -10,8 +10,8 @@ const Greetings = ({ backgroundColor = "#F7F7F7", children }) => {
         Thanks for the <span className="text-danger">registration</span> !
       </h2>
       <div className="drone-div">
-        <div className="object border border-dark">
-          <img width="310" height="180" src={littledrone} alt="" />
+        <div className="object">
+          <img className="ms-5" width="310" height="180" src={littledrone} alt="" />
         </div>
       </div>
       <div className="pb-5">
