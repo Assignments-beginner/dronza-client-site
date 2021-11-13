@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Container } from "react-bootstrap";
+import Rating from "react-rating";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -41,6 +42,14 @@ const Reviews = () => {
               <div>
                 <strong>{review.userName}</strong>
                 <p>{review.userReview}</p>
+              </div>
+              <div>
+                <Rating
+                  initialRating={review.userRating}
+                  readonly
+                  emptySymbol="far fa-star text-danger"
+                  fullSymbol="fas fa-star text-danger"
+                />
               </div>
             </div>
           ))}
