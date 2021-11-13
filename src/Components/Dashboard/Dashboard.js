@@ -88,7 +88,7 @@ const Dashboard = () => {
                   activeClassName="dashboard-active"
                   onClick={logOut}
                   className="dashboard mb-3 text-decoration-none text-uppercase"
-                  to={`${url}/logout`}
+                  to="/home"
                 >
                   <Button size="sm" variant="danger px-4">
                     Log Out
