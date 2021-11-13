@@ -97,6 +97,7 @@ const useFirebase = () => {
     isLoading,
     setUserName,
     setError,
+    setUser,
     passwordBlurHandler,
     emailBlurHandler,
     nameBlurHandler,

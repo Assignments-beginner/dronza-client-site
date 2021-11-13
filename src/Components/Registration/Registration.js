@@ -9,6 +9,7 @@ const Registration = () => {
     emailBlurHandler,
     nameBlurHandler,
     setUserName,
+    setUser,
     email,
     password,
     registerNewUser,
@@ -28,12 +29,14 @@ const Registration = () => {
     e.preventDefault();
     registerNewUser(email, password)
       .then((result) => {
+        //Redirect Path
         history.push(redirect_uri);
-        const user = result.user;
-        console.log(user);
+        console.log(result.user);
         setError("");
+        //displayName Update
         setUserName();
-        addUserToDatabase(result.user.email, result.user.displayName);
+        //add user to mongoDB
+        addUserToDatabase(result.user.email);
         window.location.reload();
       })
       .catch((error) => {
@@ -41,13 +44,13 @@ const Registration = () => {
       });
   };
 
-  const addUserToDatabase = (email, displayName) => {
-    const user = { email, displayName };
+  //add user to mongoDB
+  const addUserToDatabase = (email) => {
     // fetch("https://morning-badlands-81993.herokuapp.com/users", {
-    fetch("https://morning-badlands-81993.herokuapp.com/users", {
+    fetch("http://localhost:5000/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(user),
+      body: JSON.stringify({ email }),
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
@@ -56,7 +59,7 @@ const Registration = () => {
   //For Remove Error
   const removeError = () => {
     setError("");
-  }; 
+  };
 
   return (
     <Container className="mt-4 w-25">
@@ -113,7 +116,7 @@ const Registration = () => {
           <Button onClick={registrationHandler} variant="danger" type="submit">
             Sign Up
           </Button>
-        </div>        
+        </div>
       </Form>
     </Container>
   );
