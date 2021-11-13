@@ -1,11 +1,11 @@
-.drone-div {
+.droneg-div {
   width: 400px;
   height: 250px;
   border: solid 1px #F7F7F7;
   position: relative;
 }
 
-.object {
+.object-g {
   animation: MoveUpDown 3s linear infinite;
   position: absolute;
 }

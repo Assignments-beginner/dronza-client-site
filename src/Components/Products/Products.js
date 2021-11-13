@@ -66,7 +66,7 @@ const Products = () => {
                   </Card.Text>
 
                   <Rating
-                    initialRating={3}
+                    initialRating={product.productRating}
                     readonly
                     emptySymbol="far fa-star text-danger"
                     fullSymbol="fas fa-star text-danger"

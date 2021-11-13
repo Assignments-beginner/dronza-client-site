@@ -97,6 +97,16 @@ const AddNewProduct = () => {
           {...register("productPrice")}
         />
 
+        <input
+          style={{ outline: "none" }}
+          className="mb-3 py-2 px-3 w-25"
+          type="number"
+          min="1"
+          max="5"
+          placeholder="* Rating"
+          {...register("productRating")}
+        />
+
         <Button className="w-25" variant="danger" type="submit">
           ADD
         </Button>

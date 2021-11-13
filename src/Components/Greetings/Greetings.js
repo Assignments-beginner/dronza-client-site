@@ -9,8 +9,8 @@ const Greetings = ({ backgroundColor = "#F7F7F7", children }) => {
       <h2 className="mt-5 text-uppercase text-dark">
         Thanks for the <span className="text-danger">registration</span> !
       </h2>
-      <div className="drone-div">
-        <div className="object">
+      <div className="droneg-div">
+        <div className="object-g">
           <img className="ms-5" width="310" height="180" src={littledrone} alt="" />
         </div>
       </div>
