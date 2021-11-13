@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 const MakeAdmin = () => {
   const [email, setEmail] = useState("");
-  const [success, setSuccess] = useState(false);
 
   const handleOnBlur = (e) => {
     setEmail(e.target.value);
@@ -22,7 +22,13 @@ const MakeAdmin = () => {
       .then((data) => {
         if (data.modifiedCount) {
           console.log(data);
-          setSuccess(true);
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Admin added successfully!",
+            showConfirmButton: false,
+            timer: 2500,
+          });
         }
       });
 
@@ -40,12 +46,11 @@ const MakeAdmin = () => {
           className="mt-5 w-50 d-flex justify-content-center"
         >
           <input
-            className="form-control"
             placeholder="Enter Email"
             type="email"
             onBlur={handleOnBlur}
           />
-          <button className="btn btn-danger" type="button" id="button-addon2">
+          <button className="btn btn-danger" type="submit" >
             Approve
           </button>
         </form>
