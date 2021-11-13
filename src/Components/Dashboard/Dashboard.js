@@ -10,6 +10,7 @@ import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
 import Payment from "./Payment/Payment";
 import useAuth from "../../Hooks/useAuth";
+import ManageAllProducts from "./ManageAllProducts/ManageAllProducts";
 
 const Dashboard = () => {
   const { logOut } = useAuth();
@@ -50,12 +51,21 @@ const Dashboard = () => {
                 >
                   Add Review
                 </NavLink>
+
                 <NavLink
                   activeClassName="dashboard-active"
                   className="dashboard mb-3 text-decoration-none text-uppercase"
                   to={`${url}/addnewproduct`}
                 >
                   Add New Product
+                </NavLink>
+
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
+                  to={`${url}/manageallproducts`}
+                >
+                  Manage All Products
                 </NavLink>
 
                 <NavLink
@@ -108,6 +118,10 @@ const Dashboard = () => {
 
                 <Route path={`${path}/addnewproduct`}>
                   <AddNewProduct></AddNewProduct>
+                </Route>
+
+                <Route path={`${path}/manageallproducts`}>
+                  <ManageAllProducts></ManageAllProducts>
                 </Route>
 
                 <Route path={`${path}/manageallorders`}>
