@@ -30,6 +30,9 @@ const LogIn = () => {
     signInWithGoogle()
       .then((result) => {
         history.push(redirect_uri);
+        console.log(result.user);
+        //add user to mongoDB
+        addUserToDatabase(result.user.email);
       })
       .finally(() => setIsLoading(false));
   };
@@ -55,6 +58,18 @@ const LogIn = () => {
   //For Error Remove
   const removeError = () => {
     setError("");
+  };
+
+  //add user to mongoDB
+  const addUserToDatabase = (email) => {
+    // fetch("https://morning-badlands-81993.herokuapp.com/users", {
+    fetch("http://localhost:5000/users", {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email }),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
   };
 
   return (
