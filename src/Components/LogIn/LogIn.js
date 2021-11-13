@@ -30,7 +30,7 @@ const LogIn = () => {
     signInWithGoogle()
       .then((result) => {
         history.push(redirect_uri);
-        console.log(result.user);
+        // console.log(result.user);
         //add user to mongoDB
         addUserToDatabase(result.user.email);
       })

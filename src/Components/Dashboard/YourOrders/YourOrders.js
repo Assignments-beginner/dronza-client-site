@@ -12,7 +12,7 @@ const YourOrders = () => {
       .then((res) => res.json())
       .then((data) => setOrders(data));
     // .then((data) => console.log(data))
-  }, []);
+  }, [user.email]);
 
   const deleteHandler = (id) => {
     console.log(id);

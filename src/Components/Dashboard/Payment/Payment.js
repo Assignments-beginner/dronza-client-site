@@ -11,14 +11,14 @@ const Payment = () => {
       <p className="text-uppercase text-center mt-5">choose your payment method</p>
       <div style={{ fontSize: "100px" }} className="text-center">
         <div>
-          <i class="fab fa-cc-visa text-danger p-2"></i>
-          <i class="fab fa-google-pay text-danger p-2"></i>
+          <i className="fab fa-cc-visa text-danger p-2"></i>
+          <i className="fab fa-google-pay text-danger p-2"></i>
           <i className="fab fa-cc-mastercard text-danger p-2"></i>
         </div>
 
         <div>
-          <i class="fab fa-cc-paypal text-danger p-2"></i>
-          <i class="fab fa-cc-amazon-pay text-danger p-2"></i>
+          <i className="fab fa-cc-paypal text-danger p-2"></i>
+          <i className="fab fa-cc-amazon-pay text-danger p-2"></i>
           <i className="fab fa-cc-stripe text-danger text-danger p-2"></i>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
@@ -10,7 +9,6 @@ const Registration = () => {
     emailBlurHandler,
     nameBlurHandler,
     setUserName,
-    setUser,
     email,
     password,
     registerNewUser,
@@ -33,6 +31,7 @@ const Registration = () => {
         //Redirect Path
         history.push(redirect_uri);
         const user = result.user;
+        console.log(user);
         setError("");
         //Update displayName 
         setUserName();

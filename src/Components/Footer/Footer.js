@@ -18,17 +18,17 @@ const Footer = () => {
         <div className="social-media d-flex justify-content-center fs-4">
           <a
             href="https://www.facebook.com/groups/572432650739990"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer" 
           >
             <i className="fab fa-facebook-square text-white px-1"></i>
           </a>
           <a
             href="https://www.youtube.com/watch?v=jgKNqHWC9M4&ab_channel=YTTECHNOTECHGURUJI"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <i className="fab fa-youtube-square text-white px-1"></i>
           </a>
-          <a href="https://twitter.com/DroneRaceLeague" target="_blank">
+          <a href="https://twitter.com/DroneRaceLeague" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-twitter-square text-white px-1"></i>
           </a>
         </div>

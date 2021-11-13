@@ -22,7 +22,7 @@ const Dashboard = () => {
           dash<strong className="text-danger">board</strong>
         </h1>
       </div>
-      <hr class="new" />
+      <hr className="new" />
       <Container className="mt-4 mb-5 pb-5">
         <Row>
           <Col sm={2} xl={2} lg={2}>

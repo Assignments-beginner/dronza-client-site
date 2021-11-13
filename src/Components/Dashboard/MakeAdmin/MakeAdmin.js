@@ -45,7 +45,7 @@ const MakeAdmin = () => {
           onSubmit={handleAdminSubmit}
           className="mt-5 w-50 d-flex justify-content-center"
         >
-          <div class="input-group mb-3">
+          <div className="input-group mb-3">
             <input
               className="form-control"
               placeholder="Enter Email"

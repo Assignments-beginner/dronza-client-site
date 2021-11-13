@@ -17,7 +17,7 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
     fetch(`https://morning-badlands-81993.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleProduct(data));
-  }, []);
+  }, [id]);
 
   const onSubmit = (data) => {
     console.log(data);
