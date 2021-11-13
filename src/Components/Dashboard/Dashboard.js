@@ -13,7 +13,7 @@ import useAuth from "../../Hooks/useAuth";
 import ManageAllProducts from "./ManageAllProducts/ManageAllProducts";
 
 const Dashboard = () => {
-  const { logOut } = useAuth();
+  const { logOut, admin } = useAuth();
   let { path, url } = useRouteMatch();
   return (
     <div>
@@ -52,45 +52,53 @@ const Dashboard = () => {
                   Add Review
                 </NavLink>
 
-                <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none text-uppercase"
-                  to={`${url}/addnewproduct`}
-                >
-                  Add New Product
-                </NavLink>
-
-                <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none text-uppercase"
-                  to={`${url}/manageallproducts`}
-                >
-                  Manage All Products
-                </NavLink>
-
-                <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none text-uppercase"
-                  to={`${url}/manageallorders`}
-                >
-                  Manage All Orders
-                </NavLink>
-
-                <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard mb-3 text-decoration-none text-uppercase"
-                  to={`${url}/makeadmin`}
-                >
-                  Make Admin
-                </NavLink>
-
+                {admin && (
+                  <Nav>
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/addnewproduct`}
+                    >
+                      Add New Product
+                    </NavLink>
+                    
+                    
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/manageallproducts`}
+                    >
+                      Manage All Products
+                    </NavLink>
+                    
+                    
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/manageallorders`}
+                    >
+                      Manage All Orders
+                    </NavLink>
+                    
+                    
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/makeadmin`}
+                    >
+                      Make Admin
+                    </NavLink>
+                  </Nav>
+                )}
+                
+                
                 <NavLink
                   activeClassName="dashboard-active"
                   onClick={logOut}
                   className="dashboard mb-3 text-decoration-none text-uppercase"
                   to="/home"
                 >
-                  <Button size="sm" variant="danger px-4">
+                  <Button size="sm" variant="danger mt-3 px-4">
                     Log Out
                   </Button>
                 </NavLink>

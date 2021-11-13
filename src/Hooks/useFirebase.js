@@ -115,6 +115,7 @@ const useFirebase = () => {
     processLogin,
     setIsLoading,
     logOut,
+    admin,
   };
 };
 
