@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Rating from "react-rating";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -63,6 +64,13 @@ const Products = () => {
                       {product.productControlType}
                     </span>
                   </Card.Text>
+
+                  <Rating
+                    initialRating={3}
+                    readonly
+                    emptySymbol="far fa-star text-danger"
+                    fullSymbol="fas fa-star text-danger"
+                  />
 
                   <Card.Title>
                     {" "}
