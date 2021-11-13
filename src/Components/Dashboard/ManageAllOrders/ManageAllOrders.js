@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
   //Approve Order Change Status
   const handleUpdate = (id) => {
     const proceed = window.confirm(
-      "Are you sure, you want to approve this order?"
+      "Are you sure, you want to approve this order for shipping?"
     );
     if (proceed) {
       setStatus(status);

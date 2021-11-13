@@ -19,7 +19,7 @@ const Guideline = () => {
           Drone controller basically works by sending a radio signal from the
           remote control to the drone, which tells the drone what to do. Radio
           signals are sent from the radio transmitter in the drone controller
-          and received by the drone's receiver
+          and received by the drone's receiver.
         </p>
       </Container>
       <Container>

@@ -21,7 +21,7 @@ const LogIn = () => {
   const location = useLocation();
   const history = useHistory();
   // console.log(location.state?.from);
-  const redirect_uri = location.state?.from || "/home";
+  const redirect_uri = location.state?.from || "/dashboard";
   /*-------------------------------------------------------------------------------*\
   /////////////////////////////// Google HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
