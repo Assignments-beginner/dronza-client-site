@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Greetings.css";
-import littledrone from '../../Images/registration.png'
+import littledrone from "../../Images/registration.png";
 
-const Greetings = () => {
+const Greetings = ({ backgroundColor = "#F7F7F7", children }) => {
   return (
-    <div className="text-center d-flex flex-column justify-content-center align-items-center">
+    <div style={{ backgroundColor }} className="text-center d-flex flex-column justify-content-center align-items-center">
       <h2 className="mt-5 text-uppercase text-dark">
-        Thanks for the registration !
+        Thanks for the <span className="text-danger">registration</span> !
       </h2>
       <div className="drone-div">
         <div className="object border border-dark">
@@ -18,11 +18,14 @@ const Greetings = () => {
         <h5 className="text-dark">
           Your account has been created just wait for the reload to autometic
           sign in. <br /> <br />
-          Let's go to{" "}
-          <Link style={{ color: "#d9534f", textDecoration: "none" }} to="/home">
-            HOME
-          </Link>{" "}
-          page.
+          <div className="text-center">
+            <Link className="text-decoration-none" to="/home">
+              {" "}
+              <span style={{ color: "#d9534f", fontSize: "20px" }}>
+                Back To Home
+              </span>{" "}
+            </Link>
+          </div>
         </h5>
       </div>
     </div>
