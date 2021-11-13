@@ -10,6 +10,31 @@ const ManageAllProducts = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
+  //Delete Orders
+  const deleteHandler = (id) => {
+    console.log(id);
+    const proceed = window.confirm(
+      "Are you sure, you want to delete this order?"
+    );
+    if (proceed) {
+      fetch(`https://morning-badlands-81993.herokuapp.com/products/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            const remainingProducts = products.filter(
+              (orders) => orders._id !== id
+            );
+            console.log(remainingProducts);
+            setProducts(remainingProducts);
+          }
+        });
+    }
+  };
+
   return (
     <div>
       <h3 className="text-center text-uppercase">
@@ -35,7 +60,7 @@ const ManageAllProducts = () => {
                 <td className="text-center">
                   <div className="text-center">
                     <Button
-                      //   onClick={() => deleteHandler(product._id)}
+                      onClick={() => deleteHandler(product._id)}
                       variant="danger w-75"
                       size="sm"
                     >
