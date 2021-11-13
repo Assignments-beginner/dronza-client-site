@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import useAuth from "../../Hooks/useAuth";
-import dronza from "../../Images/dronza.png";
+// import dronza from "../../Images/dronza.png";
 
 const Header = () => {
   const { user, logOut } = useAuth();
@@ -11,7 +11,7 @@ const Header = () => {
     <Navbar className="nav-font bg-dark py-3" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand>
-          <img width="100" height="50" src={dronza} alt="" />
+          {/* <img width="100" height="50" src={dronza} alt="" /> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -100,7 +100,7 @@ const Header = () => {
               <NavLink
                 activeClassName="navs-active"
                 className="navs ms-3 me-3 text-decoration-none fs-6"
-                to="/home"
+                to="/contactus"
                 onClick={logOut}
               >
                 Log out

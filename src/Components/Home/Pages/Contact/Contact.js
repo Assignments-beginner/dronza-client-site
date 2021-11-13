@@ -8,7 +8,8 @@ const Contact = () => {
       <h2 className="text-center text-dark text-uppercase mb-5">
         contact <span className="text-danger">us</span>
       </h2>
-      <div style={{ backgroundColor: "#F6F6F6" }} className="main-footer w-100">
+      {/* <div style={{ backgroundColor: "#F6F6F6" }} className="main-footer w-100"> */}
+      <div className="main-footer w-100">
         <Container className="d-flex align-items-center justify-content-between py-4">
           {/* ////////////////////// Contact Us ////////////////////// */}
           <div className="text-center d-grid me-3">
