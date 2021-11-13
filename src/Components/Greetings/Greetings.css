@@ -1,0 +1,21 @@
+.drone-div {
+  width: 400px;
+  height: 300px;
+  border: solid 1px #b91a1a;
+  position: relative;
+}
+
+.object {
+  animation: MoveUpDown 3s linear infinite;
+  position: absolute;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: 40px;
+  }
+}
