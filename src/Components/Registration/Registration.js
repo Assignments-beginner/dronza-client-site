@@ -46,6 +46,7 @@ const Registration = () => {
 
   //add user to mongoDB
   const addUserToDatabase = (email) => {
+    //Heroku_Problem
     // fetch("https://morning-badlands-81993.herokuapp.com/users", {
     fetch("http://localhost:5000/users", {
       method: "POST",

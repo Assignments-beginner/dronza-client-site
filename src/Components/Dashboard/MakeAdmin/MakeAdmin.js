@@ -1,13 +1,28 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const MakeAdmin = () => {
   return (
-    <div>
+    <div style={{height:'600px'}}>
       <h3 className="text-center text-uppercase">
         Make <span className="text-danger">admin</span>
       </h3>
-      <h1 className="text-center mt-5">প্রচুর কাজ করতে হবে রে সামছুল</h1>
-      <h1 className="text-center mt-3 display-1">😤</h1>
+      <Container className="d-flex justify-content-center">
+      <div class="input-group mt-5 w-50">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Email"
+        />
+        <button
+          class="btn btn-danger"
+          type="button"
+          id="button-addon2"
+        >
+          Approve
+        </button>
+      </div>
+      </Container>
     </div>
   );
 };
