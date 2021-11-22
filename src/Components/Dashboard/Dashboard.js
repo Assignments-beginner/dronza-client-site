@@ -62,8 +62,7 @@ const Dashboard = () => {
                     >
                       Add New Product
                     </NavLink>
-                    
-                    
+
                     <NavLink
                       activeClassName="dashboard-active"
                       className="dashboard mb-3 text-decoration-none text-uppercase"
@@ -71,8 +70,7 @@ const Dashboard = () => {
                     >
                       Manage All Products
                     </NavLink>
-                    
-                    
+
                     <NavLink
                       activeClassName="dashboard-active"
                       className="dashboard mb-3 text-decoration-none text-uppercase"
@@ -80,8 +78,7 @@ const Dashboard = () => {
                     >
                       Manage All Orders
                     </NavLink>
-                    
-                    
+
                     <NavLink
                       activeClassName="dashboard-active"
                       className="dashboard mb-3 text-decoration-none text-uppercase"
@@ -91,8 +88,7 @@ const Dashboard = () => {
                     </NavLink>
                   </Nav>
                 )}
-                
-                
+
                 <NavLink
                   activeClassName="dashboard-active"
                   onClick={logOut}
@@ -125,17 +121,17 @@ const Dashboard = () => {
                   <Payment></Payment>
                 </Route>
 
-                <Route path={`${path}/addnewproduct`}>
+                <AdminRoute path={`${path}/addnewproduct`}>
                   <AddNewProduct></AddNewProduct>
-                </Route>
+                </AdminRoute>
 
-                <Route path={`${path}/manageallproducts`}>
+                <AdminRoute path={`${path}/manageallproducts`}>
                   <ManageAllProducts></ManageAllProducts>
-                </Route>
+                </AdminRoute>
 
-                <Route path={`${path}/manageallorders`}>
+                <AdminRoute path={`${path}/manageallorders`}>
                   <ManageAllOrders></ManageAllOrders>
-                </Route>
+                </AdminRoute>
 
                 <AdminRoute path={`${path}/makeadmin`}>
                   <MakeAdmin></MakeAdmin>
