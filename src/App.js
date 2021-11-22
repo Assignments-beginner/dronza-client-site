@@ -17,6 +17,7 @@ import BuyProduct from "./Components/Products/BuyProduct/BuyProduct";
 import Contact from "./Components/Home/Pages/Contact/Contact";
 import About from "./Components/Home/Pages/About/About";
 import Guideline from "./Components/Home/Pages/Guideline/Guideline";
+import Sorry from "./Components/Sorry/Sorry";
 
 function App() {
   return (
@@ -64,6 +65,10 @@ function App() {
 
               <Route path="/registration">
                 <Registration></Registration>
+              </Route>
+
+              <Route path="/sorry">
+                <Sorry></Sorry>
               </Route>
 
               <PrivateRoute path="/greetings">

@@ -11,6 +11,7 @@ import MakeAdmin from "./MakeAdmin/MakeAdmin";
 import Payment from "./Payment/Payment";
 import useAuth from "../../Hooks/useAuth";
 import ManageAllProducts from "./ManageAllProducts/ManageAllProducts";
+import AdminRoute from "../AdminRoute/AdminRoute";
 
 const Dashboard = () => {
   const { logOut, admin } = useAuth();
@@ -136,9 +137,9 @@ const Dashboard = () => {
                   <ManageAllOrders></ManageAllOrders>
                 </Route>
 
-                <Route path={`${path}/makeadmin`}>
+                <AdminRoute path={`${path}/makeadmin`}>
                   <MakeAdmin></MakeAdmin>
-                </Route>
+                </AdminRoute>
               </Switch>
             </div>
           </Col>
