@@ -14,7 +14,7 @@ const Products = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/products?page=${page}&&size=${size}`
+      `https://morning-badlands-81993.herokuapp.com/products?page=${page}&&size=${size}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -113,17 +113,17 @@ const Products = () => {
         </Row>
       </Container>
       <Container className="d-flex justify-content-center">
-      <div className="pagination my-4">
-        {[...Array(pageCount).keys()].map((number) => (
-          <button
-            className={number === page ? "selected" : ""}
-            key={number}
-            onClick={() => setPage(number)}
-          >
-            {number + 1}
-          </button>
-        ))}
-      </div>
+        <div className="pagination my-4">
+          {[...Array(pageCount).keys()].map((number) => (
+            <button
+              className={number === page ? "selected" : ""}
+              key={number}
+              onClick={() => setPage(number)}
+            >
+              {number + 1}
+            </button>
+          ))}
+        </div>
       </Container>
     </div>
   );
