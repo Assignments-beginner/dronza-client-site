@@ -8,8 +8,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(0);
   const [pageCount, setPageCount] = useState(0);
-
-  const [displayProducts, setDisplayProducts] = useState([]);
+  
   const size = 6;
 
   useEffect(() => {
@@ -19,7 +18,6 @@ const Products = () => {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.products);
-        setDisplayProducts(data.products);
         const count = data.count;
         const pageNumber = Math.ceil(count / size);
         setPageCount(pageNumber);
@@ -41,7 +39,7 @@ const Products = () => {
       </div>
       <Container className="w-100 mb-5">
         <Row className="g-5">
-          {displayProducts.map((product) => (
+          {products.map((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
               <Card
                 style={{
