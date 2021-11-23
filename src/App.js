@@ -61,7 +61,7 @@ function App() {
 
               <Route path="/signin">
                 <LogIn></LogIn>
-              </Route>
+              </Route>  
 
               <Route path="/registration">
                 <Registration></Registration>
