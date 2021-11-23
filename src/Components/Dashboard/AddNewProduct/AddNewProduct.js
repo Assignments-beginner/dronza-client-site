@@ -48,6 +48,10 @@ const AddNewProduct = () => {
           placeholder="Image URL"
           {...register("productImg")}
         />
+        {/* <span className="mb-3">Or</span>
+        <Form.Group className="mb-4">
+          <Form.Control accept="image/*" type="file" size="sm" />
+        </Form.Group> */}
         <input
           style={{ outline: "none" }}
           className="mb-3 py-2 px-3"

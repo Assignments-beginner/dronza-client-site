@@ -2,15 +2,36 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Rating from "react-rating";
+import "../Products/Products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(0);
+  const [pageCount, setPageCount] = useState(0);
+
+  const [displayProducts, setDisplayProducts] = useState([]);
+  const size = 6;
 
   useEffect(() => {
+    fetch(
+      `https://morning-badlands-81993.herokuapp.com/products?page=${page}&&size=${size}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data.products);
+        setDisplayProducts(data.products);
+        const count = data.count;
+        const pageNumber = Math.ceil(count / size);
+        setPageCount(pageNumber);
+      });
+  }, [page]);
+
+  /* useEffect(() => {
     fetch("https://morning-badlands-81993.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+   */
   return (
     <div className="pb-5">
       <div>
@@ -20,7 +41,7 @@ const Products = () => {
       </div>
       <Container className="w-100 mb-5">
         <Row className="g-5">
-          {products.map((product) => (
+          {displayProducts.map((product) => (
             <Col key={product._id} product={product} xl={4} lg={4}>
               <Card
                 style={{
@@ -91,6 +112,17 @@ const Products = () => {
           ))}
         </Row>
       </Container>
+      <div className="pagination">
+        {[...Array(pageCount).keys()].map((number) => (
+          <button
+            className={number === page ? "selected" : ""}
+            key={number}
+            onClick={() => setPage(number)}
+          >
+            {number + 1}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
