@@ -13,7 +13,7 @@ const Products = () => {
 
   useEffect(() => {
     fetch(
-      `https://morning-badlands-81993.herokuapp.com/products?page=${page}&&size=${size}`
+      `https://morning-badlands-81993.herokuapp.com/productspagination?page=${page}&&size=${size}`
     )
       .then((res) => res.json())
       .then((data) => {
