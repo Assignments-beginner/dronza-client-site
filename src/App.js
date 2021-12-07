@@ -84,6 +84,7 @@ function App() {
         <Footer></Footer>
       </div>
     </AuthProvider>
+
   );
 }
 

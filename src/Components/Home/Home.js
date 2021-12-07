@@ -24,7 +24,7 @@ const Home = () => {
               </span>{" "}
               <br /> <span className="tiny-shadow">with Great camera</span>
             </h1>
-            <p className="text-uppercase text-start text-white">
+            <p className="text-uppercase text-start text-white res-order-title">
               order your favourite drones now
             </p>
 
@@ -42,7 +42,7 @@ const Home = () => {
               <span style={{ color: "#b91a1a" }}>phenomenal</span> <br />
               battery backup
             </h1>
-            <p className="text-uppercase text-start text-white">
+            <p className="text-uppercase text-start text-white res-order-title">
               order your favourite drones now
             </p>
             <Link to="/products">
@@ -59,7 +59,7 @@ const Home = () => {
               <span style={{ color: "#b91a1a" }}>superfast</span> <br />{" "}
               <span className="tiny-shadow">with great range</span>
             </h1>
-            <p className="text-uppercase text-start text-white">
+            <p className="text-uppercase text-start text-white res-order-title">
               order your favourite drones now
             </p>
             <Link to="/products">

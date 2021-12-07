@@ -21,3 +21,26 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
+
+/*-------------------------------------------------------------------------------*\
+  ///////////////////////////// media query \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+
+@media all and (max-width: 688px) {
+  .header {
+    font-size: 15px;
+  }
+  .positioting {
+    margin-bottom: 2%;
+  }
+  .h-btn {
+    background-color: #b91a1a;
+    border: none;
+    color: white;
+    padding: 3px 10px 3px 10px;
+    font-size: 12px;
+  }
+  .res-order-title {
+    font-size: 10px;
+  }
+}
