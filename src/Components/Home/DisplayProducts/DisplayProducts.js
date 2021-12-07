@@ -43,7 +43,7 @@ const DisplayProducts = () => {
           {/* Dynamic Data */}
           {products.slice(0, 6).map((product) => (
             <div
-              className="border border-danger p-5"
+              className="border border-danger p-4"
               key={product._id}
               product={product}
             >
@@ -57,8 +57,8 @@ const DisplayProducts = () => {
                     borderStyle: "solid",
                     borderImage: "linear-gradient(45deg, #d9534f, #4d0000) 1",
                   }}
-                  width="340"
-                  height="230"
+                  width="320"
+                  height="210"
                   className="p-2 res-display-img"
                   src={product.productImg}
                   alt=""
