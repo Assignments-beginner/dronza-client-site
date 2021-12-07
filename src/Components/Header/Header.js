@@ -11,7 +11,7 @@ const Header = () => {
     <Navbar className="nav-font bg-dark py-3" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand>
-          <img width="100" height="50" src={dronza} alt="" />
+          <img className="res-logo" width="100" height="50" src={dronza} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

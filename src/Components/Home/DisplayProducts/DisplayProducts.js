@@ -11,7 +11,7 @@ const DisplayProducts = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
@@ -42,15 +42,11 @@ const DisplayProducts = () => {
         <Slider {...settings}>
           {/* Dynamic Data */}
           {products.slice(0, 6).map((product) => (
-            <div
-              className="border border-danger p-4"
-              key={product._id}
-              product={product}
-            >
+            <div className="p-4" key={product._id} product={product}>
               {/* Display Product Content Start  */}
 
               {/* Images  */}
-              <div>
+              <div className="d-flex justify-content-center">
                 <img
                   style={{
                     borderWidth: "5px",
