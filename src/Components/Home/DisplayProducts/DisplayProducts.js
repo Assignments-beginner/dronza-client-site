@@ -11,10 +11,21 @@ const DisplayProducts = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 688,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -32,7 +43,7 @@ const DisplayProducts = () => {
           {/* Dynamic Data */}
           {products.slice(0, 6).map((product) => (
             <div
-              className="d-grid justify-content-end p-5"
+              className="border border-danger p-5"
               key={product._id}
               product={product}
             >
@@ -48,7 +59,7 @@ const DisplayProducts = () => {
                   }}
                   width="340"
                   height="230"
-                  className="p-2"
+                  className="p-2 res-display-img"
                   src={product.productImg}
                   alt=""
                 />
