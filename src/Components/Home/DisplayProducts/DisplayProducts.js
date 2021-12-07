@@ -66,7 +66,7 @@ const DisplayProducts = () => {
               </div>
 
               {/* Details Box */}
-              <div className="d-flex justify-content-end">
+              <div className="res-details-box">
                 <div className="p-3 shadow details-box bg-white">
                   <strong className="text-danger text-uppercase">
                     {product.productName}
