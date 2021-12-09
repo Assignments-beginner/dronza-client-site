@@ -23,6 +23,8 @@ const DisplayProducts = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
+          speed: 100,
+          autoplay: false,
         },
       },
     ],

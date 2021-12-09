@@ -5,15 +5,24 @@ import Rating from "react-rating";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
-
   const settings = {
-    className: "center",
-    dots: true,
     centerMode: true,
-    infinite: true,
     centerPadding: "40px",
     slidesToShow: 3,
-    speed: 500,
+    slidesToScroll: 3,
+    dots: true,
+    speed: 300,
+    responsive: [
+      {
+        breakpoint: 688,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
