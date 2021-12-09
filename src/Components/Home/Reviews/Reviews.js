@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Container } from "react-bootstrap";
 import Rating from "react-rating";
+import "../Reviews/Reviews.css";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -19,6 +20,7 @@ const Reviews = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
+          speed: 100,
           dots: false,
         },
       },
@@ -33,7 +35,7 @@ const Reviews = () => {
   return (
     <Container>
       <div className="mt-5 mb-5 pb-5">
-        <h2 className="mb-3 text-center text-dark text-uppercase">
+        <h2 className="res-client-top mb-3 text-center text-dark text-uppercase">
           our beloved <span className="text-danger">clients</span>
         </h2>
         <Slider {...settings}>

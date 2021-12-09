@@ -4,3 +4,19 @@
   bottom: 0;
 }
 
+.res-copyright-moblie {
+  display: none;
+}
+
+@media all and (max-width: 688px) {
+  .res-copyright {
+    visibility: hidden;
+  }
+  .res-copyright-moblie {
+    display: block;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+
+  }
+}
