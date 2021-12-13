@@ -9,7 +9,7 @@ import camera from "../../../../Images/camera.png";
 
 const Guideline = () => {
   return (
-    <div id="guideline" className="mt-5 mb-5">
+    <div className="mt-5 mb-5">
       <h2 className="text-center text-dark text-uppercase mb-5">
         smart <span className="text-danger">guidance</span>
       </h2>

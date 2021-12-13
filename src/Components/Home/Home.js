@@ -1,5 +1,11 @@
 import React from "react";
-import { Button, Carousel, Container, FormControl, InputGroup } from "react-bootstrap";
+import {
+  Button,
+  Carousel,
+  Container,
+  FormControl,
+  InputGroup,
+} from "react-bootstrap";
 import Reviews from "./Reviews/Reviews";
 import slide1 from "../../Images/slide1.png";
 import slide2 from "../../Images/slide2.png";
@@ -13,7 +19,7 @@ import Guideline from "./Pages/Guideline/Guideline";
 
 const Home = () => {
   return (
-    <div id="home" >
+    <div id="home">
       <Carousel variant="dark">
         <Carousel.Item>
           <img className="d-block w-100" src={slide1} alt="First slide" />
@@ -75,14 +81,14 @@ const Home = () => {
 
       {/* NewsLetter  */}
       <Container
-        style={{ borderRadius: "10px",backgroundColor: "#F6F6F6" }}
+        style={{ borderRadius: "10px", backgroundColor: "#F6F6F6" }}
         className="p-5 d-flex justify-content-center w-50 newsletter"
-
       >
         <InputGroup className="w-75">
           <div>
             <h5 className="text-dark text-uppercase text-center mb-4">
-              Subscribe To Our Newsletter For <span className="text-danger">Latest Update</span>
+              Subscribe To Our Newsletter For{" "}
+              <span className="text-danger">Latest Update</span>
             </h5>
           </div>
           <FormControl
@@ -97,6 +103,9 @@ const Home = () => {
           >
             Subscribe
           </Button>
+          <h3 id="about" className="text-white text-center">
+            About
+          </h3>
         </InputGroup>
       </Container>
       {/* NewsLetter  */}

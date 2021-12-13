@@ -5,7 +5,7 @@ import drone from "../../../../Images/drone.png";
 
 const About = () => {
   return (
-    <div id="about" className="pt-5 mt-5 mb-5 pb-5">
+    <div className="mt-5 mb-5 pb-5">
       <h2 className="text-center text-dark text-uppercase">
         about <span className="text-danger">us</span>
       </h2>
@@ -39,24 +39,19 @@ const About = () => {
           <div className="mt-5">
             <div className="d-flex align-items-center mb-3">
               <i className="fas fa-mobile-alt text-danger fs-1 me-2"></i>{" "}
-              <span className="text-danger fs-5">
-                Mobile Device Supported
-              </span>
+              <span className="text-danger fs-5">Mobile Device Supported</span>
             </div>
             <div className="d-flex align-items-center mb-3">
               <i className="fas fa-gamepad text-danger fs-1 me-2"></i>{" "}
-              <span className="text-danger fs-5">
-              Easy integrative control
-              </span>
+              <span className="text-danger fs-5">Easy integrative control</span>
             </div>
             <div className="d-flex align-items-center mb-3">
               <i className="fas fa-headset text-danger fs-1 me-2"></i>{" "}
-              <span className="text-danger fs-5">
-              Customized Commands
-              </span>
+              <span className="text-danger fs-5">Customized Commands</span>
             </div>
           </div>
           {/* Controls  */}
+          <h3 id="guideline" className="text-white text-center">Guideline</h3>
         </div>
         {/* About Description */}
       </Container>
