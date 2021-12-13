@@ -5,11 +5,12 @@ import { HashLink } from "react-router-hash-link";
 import useAuth from "../../Hooks/useAuth";
 import dronza from "../../Images/dronza.png";
 import "./Header.css";
+// sticky="top"
 
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
-    <Navbar className="nav-font bg-dark py-3" collapseOnSelect expand="lg">
+    <Navbar sticky="top" className="nav-font bg-dark py-3" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand>
           <img
@@ -26,7 +27,7 @@ const Header = () => {
             <Nav.Link
               as={HashLink}
               activeClassName="navs-active"
-              className="navs me-3 text-decoration-none"
+              className="text-white navs me-3 text-decoration-none"
               to="/home#home"
             >
               Home
@@ -35,7 +36,7 @@ const Header = () => {
             <Nav.Link
               as={HashLink}
               activeClassName="navs-active"
-              className="navs me-3 text-decoration-none"
+              className="text-white navs me-3 text-decoration-none"
               to="/home#about"
             >
               About
@@ -44,7 +45,7 @@ const Header = () => {
             <Nav.Link
               as={HashLink}
               activeClassName="navs-active"
-              className="navs me-3 text-decoration-none"
+              className="text-white navs me-3 text-decoration-none"
               to="/products"
             >
               Products
@@ -53,7 +54,7 @@ const Header = () => {
             <Nav.Link
               as={HashLink}
               activeClassName="navs-active"
-              className="navs me-3 text-decoration-none"
+              className="text-white navs me-3 text-decoration-none"
               to="/home#guideline"
             >
               Guideline
@@ -62,7 +63,7 @@ const Header = () => {
             <Nav.Link
               as={HashLink}
               activeClassName="navs-active"
-              className="navs me-3 text-decoration-none"
+              className="text-white navs me-3 text-decoration-none"
               to="/home#contactus"
             >
               Contact Us
@@ -71,7 +72,7 @@ const Header = () => {
             <Nav.Link
               as={HashLink}
               activeClassName="navs-active"
-              className="navs me-3 text-decoration-none"
+              className="text-white navs me-3 text-decoration-none"
               to="/dashboard"
             >
               Dashboard

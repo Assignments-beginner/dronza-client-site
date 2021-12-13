@@ -5,7 +5,7 @@ import drone from "../../../../Images/drone.png";
 
 const About = () => {
   return (
-    <div id="about" className="mt-5 mb-5 pb-5">
+    <div id="about" className="pt-5 mt-5 mb-5 pb-5">
       <h2 className="text-center text-dark text-uppercase">
         about <span className="text-danger">us</span>
       </h2>
