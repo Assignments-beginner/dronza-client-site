@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import "./Header.css";
+import { HashLink } from "react-router-hash-link";
 import useAuth from "../../Hooks/useAuth";
 import dronza from "../../Images/dronza.png";
+import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useAuth();
@@ -11,58 +12,70 @@ const Header = () => {
     <Navbar className="nav-font bg-dark py-3" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand>
-          <img className="res-logo" width="100" height="50" src={dronza} alt="" />
+          <img
+            className="res-logo"
+            width="100"
+            height="50"
+            src={dronza}
+            alt=""
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-5 me-auto">
-            <NavLink
+            <Nav.Link
+              as={HashLink}
               activeClassName="navs-active"
               className="navs me-3 text-decoration-none"
-              to="/home"
+              to="/home#home"
             >
               Home
-            </NavLink>
+            </Nav.Link>
 
-            <NavLink
+            <Nav.Link
+              as={HashLink}
               activeClassName="navs-active"
               className="navs me-3 text-decoration-none"
-              to="/about"
+              to="/home#about"
             >
               About
-            </NavLink>
+            </Nav.Link>
 
-            <NavLink
+            <Nav.Link
+              as={HashLink}
               activeClassName="navs-active"
               className="navs me-3 text-decoration-none"
               to="/products"
             >
               Products
-            </NavLink>
+            </Nav.Link>
 
-            <NavLink
+            <Nav.Link
+              as={HashLink}
               activeClassName="navs-active"
               className="navs me-3 text-decoration-none"
-              to="/guideline"
+              to="/home#guideline"
             >
               Guideline
-            </NavLink>
+            </Nav.Link>
 
-            <NavLink
+            <Nav.Link
+              as={HashLink}
               activeClassName="navs-active"
               className="navs me-3 text-decoration-none"
-              to="/contactus"
+              to="/home#contactus"
             >
               Contact Us
-            </NavLink>
+            </Nav.Link>
 
-            <NavLink
+            <Nav.Link
+              as={HashLink}
               activeClassName="navs-active"
               className="navs me-3 text-decoration-none"
               to="/dashboard"
             >
               Dashboard
-            </NavLink>
+            </Nav.Link>
           </Nav>
           {/* User Profile */}
           <Nav className="d-flex align-items-center">

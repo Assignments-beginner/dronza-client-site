@@ -31,7 +31,7 @@ const Products = () => {
   }, []);
    */
   return (
-    <div className="pb-5">
+    <div id="products" className="pb-5">
       <div>
         <h2 className="my-5 text-center text-dark text-uppercase">
           all <span className="text-danger">products</span>

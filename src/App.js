@@ -1,5 +1,5 @@
 import "./App.css";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
@@ -61,7 +61,7 @@ function App() {
 
               <Route path="/signin">
                 <LogIn></LogIn>
-              </Route>  
+              </Route>
 
               <Route path="/registration">
                 <Registration></Registration>
@@ -84,7 +84,6 @@ function App() {
         <Footer></Footer>
       </div>
     </AuthProvider>
-
   );
 }
 

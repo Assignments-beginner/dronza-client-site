@@ -13,7 +13,7 @@ import Guideline from "./Pages/Guideline/Guideline";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home" >
       <Carousel variant="dark">
         <Carousel.Item>
           <img className="d-block w-100" src={slide1} alt="First slide" />

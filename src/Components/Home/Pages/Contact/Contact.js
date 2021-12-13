@@ -4,7 +4,7 @@ import map from "../../../../Images/location.jpg";
 
 const Contact = () => {
   return (
-    <div className="pt-5">
+    <div id="contactus" className="pt-5">
       <h2 className="text-center text-dark text-uppercase mb-5">
         contact <span className="text-danger">us</span>
       </h2>
