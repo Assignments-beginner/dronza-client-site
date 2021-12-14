@@ -44,4 +44,8 @@
   .res-order-title {
     font-size: 10px;
   }
+  .res-newsletter {
+    padding: 0px 10px 0px 10px;
+    max-width: 290px;
+  }
 }
