@@ -80,9 +80,9 @@ const Home = () => {
       <Reviews></Reviews>
 
       {/* NewsLetter  */}
-      <Container
+      <div
         style={{ borderRadius: "10px", backgroundColor: "#F6F6F6" }}
-        className="px-5 pb-4 pt-5 d-grid justify-content-center newsletter"
+        className="res-newsletter mx-auto pb-4 pt-5 d-grid justify-content-center"
       >
         <div className="mb-4">
           <h5 className="text-dark text-uppercase text-center">
@@ -108,7 +108,7 @@ const Home = () => {
             About-Hashlink
           </span>
         </div>
-      </Container>
+      </div>
       {/* NewsLetter  */}
 
       <About></About>
