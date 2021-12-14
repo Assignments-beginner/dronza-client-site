@@ -82,19 +82,18 @@ const Home = () => {
       {/* NewsLetter  */}
       <Container
         style={{ borderRadius: "10px", backgroundColor: "#F6F6F6" }}
-        className="p-5 d-flex justify-content-center w-50 newsletter"
+        className="px-5 pb-4 pt-5 d-grid justify-content-center newsletter"
       >
-        <InputGroup className="w-75">
-          <div>
-            <h5 className="text-dark text-uppercase text-center mb-4">
-              Subscribe To Our Newsletter For{" "}
-              <span className="text-danger">Latest Update</span>
-            </h5>
-          </div>
+        <div className="mb-4">
+          <h5 className="text-dark text-uppercase text-center">
+            Subscribe To Our Newsletter For{" "}
+            <span className="text-danger">Latest Update</span>
+          </h5>
+        </div>
+        <InputGroup>
           <FormControl
             placeholder="Enter Your Email"
             aria-label="Enter Your Email"
-            aria-describedby="basic-addon2"
           />
           <Button
             className="text-uppercase"
@@ -103,10 +102,12 @@ const Home = () => {
           >
             Subscribe
           </Button>
-          <h3 id="about" className="text-white text-center">
-            About
-          </h3>
         </InputGroup>
+        <div>
+          <span id="about" className="text-center" style={{color: '#F6F6F6'}}>
+            About-Hashlink
+          </span>
+        </div>
       </Container>
       {/* NewsLetter  */}
 

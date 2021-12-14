@@ -34,7 +34,7 @@ const Reviews = () => {
   }, []);
   return (
     <Container>
-      <div className="mt-5 mb-5 pb-5">
+      <div className="mt-5 res-review-bottom">
         <h2 className="res-client-top mb-3 text-center text-dark text-uppercase">
           our beloved <span className="text-danger">clients</span>
         </h2>
