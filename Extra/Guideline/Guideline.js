@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardGroup, Container } from "react-bootstrap";
+import Drone from "./Drone/Drone";
 import "./Guideline.css";
 import battery from "../../../../Images/battery.png";
 import dronefly from "../../../../Images/dronefly.png";
@@ -12,9 +13,9 @@ const Guideline = () => {
       <h2 className="text-center text-dark text-uppercase mb-5 pt-5">
         smart <span className="text-danger">guidance</span>
       </h2>
-      <Container className="text-center px-5">
+      <Container className="text-center w-50">
         <h4 className="text-uppercase">How it works</h4>
-        <p className="res-how-text-justify">
+        <p>
           Drone controller basically works by sending a radio signal from the
           remote control to the drone, which tells the drone what to do. Radio
           signals are sent from the radio transmitter in the drone controller
@@ -22,7 +23,11 @@ const Guideline = () => {
         </p>
       </Container>
       <Container>
-        <div>
+        <div className="mx-5 w-25 d-flex justify-content-center">
+          <Drone></Drone>
+        </div>
+
+        <div className="how">
           <CardGroup>
             <Card className="text-center">
               <div className="d-flex justify-content-center mt-3">

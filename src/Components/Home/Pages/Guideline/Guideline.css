@@ -1,5 +1,7 @@
-.how {
-    margin-top: 360px;
+@media all and (max-width:688px) {
+    .res-how-text-justify {
+        text-align: justify;
+      }
 }
 
 
