@@ -14,7 +14,7 @@ const Contact = () => {
         <Container className="py-4">
           <Row className="d-flex align-items-center justify-content-between">
             {/* ////////////////////// Contact Us ////////////////////// */}
-            <Col className="text-center d-grid me-3">
+            <Col className="text-center d-grid">
               <strong className="text-dark text-uppercase">
                 connect with us
               </strong>
@@ -29,7 +29,7 @@ const Contact = () => {
             </Col>
 
             {/* ////////////////////// Our Locations ////////////////////// */}
-            <Col className="text-center mt-2 mb-3">
+            <Col className="res-contact-details text-center mt-2 mb-3">
               <p className="text-dark text-uppercase">
                 <strong>Our Branches</strong>
               </p>
@@ -45,7 +45,7 @@ const Contact = () => {
             </Col>
 
             {/*////////////////////// ADDRESS //////////////////////*/}
-            <Col className="text-center d-grid">
+            <Col className="res-contact-details text-center d-grid">
               <div>
                 <strong className="text-dark text-uppercase">address</strong>{" "}
                 <i class="fas fa-map-marker-alt text-danger"></i>
@@ -58,7 +58,7 @@ const Contact = () => {
                 <i className="fas fa-truck text-danger"></i>
               </div>
               <span>Under City 1Week</span>
-              <span>Under Province 2Weeks</span>
+              <span className="res-delivery">Under Province 2Weeks</span>
             </Col>
           </Row>
         </Container>

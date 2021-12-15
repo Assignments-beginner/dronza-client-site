@@ -1,6 +1,12 @@
-@media all and (max-width:688px) {
-    .res-map {
-        width: 300px;
-        height: 200px;
-    }
+@media all and (max-width: 688px) {
+  .res-map {
+    width: 300px;
+    height: 200px;
+  }
+  .res-contact-details {
+    padding-top: 35px;
+  }
+  .res-delivery {
+    margin-bottom: 30px;
+  }
 }
