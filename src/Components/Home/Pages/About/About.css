@@ -37,3 +37,28 @@
     top: 40px;
   }
 }
+
+/*-------------------------------------------------------------------------------*\
+  ///////////////////////////// media query \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+
+@media all and (max-width: 688px) {
+  .res-animated-drone {
+    width: 250px;
+    height: 155px;
+  }
+  .drone-div {
+    width: 300px;
+    height: 300px;
+    border: solid 25px #b91a1a;
+    position: relative;
+  }
+
+  .hd {
+    font-size: 50px;
+  }
+
+  .hd-div {
+    padding: 5px;
+  }
+}

@@ -2,7 +2,6 @@ import React from "react";
 import {
   Button,
   Carousel,
-  Container,
   FormControl,
   InputGroup,
 } from "react-bootstrap";
