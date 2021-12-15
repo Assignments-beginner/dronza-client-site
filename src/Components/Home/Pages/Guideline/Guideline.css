@@ -1,7 +1,12 @@
-@media all and (max-width:688px) {
-    .res-how-text-justify {
-        text-align: justify;
-      }
+.how-description {
+  height: 520px;
+  background: url("../../../../Images/roads.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
-
-
+@media all and (max-width: 688px) {
+  .res-how-text-justify {
+    text-align: justify;
+  }
+}
