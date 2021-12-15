@@ -5,13 +5,19 @@ import drone from "../../../../Images/drone.png";
 
 const About = () => {
   return (
-    <div className="mt-5 mb-5 pb-5">
-      <h2 className="text-center text-dark text-uppercase">
+    <div className="mt-3">
+      <h2 className="text-center text-dark text-uppercase pt-5">
         about <span className="text-danger">us</span>
       </h2>
-      <Container className="d-flex align-items-center mt-5">
+      <Container className="mt-5">
         <Row>
-          <Col className="border border-danger d-flex justify-content-center" xl={6} lg={6} xs={12} sm={12} >
+          <Col
+            className="d-flex justify-content-center mt-3"
+            xl={6}
+            lg={6}
+            xs={12}
+            sm={12}
+          >
             {/* Drone Animation  */}
             <div className="drone-div">
               <div className="object">
@@ -27,7 +33,7 @@ const About = () => {
           <Col xl={6} lg={6} xs={12} sm={12}>
             {/* About Description */}
             <div className="mx-5">
-              <h2 className="text-uppercase">
+              <h2 className="text-uppercase res-about-title">
                 Specializing in <br /> Drone Services <br /> and Aerial
                 Photography
               </h2>
@@ -43,30 +49,38 @@ const About = () => {
               {/* Controls  */}
               <div className="mt-5">
                 <div className="d-flex align-items-center mb-3">
-                  <i className="fas fa-mobile-alt text-danger fs-1 me-2"></i>{" "}
+                  <div className="res-feature-icons">
+                    <i className="fas fa-mobile-alt text-danger fs-1 me-2"></i>{" "}
+                  </div>
                   <span className="text-danger fs-5">
                     Mobile Device Supported
                   </span>
                 </div>
                 <div className="d-flex align-items-center mb-3">
-                  <i className="fas fa-gamepad text-danger fs-1 me-2"></i>{" "}
+                  <div className="res-feature-icons">
+                    <i className="fas fa-gamepad text-danger fs-1 me-2"></i>{" "}
+                  </div>
                   <span className="text-danger fs-5">
                     Easy integrative control
                   </span>
                 </div>
                 <div className="d-flex align-items-center mb-3">
-                  <i className="fas fa-headset text-danger fs-1 me-2"></i>{" "}
+                  <div className="res-feature-icons">
+                    <i className="fas fa-headset text-danger fs-1 me-2"></i>{" "}
+                  </div>
                   <span className="text-danger fs-5">Customized Commands</span>
                 </div>
               </div>
               {/* Controls  */}
-              <h3 id="guideline" className="text-white text-center">
-                Guideline
-              </h3>
             </div>
             {/* About Description */}
           </Col>
         </Row>
+        <div id="guideline" className="d-flex justify-content-center">
+          <span  className="text-white pt-3">
+            Guideline-Hashlink
+          </span>
+        </div>
       </Container>
     </div>
   );

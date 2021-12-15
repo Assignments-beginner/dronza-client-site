@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Carousel,
-  FormControl,
-  InputGroup,
-} from "react-bootstrap";
+import { Button, Carousel, FormControl, InputGroup } from "react-bootstrap";
 import Reviews from "./Reviews/Reviews";
 import slide1 from "../../Images/slide1.png";
 import slide2 from "../../Images/slide2.png";
@@ -102,13 +97,13 @@ const Home = () => {
             Subscribe
           </Button>
         </InputGroup>
-        <div>
-          <span id="about" className="text-center" style={{color: '#F6F6F6'}}>
-            About-Hashlink
-          </span>
-        </div>
       </div>
       {/* NewsLetter  */}
+      <div id="about" className="d-flex justify-content-center">
+        <span className="text-white pt-3" style={{ color: "#F6F6F6" }}>
+          About-Hashlink
+        </span>
+      </div>
 
       <About></About>
 

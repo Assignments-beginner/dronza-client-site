@@ -9,8 +9,8 @@ import camera from "../../../../Images/camera.png";
 
 const Guideline = () => {
   return (
-    <div className="mt-5 mb-5">
-      <h2 className="text-center text-dark text-uppercase mb-5">
+    <div className="mb-5 mt-3">
+      <h2 className="text-center text-dark text-uppercase mb-5 pt-5">
         smart <span className="text-danger">guidance</span>
       </h2>
       <Container className="text-center w-50">
