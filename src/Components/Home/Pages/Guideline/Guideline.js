@@ -13,15 +13,15 @@ const Guideline = () => {
         smart <span className="text-danger">guidance</span>
       </h2>
       <div className="how-description text-center px-5">
-        <h4 className="text-uppercase text-white">How it works</h4>
-        <p className="res-how-text-justify text-white">
+        <h3 className="text-uppercase text-danger pt-5">How it works</h3>
+        <p className="res-how mx-auto text-white">
           Drone controller basically works by sending a radio signal from the
           remote control to the drone, which tells the drone what to do. Radio
           signals are sent from the radio transmitter in the drone controller
           and received by the drone's receiver.
         </p>
       </div>
-      <Container>
+      <Container className="guideline-cards">
         <div>
           <CardGroup>
             <Card className="text-center">

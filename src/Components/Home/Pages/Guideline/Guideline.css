@@ -1,12 +1,18 @@
 .how-description {
-  height: 520px;
+  height: 620px;
   background: url("../../../../Images/roads.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
+.guideline-cards {
+  margin-top: -100px;
+}
+.res-how {
+  width: 600px;
+}
 @media all and (max-width: 688px) {
-  .res-how-text-justify {
+  .res-how {
     text-align: justify;
   }
 }
