@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import google from "../../Images/google.png";
@@ -72,7 +72,8 @@ const LogIn = () => {
   };
 
   return (
-    <Container className="mt-4 w-25">
+    <Row>
+      <Col lg={4} xl={4} sm={12} className="mt-4 mx-auto px-5">
       <p className="text-uppercase fs-2">
         Please <span className="text-danger">Sign In</span>{" "}
       </p>
@@ -120,7 +121,7 @@ const LogIn = () => {
       <div className="mt-3 mb-5 d-grid justify-items-center">
         <p className="text-secondary mb-3 text-center">Or you can also</p>
         {/* Button */}
-        <button onClick={googleLoginHandler} className="signin-btn">
+        <button onClick={googleLoginHandler} className="mx-auto signin-btn">
           <div className="d-flex align-items-center justify-content-between">
             <img height="32" width="32" src={google} alt="" />{" "}
             <span>Continue With Google</span>{" "}
@@ -128,7 +129,8 @@ const LogIn = () => {
           </div>
         </button>
       </div>
-    </Container>
+    </Col>
+    </Row>
   );
 };
 
