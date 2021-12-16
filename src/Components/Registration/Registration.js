@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Form } from "react-bootstrap";
+import { Container, Button, Form, Row, Col } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
@@ -65,7 +65,8 @@ const Registration = () => {
   };
 
   return (
-    <Container className="mt-4 w-25">
+    <Row>
+      <Col xl={3} lg={3} sm={12} className="mt-4 mx-auto px-5">
       <p className="text-danger text-uppercase fs-2">Registration</p>
       <Form>
         {/* Name Field */}
@@ -121,7 +122,8 @@ const Registration = () => {
           </Button>
         </div>
       </Form>
-    </Container>
+    </Col>
+    </Row>
   );
 };
 
