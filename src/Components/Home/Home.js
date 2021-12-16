@@ -84,7 +84,7 @@ const Home = () => {
             <span className="text-danger">Latest Update</span>
           </h5>
         </div>
-        <InputGroup>
+        <InputGroup className="pb-4">
           <FormControl
             placeholder="Enter Your Email"
             aria-label="Enter Your Email"
@@ -100,7 +100,7 @@ const Home = () => {
       </div>
       {/* NewsLetter  */}
       <div id="about" className="d-flex justify-content-center">
-        <span className="text-white pt-3" style={{ color: "#F6F6F6" }}>
+        <span className="text-white pt-3">
           About-Hashlink
         </span>
       </div>

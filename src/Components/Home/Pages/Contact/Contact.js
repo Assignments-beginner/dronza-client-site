@@ -5,8 +5,8 @@ import "../Contact/Contact.css";
 
 const Contact = () => {
   return (
-    <div id="contactus" className="pt-5">
-      <h2 className="text-center text-dark text-uppercase mb-5">
+    <div>
+      <h2 className="text-center text-dark text-uppercase mb-3">
         contact <span className="text-danger">us</span>
       </h2>
       {/* <div style={{ backgroundColor: "#F6F6F6" }} className="main-footer w-100"> */}
