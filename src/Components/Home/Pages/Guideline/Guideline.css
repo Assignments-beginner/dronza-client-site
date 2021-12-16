@@ -8,11 +8,38 @@
 .guideline-cards {
   margin-top: -100px;
 }
-.res-how {
+.how {
   width: 600px;
+  margin: 0px auto;
+}
+.res-how {
+  display: none;
+}
+.how-title {
+  color: #B91A1A;
+  font-weight: bolder;
+  padding-top: 30px;
 }
 @media all and (max-width: 688px) {
   .res-how {
-    text-align: justify;
+    text-align: center;
+    display: block;
+  }
+  .how {
+    display: none;
+  }
+  .how-description {
+    height: 420px;
+    background: url("../../../../Images/res_roads.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .how-title {
+    color: #B91A1A;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 20px;
+
   }
 }
