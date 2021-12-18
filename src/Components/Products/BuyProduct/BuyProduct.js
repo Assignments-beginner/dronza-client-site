@@ -176,7 +176,7 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
             </Button>
           </Form>
           <div className="mb-3 text-center mt-5 res-back-allproducts">
-            <Link
+            <Link 
               to="/products"
               style={{ color: "#d9534f", textDecoration: "none" }}
             >
