@@ -18,6 +18,7 @@ import Contact from "./Components/Home/Pages/Contact/Contact";
 import About from "./Components/Home/Pages/About/About";
 import Guideline from "./Components/Home/Pages/Guideline/Guideline";
 import Sorry from "./Components/Sorry/Sorry";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <div className="page-container">
         <div className="content-wrap">
           <BrowserRouter>
+            <ScrollToTop />
             <Header></Header>
             <Switch>
               <Route exact path="/">
