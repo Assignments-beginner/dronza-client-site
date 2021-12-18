@@ -1,0 +1,19 @@
+.product-img {
+  width: 530px;
+  height: 280px;
+}
+.res-back-allproducts {
+  display: none;
+}
+@media all and (max-width: 688px) {
+  .product-img {
+    width: 224px;
+    height: 154px;
+  }
+  .res-back-allproducts {
+    display: block;
+  }
+  .back-allproducts {
+    display: none;
+  }
+}
