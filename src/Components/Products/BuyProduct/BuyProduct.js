@@ -45,14 +45,14 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
           product <span className="text-danger">details</span>
         </h3>
       </div>
-      <Row className="d-flex justify-content-center p-5">
-        <Col xl={6} lg={6} sm={12} className="border border-danger">
-          <Container>
+      <Container>
+        <Row className="p-5">
+          <Col xl={6} lg={6} sm={12}>
             <div className="d-grid align-items-center">
               {/* Drone Image */}
               <div className="d-flex justify-content-center">
                 <img
-                  className="product-img border border-danger"
+                  className="product-img "
                   src={singleProduct.productImg}
                   alt=""
                 />
@@ -61,7 +61,7 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
               <div>
                 <div>
                   <h3 className="text-danger">{singleProduct.productName}</h3>
-                  <p className="text-justify mt-3">
+                  <p className="text-justify mt-3 ">
                     {singleProduct.productDescription}
                   </p>
                 </div>
@@ -107,84 +107,84 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
               </div>
               {/* Drone Details  */}
             </div>
-          </Container>
-        </Col>
+          </Col>
 
-        <Col xl={3} lg={3} sm={12} className="mx-auto border border-danger">
-          <Form
-            className="d-flex flex-column mt-3"
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            {singleProduct.productName && (
+          <Col xl={3} lg={3} sm={12} className="mx-auto ">
+            <Form
+              className="d-flex flex-column mt-3"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              {singleProduct.productName && (
+                <input
+                  style={{ outline: "none" }}
+                  className="mb-3 py-2 px-3"
+                  defaultValue={singleProduct.productName}
+                  {...register("singleProductName")}
+                />
+              )}
+
+              {singleProduct.productModel && (
+                <input
+                  style={{ outline: "none" }}
+                  className="mb-3 py-2 px-3 "
+                  defaultValue={singleProduct.productModel}
+                  {...register("singleProductModel")}
+                />
+              )}
+
               <input
                 style={{ outline: "none" }}
                 className="mb-3 py-2 px-3"
-                defaultValue={singleProduct.productName}
-                {...register("singleProductName")}
+                defaultValue={user.displayName}
+                {...register("userName")}
               />
-            )}
-
-            {singleProduct.productModel && (
               <input
                 style={{ outline: "none" }}
-                className="mb-3 py-2 px-3 "
-                defaultValue={singleProduct.productModel}
-                {...register("singleProductModel")}
+                className="mb-3 py-2 px-3"
+                defaultValue={user.email}
+                {...register("userEmail")}
               />
-            )}
+              {/* Error */}
 
-            <input
-              style={{ outline: "none" }}
-              className="mb-3 py-2 px-3"
-              defaultValue={user.displayName}
-              {...register("userName")}
-            />
-            <input
-              style={{ outline: "none" }}
-              className="mb-3 py-2 px-3"
-              defaultValue={user.email}
-              {...register("userEmail")}
-            />
-            {/* Error */}
+              {singleProduct.productImg && (
+                <input
+                  className="mb-3 p-2 d-none"
+                  defaultValue={singleProduct.productImg}
+                  {...register("singleProductImg")}
+                />
+              )}
 
-            {singleProduct.productImg && (
+              {singleProduct.productPrice && (
+                <input
+                  className="mb-3 py-2 px-3"
+                  defaultValue={singleProduct.productPrice}
+                  {...register("singleProductPrice")}
+                />
+              )}
+
+              {/* Error */}
+
               <input
                 className="mb-3 p-2 d-none"
-                defaultValue={singleProduct.productImg}
-                {...register("singleProductImg")}
+                defaultValue="Pending"
+                {...register("bookedproductStatus")}
               />
-            )}
 
-            {singleProduct.productPrice && (
-              <input
-                className="mb-3 py-2 px-3"
-                defaultValue={singleProduct.productPrice}
-                {...register("singleProductPrice")}
-              />
-            )}
-
-            {/* Error */}
-
-            <input
-              className="mb-3 p-2 d-none"
-              defaultValue="Pending"
-              {...register("bookedproductStatus")}
-            />
-
-            <Button variant="danger" type="submit">
-              Order Now
-            </Button>
-          </Form>
-          <div className="mb-3 text-center mt-5 res-back-allproducts">
-            <Link 
-              to="/products"
-              style={{ color: "#d9534f", textDecoration: "none" }}
-            >
-              Back to All Products
-            </Link>
-          </div>
-        </Col>
-      </Row>
+              <Button variant="danger" type="submit">
+                Order Now
+              </Button>
+            </Form>
+            <div className="mb-3 text-center mt-5 res-back-allproducts">
+              <Link
+                to="/products"
+                style={{ color: "#d9534f", textDecoration: "none" }}
+              >
+                Back to All Products
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
