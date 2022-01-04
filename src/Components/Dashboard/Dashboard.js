@@ -29,7 +29,7 @@ const Dashboard = () => {
             <Nav className="d-grid">
               <NavLink
                 activeClassName="dashboard-navText-active"
-                className="dashboard-navText mb-5 text-decoration-none text-uppercase"
+                className="dashboard-navText pt-5 mb-5 text-decoration-none text-uppercase"
                 to={`${url}/yourorders`}
               >
                 <div className="icons">
@@ -96,7 +96,7 @@ const Dashboard = () => {
 
                   <NavLink
                     activeClassName="dashboard-navText-active"
-                    className="dashboard-navText text-decoration-none text-uppercase"
+                    className="dashboard-navText text-decoration-none text-uppercase pb-5"
                     to={`${url}/makeadmin`}
                   >
                     <div className="icons">

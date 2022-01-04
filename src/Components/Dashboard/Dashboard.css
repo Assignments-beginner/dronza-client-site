@@ -21,7 +21,8 @@ hr.new {
   color: white;
   font-weight: bold;
   width: 290px;
-  height: 500px;
+  /* height: 500px; */
+  align-self: flex-start;
   position: sticky;
   top: 20%;
 }
