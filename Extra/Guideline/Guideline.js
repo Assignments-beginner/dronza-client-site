@@ -1,125 +1,137 @@
 import React from "react";
-import { Card, CardGroup, Container } from "react-bootstrap";
-import Drone from "./Drone/Drone";
-import "./Guideline.css";
-import battery from "../../../../Images/battery.png";
-import dronefly from "../../../../Images/dronefly.png";
-import controller from "../../../../Images/controller.png";
-import camera from "../../../../Images/camera.png";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Col, Container, Nav, Row } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import "./Dashboard.css";
+import YourOrders from "./YourOrders/YourOrders";
+import AddReview from "./AddReview/AddReview";
+import AddNewProduct from "./AddNewProduct/AddNewProduct";
+import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
+import MakeAdmin from "./MakeAdmin/MakeAdmin";
+import Payment from "./Payment/Payment";
+import useAuth from "../../Hooks/useAuth";
+import ManageAllProducts from "./ManageAllProducts/ManageAllProducts";
+import AdminRoute from "../AdminRoute/AdminRoute";
 
-const Guideline = () => {
+const Dashboard = () => {
+  const { admin } = useAuth();
+  let { path, url } = useRouteMatch();
   return (
-    <div className="mb-5 mt-3">
-      <h2 className="text-center text-dark text-uppercase mb-5 pt-5">
-        smart <span className="text-danger">guidance</span>
-      </h2>
-      <Container className="text-center w-50">
-        <h4 className="text-uppercase">How it works</h4>
-        <p>
-          Drone controller basically works by sending a radio signal from the
-          remote control to the drone, which tells the drone what to do. Radio
-          signals are sent from the radio transmitter in the drone controller
-          and received by the drone's receiver.
-        </p>
-      </Container>
-      <Container>
-        <div className="mx-5 w-25 d-flex justify-content-center">
-          <Drone></Drone>
-        </div>
+    <div>
+      <div>
+        <h1 className="text-center text-uppercase mt-3 mb-3 display-6">
+          dash<strong className="text-danger">board</strong>
+        </h1>
+      </div>
+      <hr className="new" />
+      <Container className="mt-4 mb-5 pb-5">
+        <Row>
+          <Col sm={2} xl={2} lg={2}>
+            <div className="pt-5 px-2">
+              <Nav className="d-grid me-auto">
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
+                  to={`${url}/yourorders`}
+                >
+                  Your Orders
+                </NavLink>
 
-        <div className="how">
-          <CardGroup>
-            <Card className="text-center">
-              <div className="d-flex justify-content-center mt-3">
-                <Card.Img
-                  style={{ height: "70px", width: "70px" }}
-                  src={controller}
-                />
-              </div>
-              <Card.Body>
-                <Card.Title>Controller</Card.Title>
-                <Card.Text className="text-center">
-                  Correctly connecting a drone to the controller ensures a
-                  smooth flight of the drone as it goes about its job of
-                  monitoring, performing inspections and other jobs.
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <strong className="text-danger text-center">
-                  How To Use Controller
-                </strong>
-              </Card.Footer>
-            </Card>
-            <Card className="text-center">
-              <div className="d-flex justify-content-center mt-3">
-                <Card.Img
-                  style={{ height: "70px", width: "70px" }}
-                  src={dronefly}
-                />
-              </div>
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
+                  to={`${url}/payment`}
+                >
+                  Payment
+                </NavLink>
 
-              <Card.Body>
-                <Card.Title>Flying</Card.Title>
-                <Card.Text className="text-center">
-                  Mount your electronic speed controllers. Attach the landing
-                  gear. Connect LibrePilot to your drone. Take your drone for a
-                  spin!
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <strong className="text-danger text-center">
-                  How To Fly Ready
-                </strong>
-              </Card.Footer>
-            </Card>
-            <Card className="text-center">
-              <div className="d-flex justify-content-center mt-3">
-                <Card.Img
-                  style={{ height: "70px", width: "70px" }}
-                  src={camera}
-                />
-              </div>
-              <Card.Body>
-                <Card.Title>Camera</Card.Title>
-                <Card.Text className="text-center">
-                  For distances between the camera and the scene center shorter
-                  than 120 meters, FULL HD (1920x1200) resolution will be
-                  sufficient, but it is better to use a higher resolution
-                  (2k/4k).
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <strong className="text-danger text-center">
-                  How To Record Video
-                </strong>
-              </Card.Footer>
-            </Card>
-            <Card className="text-center">
-              <div className="d-flex justify-content-center mt-3">
-                <Card.Img
-                  style={{ height: "70px", width: "70px" }}
-                  src={battery}
-                />
-              </div>
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard mb-3 text-decoration-none text-uppercase"
+                  to={`${url}/addreview`}
+                >
+                  Add Review
+                </NavLink>
 
-              <Card.Body>
-                <Card.Title>Battery</Card.Title>
-                <Card.Text className="text-center">
-                  It comes with a USB cable that you can plug into your computer
-                  USB port to charge it or you can use a USB wall charger.
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <strong className="text-danger text-center">
-                  How To Charge Battery
-                </strong>
-              </Card.Footer>
-            </Card>
-          </CardGroup>
-        </div>
+                {admin && (
+                  <Nav>
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/addnewproduct`}
+                    >
+                      Add New Product
+                    </NavLink>
+
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/manageallproducts`}
+                    >
+                      Manage All Products
+                    </NavLink>
+
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/manageallorders`}
+                    >
+                      Manage All Orders
+                    </NavLink>
+
+                    <NavLink
+                      activeClassName="dashboard-active"
+                      className="dashboard mb-3 text-decoration-none text-uppercase"
+                      to={`${url}/makeadmin`}
+                    >
+                      Make Admin
+                    </NavLink>
+                  </Nav>
+                )}
+              </Nav>
+            </div>
+          </Col>
+          <Col sm={10} xl={10} lg={10}>
+            <div className="menubar px-5 w-100">
+              <Switch>
+                <Route exact path={path}>
+                  <YourOrders></YourOrders>
+                </Route>
+
+                <Route exact path={`${path}/yourorders`}>
+                  <YourOrders></YourOrders>
+                </Route>
+
+                <Route path={`${path}/addreview`}>
+                  <AddReview></AddReview>
+                </Route>
+
+                <Route path={`${path}/payment`}>
+                  <Payment></Payment>
+                </Route>
+
+                <AdminRoute path={`${path}/addnewproduct`}>
+                  <AddNewProduct></AddNewProduct>
+                </AdminRoute>
+
+                <AdminRoute path={`${path}/manageallproducts`}>
+                  <ManageAllProducts></ManageAllProducts>
+                </AdminRoute>
+
+                <AdminRoute path={`${path}/manageallorders`}>
+                  <ManageAllOrders></ManageAllOrders>
+                </AdminRoute>
+
+                <AdminRoute path={`${path}/makeadmin`}>
+                  <MakeAdmin></MakeAdmin>
+                </AdminRoute>
+              </Switch>
+            </div>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
 };
 
-export default Guideline;
+export default Dashboard;
