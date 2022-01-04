@@ -19,7 +19,8 @@ const Dashboard = () => {
   return (
     <>
       <div className="dashboard-text pt-4">
-        <span className="text-uppercase">DashBoard</span>
+        <span className="text-uppercase text-dark">Dash</span>
+        <span className="text-uppercase text-danger">Board</span>
       </div>
       <hr className="new mb-4 mx-auto" />
       <Container className="mt-2">

@@ -1,5 +1,5 @@
 .dashboard-text {
-  font-size: 30px;
+  font-size: 35px;
   color: #c7ad8b;
   text-align: center;
 }
@@ -60,5 +60,8 @@ hr.new {
   }
   .dashboard-section {
     padding: 0px 0px 0px 20px;
+  }
+  .dashboard-text {
+    font-size: 30px;
   }
 }
