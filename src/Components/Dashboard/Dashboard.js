@@ -33,7 +33,7 @@ const Dashboard = () => {
                 to={`${url}/yourorders`}
               >
                 <div className="icons">
-                  <i class="fas fa-shopping-cart"></i>
+                  <i className="fas fa-shopping-cart"></i>
                 </div>{" "}
                 <span className="d-navText">Your Orders</span>
               </NavLink>
@@ -44,7 +44,7 @@ const Dashboard = () => {
                 to={`${url}/payment`}
               >
                 <div className="icons">
-                  <i class="fas fa-dollar-sign"></i>
+                  <i className="fas fa-dollar-sign"></i>
                 </div>{" "}
                 <span className="d-navText">Payment</span>
               </NavLink> */}
@@ -55,7 +55,7 @@ const Dashboard = () => {
                 to={`${url}/addreview`}
               >
                 <div className="icons">
-                  <i class="far fa-comment-alt"></i>
+                  <i className="far fa-comment-alt"></i>
                 </div>{" "}
                 <span className="d-navText">Add Review</span>
               </NavLink>
@@ -67,7 +67,7 @@ const Dashboard = () => {
                     to={`${url}/addnewproduct`}
                   >
                     <div className="icons">
-                      <i class="fas fa-plus-square"></i>
+                      <i className="fas fa-plus-square"></i>
                     </div>{" "}
                     <span className="d-navText">Add New Product</span>
                   </NavLink>
@@ -78,7 +78,7 @@ const Dashboard = () => {
                     to={`${url}/manageallproducts`}
                   >
                     <div className="icons">
-                      <i class="fas fa-archive"></i>
+                      <i className="fas fa-cube"></i>
                     </div>{" "}
                     <span className="d-navText pe-3">Manage All Products</span>
                   </NavLink>
@@ -89,7 +89,7 @@ const Dashboard = () => {
                     to={`${url}/manageallorders`}
                   >
                     <div className="icons">
-                      <i class="fas fa-dolly"></i>
+                      <i className="fas fa-dolly"></i>
                     </div>{" "}
                     <span className="d-navText">Manage All Orders</span>
                   </NavLink>
@@ -100,7 +100,7 @@ const Dashboard = () => {
                     to={`${url}/makeadmin`}
                   >
                     <div className="icons">
-                      <i class="fas fa-user"></i>
+                      <i className="fas fa-user"></i>
                     </div>{" "}
                     <span className="d-navText">Make Admin</span>
                   </NavLink>
