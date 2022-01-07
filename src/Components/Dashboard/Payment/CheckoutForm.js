@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { Button, Container } from "react-bootstrap";
 
@@ -7,7 +8,11 @@ const CheckoutForm = ({ payment }) => {
   const stripe = useStripe();
   const elements = useElements();
 
+  const [cardError, setCardError] = useState("");
+
   const handleSubmit = async (e) => {
+    e.preventDefault();
+
     if (!stripe || !elements) {
       return;
     }
@@ -15,7 +20,18 @@ const CheckoutForm = ({ payment }) => {
     if (card === null) {
       return;
     }
-    e.preventDefault();
+
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
+      card,
+    });
+
+    if (error) {
+      setCardError(error.message);
+    } else {
+      setCardError("");
+      console.log("[PaymentMethod]", paymentMethod);
+    }
   };
   return (
     <div>
@@ -48,6 +64,9 @@ const CheckoutForm = ({ payment }) => {
           </Button>
         </Container>
       </form>
+      {
+          cardError && <p className="text-center text-danger">{cardError}</p>
+      }
     </div>
   );
 };
