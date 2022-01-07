@@ -1,5 +1,6 @@
 import React from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { Button, Container } from "react-bootstrap";
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -18,25 +19,33 @@ const CheckoutForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <CardElement
-          options={{
-            style: {
-              base: {
-                fontSize: "16px",
-                color: "#424770",
-                "::placeholder": {
-                  color: "#aab7c4",
+        <Container>
+          <CardElement
+            className="mt-4"
+            options={{
+              style: {
+                base: {
+                  fontSize: "25px",
+                  color: "#424770",
+                  "::placeholder": {
+                    color: "#aab7c4",
+                  },
+                },
+                invalid: {
+                  color: "#9e2146",
                 },
               },
-              invalid: {
-                color: "#9e2146",
-              },
-            },
-          }}
-        />
-        <button type="submit" disabled={!stripe}>
-          Pay
-        </button>
+            }}
+          />
+
+          <Button
+            variant="danger fs-5 w-25 mt-4"
+            type="submit"
+            disabled={!stripe}
+          >
+            Pay
+          </Button>
+        </Container>
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 .payment-frame {
-  height: 400px;
+  height: 300px;
   border: 2px solid lightgray;
 }
 .label {
@@ -10,4 +10,10 @@
   width: 100px;
   margin: 10px;
   text-transform: uppercase;
+}
+
+@media all and (max-width: 688px) {
+  .dashboard-sectionTitle {
+    font-size: 20px;
+  }
 }
