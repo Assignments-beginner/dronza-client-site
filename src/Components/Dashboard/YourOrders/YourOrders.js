@@ -82,7 +82,7 @@ const YourOrders = () => {
                   </Button>
                 ) : (
                   // <Link to={`payment/${order._id}`}>
-                  <Link to={`payment`}>
+                  <Link to={`/dashboard/payment/${order._id}`}>
                   <Button variant="outline-danger" size="sm">
                     Pay
                   </Button>

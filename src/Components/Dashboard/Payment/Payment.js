@@ -1,7 +1,9 @@
 import React from "react";
 import "./Payment.css";
+import { useParams } from "react-router";
 import { Button, Col, Container, Row } from "react-bootstrap";
 const Payment = () => {
+  const { paymentId } = useParams();
   return (
     <>
       <h3 className="dashboard-sectionTitle text-center text-dark mb-5 text-uppercase">
