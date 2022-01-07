@@ -44,6 +44,7 @@ hr.new {
 .dashboard-navText-active {
   color: #dc3545;
 }
+
 /* //////////////////// Media Queries ///////////////////// */
 
 @media all and (max-width: 688px) {

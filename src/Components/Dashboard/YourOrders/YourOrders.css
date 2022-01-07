@@ -17,10 +17,12 @@
   .pay-delete {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .pay-delete button {
     width: 100%;
     font-size: 16px;
+    margin: 0px 0px 5px 0px;
   }
 
 }

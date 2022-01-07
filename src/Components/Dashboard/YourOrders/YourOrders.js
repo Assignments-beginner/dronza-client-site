@@ -50,13 +50,14 @@ const YourOrders = () => {
       </div>
       <Row className="g-4">
         {orders.map((order) => (
-          <Col key={order._id} xl={4} lg={4}>
-            <Card>
+          <Col key={order._id} xl={4} lg={4} >
+            <Card className="shadow-sm">
               <Card.Img
-                width="250"
-                height="175"
+                width="240"
+                height="165"
                 variant="top"
                 src={order.singleProductImg}
+                className="p-3"
               />
               <Card.Body className="text-center">
                 <Card.Title>
