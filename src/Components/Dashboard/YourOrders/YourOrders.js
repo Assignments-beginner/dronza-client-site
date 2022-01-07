@@ -38,7 +38,7 @@ const YourOrders = () => {
   };
 
   return (
-    <Container className="px-5 pb-5 mb-3">
+    <Container className="pb-5 mb-3">
       <div>
         <h3 className="dashboard-sectionTitle text-center text-uppercase">
           Your <span className="text-danger">orders</span>

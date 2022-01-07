@@ -2,7 +2,8 @@ import React from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { Button, Container } from "react-bootstrap";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ payment }) => {
+  const { paymentPrice } = payment;
   const stripe = useStripe();
   const elements = useElements();
 
@@ -43,7 +44,7 @@ const CheckoutForm = () => {
             type="submit"
             disabled={!stripe}
           >
-            Pay
+            Pay ${paymentPrice}
           </Button>
         </Container>
       </form>
