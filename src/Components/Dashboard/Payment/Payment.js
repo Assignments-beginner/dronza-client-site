@@ -25,7 +25,7 @@ const Payment = () => {
       <h3 className="dashboard-sectionTitle text-center text-dark mb-3 text-uppercase">
         Payment
       </h3>
-      <Container className="payment-frame w-75 mb-5 pt-3">
+      <Container className="payment-frame mb-5 pt-3">
         <Row>
           {/* Name  */}
           <Col>

@@ -20,11 +20,16 @@ hr.new {
   background-color: #212529;
   color: white;
   font-weight: bold;
-  width: 290px;
+  /* width: 290px; */
   /* height: 500px; */
   align-self: flex-start;
   position: sticky;
   top: 20%;
+}
+
+.dash-nav {
+  display: flex;
+  flex-direction: column;
 }
 
 .dashboard-section {

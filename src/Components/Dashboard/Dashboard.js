@@ -26,16 +26,17 @@ const Dashboard = () => {
       <Container className="mt-2">
         <div className="d-flex">
           <div className="side-menu d-flex justify-content-center align-items-center px-3 mb-5">
-            <Nav className="d-grid">
+            <Nav className="dash-nav">
               <NavLink
                 activeClassName="dashboard-navText-active"
-                className="dashboard-navText pt-5 mb-5 text-decoration-none text-uppercase"
+                className="dashboard-navText pt-5 mb-5 text-decoration-none text-uppercase pe-3"
                 to={`${url}/yourorders`}
               >
                 <div className="icons">
                   <i className="fas fa-shopping-cart"></i>
                 </div>{" "}
-                <span className="d-navText">Your Orders</span>
+                <span className="d-navText">Your&nbsp;</span>
+                <span className="d-navText">Orders</span>
               </NavLink>
 
               {/* <NavLink
@@ -60,7 +61,7 @@ const Dashboard = () => {
                 <span className="d-navText">Add Review</span>
               </NavLink>
               {admin && (
-                <Nav>
+                <Nav className="dash-nav">
                   <NavLink
                     activeClassName="dashboard-navText-active"
                     className="dashboard-navText mb-5 text-decoration-none text-uppercase"
@@ -71,16 +72,17 @@ const Dashboard = () => {
                     </div>{" "}
                     <span className="d-navText">Add New Product</span>
                   </NavLink>
-
                   <NavLink
                     activeClassName="dashboard-navText-active"
-                    className="dashboard-navText mb-5 text-decoration-none text-uppercase"
+                    className="dashboard-navText mb-5 text-decoration-none text-uppercase pe-3"
                     to={`${url}/manageallproducts`}
                   >
                     <div className="icons">
                       <i className="fas fa-cube"></i>
                     </div>{" "}
-                    <span className="d-navText pe-3">Manage All Products</span>
+                    <span className="d-navText">Manage&nbsp;</span>
+                    <span className="d-navText">All&nbsp;</span>
+                    <span className="d-navText">Products</span>
                   </NavLink>
 
                   <NavLink
