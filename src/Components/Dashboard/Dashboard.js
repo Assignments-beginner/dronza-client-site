@@ -38,7 +38,7 @@ const Dashboard = () => {
                 <span className="d-navText">Your Orders</span>
               </NavLink>
 
-              <NavLink
+              {/* <NavLink
                 activeClassName="dashboard-navText-active"
                 className="dashboard-navText mb-5 text-decoration-none text-uppercase"
                 to={`${url}/payment`}
@@ -47,7 +47,7 @@ const Dashboard = () => {
                   <i class="fas fa-dollar-sign"></i>
                 </div>{" "}
                 <span className="d-navText">Payment</span>
-              </NavLink>
+              </NavLink> */}
 
               <NavLink
                 activeClassName="dashboard-navText-active"
@@ -124,6 +124,7 @@ const Dashboard = () => {
                 <AddReview></AddReview>
               </Route>
 
+              {/* <Route path={`${path}/payment/paymentId`}> */}
               <Route path={`${path}/payment`}>
                 <Payment></Payment>
               </Route>

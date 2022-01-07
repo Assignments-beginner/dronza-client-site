@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import "./YourOrders.css";
 
@@ -80,9 +81,12 @@ const YourOrders = () => {
                     Paid
                   </Button>
                 ) : (
+                  // <Link to={`payment/${order._id}`}>
+                  <Link to={`payment`}>
                   <Button variant="outline-danger" size="sm">
                     Pay
                   </Button>
+                  </Link>
                 )}
                 <Button
                   onClick={() => deleteHandler(order._id)}
