@@ -1,5 +1,5 @@
 .payment-frame {
-  height: 700px;
+  height: 400px;
   border: 2px solid lightgray;
 }
 .label {
@@ -9,4 +9,5 @@
   display: inline-block;
   width: 100px;
   margin: 10px;
+  text-transform: uppercase;
 }
