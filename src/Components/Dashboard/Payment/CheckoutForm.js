@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { Button, Container } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
 import useAuth from "../../../Hooks/useAuth";
 
 const CheckoutForm = ({ payment }) => {
@@ -113,16 +114,21 @@ const CheckoutForm = ({ payment }) => {
             }}
           />
 
-          <Button
-            variant="danger fs-5 w-25 mt-4"
-            type="submit"
-            disabled={!stripe}
-          >
-            Pay&nbsp; ${paymentPrice}
-          </Button>
+          {processing ? (
+            <Spinner animation="border" />
+          ) : (
+            <Button
+              variant="danger fs-5 w-25 mt-4"
+              type="submit"
+              disabled={!stripe || success}
+            >
+              Pay&nbsp; ${paymentPrice}
+            </Button>
+          )}
         </Container>
       </form>
       {cardError && <p className="text-center text-danger">{cardError}</p>}
+      {success && <p className="text-center text-success">{success}</p>}
     </div>
   );
 };
