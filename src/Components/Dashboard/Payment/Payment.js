@@ -54,9 +54,11 @@ const Payment = () => {
             {payment.paymentPrice}
           </Col>
         </Row>
-        <Elements stripe={stripePromise}>
-          <CheckoutForm payment={payment} />
-        </Elements>
+        {payment?.paymentPrice && (
+          <Elements stripe={stripePromise}>
+            <CheckoutForm payment={payment} />
+          </Elements>
+        )}
       </Container>
     </>
   );
