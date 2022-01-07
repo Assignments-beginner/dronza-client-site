@@ -70,13 +70,28 @@ const YourOrders = () => {
                   <span className="text-danger">BOOKED BY</span> <br />{" "}
                   <i className="fas fa-user"></i> {order.userName}
                 </Card.Text>
+                <div className="pay-delete">
+                {order.payment ? (
+                  <Button
+                    variant="outline-success disabled"
+                    size="sm"
+                  >
+                    Paid
+                  </Button>
+                ) : (
+                  <Button variant="outline-danger" size="sm">
+                    Pay
+                  </Button>
+                )}
                 <Button
                   onClick={() => deleteHandler(order._id)}
-                  className="text-center btn-danger px-4"
+                  variant="danger"
                   size="sm"
                 >
+                  {/* <i className="fas fa-trash-alt fs-6"></i> */}
                   Cancel
                 </Button>
+                </div>
               </Card.Body>
               <Card.Footer
                 style={{ backgroundColor: "#e0e0eb" }}
