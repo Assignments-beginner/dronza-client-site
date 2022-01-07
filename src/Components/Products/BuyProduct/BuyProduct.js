@@ -144,13 +144,21 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
                 defaultValue={user.email}
                 {...register("userEmail")}
               />
-              {/* Error */}
+              {/* Error Fixed */}
 
               {singleProduct.productImg && (
                 <input
                   className="mb-3 p-2 d-none"
                   defaultValue={singleProduct.productImg}
                   {...register("singleProductImg")}
+                />
+              )}
+
+              {singleProduct.productPaymentPrice && (
+                <input
+                  className="mb-3 p-2 d-none"
+                  defaultValue={singleProduct.productPaymentPrice}
+                  {...register("paymentPrice")}
                 />
               )}
 
@@ -162,7 +170,7 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
                 />
               )}
 
-              {/* Error */}
+              {/* Error Fixed */}
 
               <input
                 className="mb-3 p-2 d-none"

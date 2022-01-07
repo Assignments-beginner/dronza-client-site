@@ -43,8 +43,8 @@ const Payment = () => {
           {/* Price  */}
           <Col>
             {" "}
-            <span className="label text-center">Price</span>
-            {payment.singleProductPrice}
+            <span className="label text-center">Price</span>$
+            {payment.paymentPrice}
           </Col>
         </Row>
       </Container>
