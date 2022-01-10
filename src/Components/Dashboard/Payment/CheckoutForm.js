@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { Button, Container } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
@@ -12,9 +11,9 @@ const CheckoutForm = ({ payment }) => {
   const { user } = useAuth();
 
   const [cardError, setCardError] = useState("");
+  const [clientSecret, setClientSecret] = useState("");
   const [success, setSuccess] = useState("");
   const [processing, setProcessing] = useState(false);
-  const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
     fetch(
@@ -29,6 +28,7 @@ const CheckoutForm = ({ payment }) => {
     )
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
+    // .then((data) => console.log(data));
   }, [paymentPrice]);
 
   const handleSubmit = async (e) => {
@@ -42,6 +42,7 @@ const CheckoutForm = ({ payment }) => {
       return;
     }
 
+    setProcessing(true);
     //Payment Intent
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
@@ -50,6 +51,7 @@ const CheckoutForm = ({ payment }) => {
 
     if (error) {
       setCardError(error.message);
+      setSuccess("");
     } else {
       setCardError("");
       console.log("[PaymentMethod]", paymentMethod);
