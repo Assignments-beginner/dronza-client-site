@@ -119,7 +119,7 @@ const CheckoutForm = ({ payment }) => {
             </div>
           ) : (
             <Button
-              variant="danger fs-5 w-25 mt-4"
+              variant="danger fs-5 w-25 my-4"
               type="submit"
               disabled={!stripe || success}
             >
@@ -128,8 +128,8 @@ const CheckoutForm = ({ payment }) => {
           )}
         </Container>
       </form>
-      {cardError && <p className="text-center text-danger">{cardError}</p>}
-      {success && <p className="text-center text-success">{success}</p>}
+      {cardError && <p className="text-center text-danger mb-5">{cardError}</p>}
+      {success && <p className="text-center text-success mb-5">{success}</p>}
     </div>
   );
 };
