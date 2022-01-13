@@ -16,13 +16,9 @@ const CheckoutForm = ({ payment }) => {
   const [processing, setProcessing] = useState(false);
 
   useEffect(() => {
-    fetch(
-      "https://morning-badlands-81993.herokuapp.com/create-payment-intent",
-      {
+    fetch('https://morning-badlands-81993.herokuapp.com/create-payment-intent',{
         method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
+        headers: { "content-type": "application/json" },
         body: JSON.stringify({ paymentPrice }),
       }
     )
@@ -54,7 +50,7 @@ const CheckoutForm = ({ payment }) => {
       setSuccess("");
     } else {
       setCardError("");
-      console.log("[PaymentMethod]", paymentMethod);
+      console.log("[PaymentMethod Information]", paymentMethod);
     }
     const { paymentIntent, error: intentError } =
       await stripe.confirmCardPayment(clientSecret, {
@@ -75,14 +71,15 @@ const CheckoutForm = ({ payment }) => {
       setSuccess("Your payment processed successfully.");
       console.log(paymentIntent);
       setProcessing(false);
-      // Save To Database
+
+      //Save to Mongo Database
       const payment = {
         amount: paymentIntent.amount,
         created: paymentIntent.created,
         last4: paymentMethod.card.last4,
         transaction: paymentIntent.client_secret.slice("_secret")[0],
       };
-      const url = `https://morning-badlands-81993.herokuapp.com/allorders/${_id}`;
+      const url = `https://morning-badlands-81993.herokuapp.com/payment/${_id}`;
       fetch(url, {
         method: "PUT",
         headers: {
@@ -117,7 +114,9 @@ const CheckoutForm = ({ payment }) => {
           />
 
           {processing ? (
-            <Spinner animation="border" />
+            <div className="p-5 d-flex justify-content-center">
+              <Spinner variant="danger" animation="border" />
+            </div>
           ) : (
             <Button
               variant="danger fs-5 w-25 mt-4"

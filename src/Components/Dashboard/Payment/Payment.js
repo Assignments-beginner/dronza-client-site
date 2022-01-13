@@ -16,7 +16,7 @@ const Payment = () => {
   const [payment, setPayment] = useState({});
 
   useEffect(() => {
-    fetch(`https://morning-badlands-81993.herokuapp.com/allorders/${paymentId}`)
+    fetch(`https://morning-badlands-81993.herokuapp.com/payment/${paymentId}`)
       .then((res) => res.json())
       .then((data) => setPayment(data));
   }, [paymentId]);

@@ -26,7 +26,7 @@ const Header = () => {
           <Nav className="ms-5 me-auto">
             <Nav.Link
               as={HashLink}
-              activeClassName="navs-active"
+              activeclassname="navs-active"
               className="text-white navs me-3 text-decoration-none"
               to="/home#home"
             >
@@ -35,7 +35,7 @@ const Header = () => {
 
             <Nav.Link
               as={HashLink}
-              activeClassName="navs-active"
+              activeclassname="navs-active"
               className="text-white navs me-3 text-decoration-none"
               to="/home#about"
             >
@@ -44,7 +44,7 @@ const Header = () => {
 
             <Nav.Link
               as={HashLink}
-              activeClassName="navs-active"
+              activeclassname="navs-active"
               className="text-white navs me-3 text-decoration-none"
               to="/products"
             >
@@ -53,7 +53,7 @@ const Header = () => {
 
             <Nav.Link
               as={HashLink}
-              activeClassName="navs-active"
+              activeclassname="navs-active"
               className="text-white navs me-3 text-decoration-none"
               to="/home#guideline"
             >
@@ -62,7 +62,7 @@ const Header = () => {
 
             <Nav.Link
               as={HashLink}
-              activeClassName="navs-active"
+              activeclassname="navs-active"
               className="text-white navs me-3 text-decoration-none"
               to="/home#contactus"
             >
@@ -71,7 +71,7 @@ const Header = () => {
 
             <Nav.Link
               as={HashLink}
-              activeClassName="navs-active"
+              activeclassname="navs-active"
               className="text-white navs me-3 text-decoration-none"
               to="/dashboard"
             >
@@ -93,7 +93,7 @@ const Header = () => {
             </div>
 
             <NavLink
-              activeClassName="navs-active"
+              activeclassname="navs-active"
               className="navs ms-3 me-3 text-decoration-none fs-6"
               to="/dashboard"
             >
@@ -102,7 +102,7 @@ const Header = () => {
 
             {!user?.email && (
               <NavLink
-                activeClassName="navs-active"
+                activeclassname="navs-active"
                 className="navs ms-3 me-3 text-decoration-none fs-6"
                 to="/signin"
               >
@@ -112,7 +112,7 @@ const Header = () => {
 
             {user?.email && (
               <NavLink
-                activeClassName="navs-active"
+                activeclassname="navs-active"
                 className="navs ms-3 me-3 text-decoration-none fs-6"
                 to="/home"
                 onClick={logOut}
