@@ -26,34 +26,36 @@ const Payment = () => {
         Payment
       </h3>
       <Container className="payment-frame mb-5 pt-3">
-        <Row>
-          {/* Name  */}
-          <Col>
-            {" "}
-            <span className="label text-center">Name</span>
-            {payment.userName}
-          </Col>
-          {/* Product  */}
-          <Col>
-            {" "}
-            <span className="label text-center">Product</span>{" "}
-            {payment.singleProductName}
-          </Col>
-        </Row>
-        <Row>
-          {/* Model  */}
-          <Col>
-            {" "}
-            <span className="label text-center">Model</span>
-            {payment.singleProductModel}
-          </Col>
-          {/* Price  */}
-          <Col>
-            {" "}
-            <span className="label text-center">Price</span>$
-            {payment.paymentPrice}
-          </Col>
-        </Row>
+        <Container className="border border-danger w-75">
+          <Row>
+            {/* Name  */}
+            <Col>
+              {" "}
+              <span className="label text-center">Name</span>
+              {payment.userName}
+            </Col>
+            {/* Product  */}
+            <Col>
+              {" "}
+              <span className="label text-center">Product</span>{" "}
+              {payment.singleProductName}
+            </Col>
+          </Row>
+          <Row>
+            {/* Model  */}
+            <Col>
+              {" "}
+              <span className="label text-center">Model</span>
+              {payment.singleProductModel}
+            </Col>
+            {/* Price  */}
+            <Col>
+              {" "}
+              <span className="label text-center">Price</span>$
+              {payment.paymentPrice}
+            </Col>
+          </Row>
+        </Container>
         {payment?.paymentPrice && (
           <Elements stripe={stripePromise}>
             <CheckoutForm payment={payment} />

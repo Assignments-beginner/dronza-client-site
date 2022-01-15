@@ -16,7 +16,9 @@ const CheckoutForm = ({ payment }) => {
   const [processing, setProcessing] = useState(false);
 
   useEffect(() => {
-    fetch('https://morning-badlands-81993.herokuapp.com/create-payment-intent',{
+    fetch(
+      "https://morning-badlands-81993.herokuapp.com/create-payment-intent",
+      {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ paymentPrice }),
@@ -96,14 +98,14 @@ const CheckoutForm = ({ payment }) => {
       <form onSubmit={handleSubmit}>
         <Container>
           <CardElement
-            className="mt-4"
+            className="mt-4 w-75 border border-danger mx-auto"
             options={{
               style: {
                 base: {
-                  fontSize: "25px",
-                  color: "#424770",
+                  fontSize: "20px",
+                  color: "#696969",
                   "::placeholder": {
-                    color: "#aab7c4",
+                    color: "#696969",
                   },
                 },
                 invalid: {
@@ -118,13 +120,15 @@ const CheckoutForm = ({ payment }) => {
               <Spinner variant="danger" animation="border" />
             </div>
           ) : (
+            <div className="d-flex justify-content-center">
             <Button
-              variant="danger fs-5 w-25 my-4"
+              variant="danger fs-5 my-4"
               type="submit"
               disabled={!stripe || success}
             >
               Pay&nbsp; ${paymentPrice}
             </Button>
+            </div>
           )}
         </Container>
       </form>
