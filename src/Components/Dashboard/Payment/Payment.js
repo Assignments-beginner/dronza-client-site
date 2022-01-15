@@ -25,9 +25,9 @@ const Payment = () => {
       <h3 className="dashboard-sectionTitle text-center text-dark my-4 text-uppercase">
         Payment <span className="text-danger">Gateway</span>
       </h3>
-      <Container className="payment-frame mb-5 pt-3">
-        <div className="border border-danger mx-auto orderInfo">
-          <Row>
+      <div className="payment-frame">
+        <div className="border border-danger mx-auto orderInfo mt-4">
+          <Row className="orderInfo-row">
             {/* Product  */}
             <Col>
               {" "}
@@ -41,7 +41,7 @@ const Payment = () => {
               {payment.singleProductModel}
             </Col>
           </Row>
-          <Row>
+          <Row className="orderInfo-row">
             {/* Status  */}
             <Col>
               <span className="label text-center">Status</span>
@@ -61,7 +61,7 @@ const Payment = () => {
             <CheckoutForm payment={payment} />
           </Elements>
         )}
-      </Container>
+      </div>
     </>
   );
 };

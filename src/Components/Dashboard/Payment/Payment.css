@@ -1,6 +1,7 @@
 .payment-frame {
-  /* height: 300px; */
   border: 2px solid lightgray;
+  width: 80%;
+  margin: 0 auto;
 }
 .label {
   padding: 8px;
@@ -13,13 +14,19 @@
 }
 .orderInfo {
   width: 70%;
-  
 }
+
 @media all and (max-width: 688px) {
   .dashboard-sectionTitle {
     font-size: 20px;
   }
   .orderInfo {
-    width: 100%;
+    width: 80%;
+  }
+  .orderInfo-row {
+    flex-direction: column;
+  }
+  .payment-frame {
+    width: 90%;
   }
 }
