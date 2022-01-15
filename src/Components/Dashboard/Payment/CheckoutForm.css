@@ -1,0 +1,9 @@
+.cardElement {
+  width: 50%;
+}
+
+@media all and (max-width: 688px) {
+  .cardElement {
+    width: 100%;
+  }
+}

@@ -78,6 +78,7 @@ const YourOrders = () => {
                       Paid
                     </Button>
                   ) : (
+                    // <Link to={`dahboard/payment/:paymentId`}>
                     <Link to={`/payment/${order._id}`}>
                       <Button variant="outline-danger" size="sm">
                         Pay
@@ -89,7 +90,6 @@ const YourOrders = () => {
                     variant="danger"
                     size="sm"
                   >
-                    {/* <i className="fas fa-trash-alt fs-6"></i> */}
                     Cancel
                   </Button>
                 </div>

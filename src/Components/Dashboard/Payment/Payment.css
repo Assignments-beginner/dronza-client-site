@@ -13,18 +13,17 @@
   text-transform: uppercase;
 }
 .orderInfo {
-  width: 70%;
+  width: 25%;
 }
-
+.orderInfo-row {
+  flex-direction: column;
+}
 @media all and (max-width: 688px) {
   .dashboard-sectionTitle {
     font-size: 20px;
   }
   .orderInfo {
     width: 80%;
-  }
-  .orderInfo-row {
-    flex-direction: column;
   }
   .payment-frame {
     width: 90%;

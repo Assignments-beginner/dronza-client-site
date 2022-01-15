@@ -3,6 +3,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { Button, Container } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import useAuth from "../../../Hooks/useAuth";
+import "./CheckoutForm.css";
 
 const CheckoutForm = ({ payment }) => {
   const { paymentPrice, _id, userName } = payment;
@@ -98,7 +99,7 @@ const CheckoutForm = ({ payment }) => {
       <form onSubmit={handleSubmit}>
         <Container>
           <CardElement
-            className="mt-2 cardElement w-75 border border-danger mx-auto"
+            className="mt-3 cardElement mx-auto"
             options={{
               style: {
                 base: {

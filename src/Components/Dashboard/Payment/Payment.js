@@ -25,8 +25,8 @@ const Payment = () => {
       <h3 className="dashboard-sectionTitle text-center text-dark my-4 text-uppercase">
         Payment <span className="text-danger">Gateway</span>
       </h3>
-      <div className="payment-frame">
-        <div className="border border-danger mx-auto orderInfo mt-4">
+      <div className="payment-frame mb-5">
+        <div className="mx-auto orderInfo mt-4">
           <Row className="orderInfo-row">
             {/* Product  */}
             <Col>
