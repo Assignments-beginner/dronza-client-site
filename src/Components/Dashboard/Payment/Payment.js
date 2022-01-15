@@ -22,8 +22,8 @@ const Payment = () => {
   }, [paymentId]);
   return (
     <>
-      <h3 className="dashboard-sectionTitle text-center text-dark mb-3 text-uppercase">
-        Payment
+      <h3 className="dashboard-sectionTitle text-center text-dark my-4 text-uppercase">
+        Payment <span className="text-danger">Gateway</span>
       </h3>
       <Container className="payment-frame mb-5 pt-3">
         <div className="border border-danger mx-auto orderInfo">

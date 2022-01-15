@@ -5,8 +5,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
-import AuthProvider from "./Context/AuthProvider";
 import LogIn from "./Components/LogIn/LogIn";
+import AuthProvider from "./Context/AuthProvider";
 import Registration from "./Components/Registration/Registration";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NotFound from "./Components/NotFound/NotFound";
@@ -17,6 +17,7 @@ import BuyProduct from "./Components/Products/BuyProduct/BuyProduct";
 import Contact from "./Components/Home/Pages/Contact/Contact";
 import About from "./Components/Home/Pages/About/About";
 import Guideline from "./Components/Home/Pages/Guideline/Guideline";
+import Payment from "./Components/Dashboard/Payment/Payment";
 import Sorry from "./Components/Sorry/Sorry";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
@@ -53,6 +54,18 @@ function App() {
                 <Contact></Contact>
               </Route>
 
+              <Route path="/registration">
+                <Registration></Registration>
+              </Route>
+
+              <PrivateRoute path="/signin">
+                <LogIn></LogIn>
+              </PrivateRoute>
+
+              <PrivateRoute path="/payment/:paymentId">
+                <Payment></Payment>
+              </PrivateRoute>
+
               <PrivateRoute path="/singleproduct/:id">
                 <BuyProduct></BuyProduct>
               </PrivateRoute>
@@ -61,9 +74,9 @@ function App() {
                 <Dashboard></Dashboard>
               </PrivateRoute>
 
-              <Route path="/signin">
-                <LogIn></LogIn>
-              </Route>
+              <PrivateRoute path="/greetings">
+                <Greetings></Greetings>
+              </PrivateRoute>
 
               <Route path="/registration">
                 <Registration></Registration>
@@ -72,10 +85,6 @@ function App() {
               <Route path="/sorry">
                 <Sorry></Sorry>
               </Route>
-
-              <PrivateRoute path="/greetings">
-                <Greetings></Greetings>
-              </PrivateRoute>
 
               <Route path="*">
                 <NotFound></NotFound>

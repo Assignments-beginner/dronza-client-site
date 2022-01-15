@@ -51,7 +51,7 @@ const YourOrders = () => {
       </div>
       <Row className="g-4">
         {orders.map((order) => (
-          <Col key={order._id} xl={4} lg={4} >
+          <Col key={order._id} xl={4} lg={4}>
             <Card className="shadow-sm">
               <Card.Img
                 width="240"
@@ -73,29 +73,25 @@ const YourOrders = () => {
                   <i className="fas fa-user"></i> {order.userName}
                 </Card.Text>
                 <div className="pay-delete">
-                {order.payment ? (
+                  {order.payment ? (
+                    <Button variant="outline-success disabled" size="sm">
+                      Paid
+                    </Button>
+                  ) : (
+                    <Link to={`/payment/${order._id}`}>
+                      <Button variant="outline-danger" size="sm">
+                        Pay
+                      </Button>
+                    </Link>
+                  )}
                   <Button
-                    variant="outline-success disabled"
+                    onClick={() => deleteHandler(order._id)}
+                    variant="danger"
                     size="sm"
                   >
-                    Paid
+                    {/* <i className="fas fa-trash-alt fs-6"></i> */}
+                    Cancel
                   </Button>
-                ) : (
-                  // <Link to={`payment/${order._id}`}>
-                  <Link to={`/dashboard/payment/${order._id}`}>
-                  <Button variant="outline-danger" size="sm">
-                    Pay
-                  </Button>
-                  </Link>
-                )}
-                <Button
-                  onClick={() => deleteHandler(order._id)}
-                  variant="danger"
-                  size="sm"
-                >
-                  {/* <i className="fas fa-trash-alt fs-6"></i> */}
-                  Cancel
-                </Button>
                 </div>
               </Card.Body>
               <Card.Footer
