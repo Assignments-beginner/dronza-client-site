@@ -11,9 +11,15 @@
   margin: 10px;
   text-transform: uppercase;
 }
-
+.orderInfo {
+  width: 70%;
+  
+}
 @media all and (max-width: 688px) {
   .dashboard-sectionTitle {
     font-size: 20px;
+  }
+  .orderInfo {
+    width: 100%;
   }
 }

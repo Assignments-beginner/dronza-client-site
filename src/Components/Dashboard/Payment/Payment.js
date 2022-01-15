@@ -26,27 +26,26 @@ const Payment = () => {
         Payment
       </h3>
       <Container className="payment-frame mb-5 pt-3">
-        <Container className="border border-danger w-75">
+        <div className="border border-danger mx-auto orderInfo">
           <Row>
-            {/* Name  */}
-            <Col>
-              {" "}
-              <span className="label text-center">Name</span>
-              {payment.userName}
-            </Col>
             {/* Product  */}
             <Col>
               {" "}
-              <span className="label text-center">Product</span>{" "}
+              <span className="label text-center">Product</span>
               {payment.singleProductName}
             </Col>
-          </Row>
-          <Row>
             {/* Model  */}
             <Col>
               {" "}
               <span className="label text-center">Model</span>
               {payment.singleProductModel}
+            </Col>
+          </Row>
+          <Row>
+            {/* Status  */}
+            <Col>
+              <span className="label text-center">Status</span>
+              {payment.bookedproductStatus}
             </Col>
             {/* Price  */}
             <Col>
@@ -55,7 +54,8 @@ const Payment = () => {
               {payment.paymentPrice}
             </Col>
           </Row>
-        </Container>
+        </div>
+        <h5 className="text-center mt-2 text-uppercase">{payment.userName}</h5>
         {payment?.paymentPrice && (
           <Elements stripe={stripePromise}>
             <CheckoutForm payment={payment} />

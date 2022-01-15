@@ -98,7 +98,7 @@ const CheckoutForm = ({ payment }) => {
       <form onSubmit={handleSubmit}>
         <Container>
           <CardElement
-            className="mt-4 w-75 border border-danger mx-auto"
+            className="mt-2 cardElement w-75 border border-danger mx-auto"
             options={{
               style: {
                 base: {
@@ -121,13 +121,13 @@ const CheckoutForm = ({ payment }) => {
             </div>
           ) : (
             <div className="d-flex justify-content-center">
-            <Button
-              variant="danger fs-5 my-4"
-              type="submit"
-              disabled={!stripe || success}
-            >
-              Pay&nbsp; ${paymentPrice}
-            </Button>
+              <Button
+                variant="danger fs-5 my-4"
+                type="submit"
+                disabled={!stripe || success}
+              >
+                Pay&nbsp; ${paymentPrice}
+              </Button>
             </div>
           )}
         </Container>
