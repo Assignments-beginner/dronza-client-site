@@ -3,7 +3,6 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { Button, Container } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import useAuth from "../../../Hooks/useAuth";
-import "./CheckoutForm.css";
 
 const CheckoutForm = ({ payment }) => {
   const { paymentPrice, _id, userName } = payment;

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Payment.css";
 import { useParams } from "react-router";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import CheckoutForm from "./CheckoutForm";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
@@ -55,7 +55,7 @@ const Payment = () => {
             </Col>
           </Row>
         </div>
-        <h5 className="text-center mt-2 text-uppercase">{payment.userName}</h5>
+        <h5 className="text-center mt-4 text-uppercase">{payment.userName}</h5>
         {payment?.paymentPrice && (
           <Elements stripe={stripePromise}>
             <CheckoutForm payment={payment} />

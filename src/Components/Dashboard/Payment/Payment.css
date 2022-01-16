@@ -1,6 +1,6 @@
 .payment-frame {
   border: 2px solid lightgray;
-  width: 80%;
+  width: 40%;
   margin: 0 auto;
 }
 .label {
@@ -13,7 +13,7 @@
   text-transform: uppercase;
 }
 .orderInfo {
-  width: 25%;
+  width: 45%;
 }
 .orderInfo-row {
   flex-direction: column;
