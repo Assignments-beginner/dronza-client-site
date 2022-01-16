@@ -58,9 +58,9 @@ function App() {
                 <Registration></Registration>
               </Route>
 
-              <PrivateRoute path="/signin">
+              <Route path="/signin">
                 <LogIn></LogIn>
-              </PrivateRoute>
+              </Route>
 
               <PrivateRoute path="/payment/:paymentId">
                 <Payment></Payment>
