@@ -131,5 +131,61 @@
     "productPrice": "$1600",
     "productRating": "5",
     "productPaymentPrice": "1600"
+  },
+
+  {
+    "productName": "HAVIC",
+    "productImg": "https://png.pngitem.com/pimgs/s/491-4911131_mavic-2-enterprise-dual-dr...",
+    "productModel": "MI 09",
+    "productRange": "3 KM",
+    "productControlType": "Gesture Control",
+    "productResolution": "FHD 1080p",
+    "productBatteries": "3 Hours",
+    "productDescription": "Smart and Powerful Performance - Orbit Mode, and Gesture Control free ...",
+    "productPrice": "$1299",
+    "productRating": "3",
+    "productPaymentPrice": "1299"
+  },
+
+  {
+    "productName": "Aries",
+    "productImg": "https://png.pngitem.com/pimgs/s/491-4911075_aries-blackbird-x10-hd-png...",
+    "productModel": "A6E RI",
+    "productRange": "2 KM",
+    "productControlType": "Remote Control",
+    "productResolution": "4K HD",
+    "productBatteries": "4 Hours",
+    "productDescription": "Feel the thrill of immersive flight provided by the Aries A6E RI Goggl...",
+    "productPrice": "$2599",
+    "productRating": "4",
+    "productPaymentPrice": "2599"
+  },
+
+  {
+    "productName": "Protrone",
+    "productImg": "https://png.pngitem.com/pimgs/s/657-6572370_new-lily-drone-camera-prop...",
+    "productModel": "PTE 3M",
+    "productRange": "5 KM",
+    "productControlType": "Gesture Control",
+    "productResolution": "HD 720p",
+    "productBatteries": "5 Hours",
+    "productDescription": "Protrone drone is equipped with 4 Propeller Guards to protect you from...",
+    "productPrice": "$2199",
+    "productRating": "3",
+    "productPaymentPrice": "2199"
+  },
+
+  {
+    "productName": "Timberjam",
+    "productImg": "https://png.pngitem.com/pimgs/s/491-4911064_x-star-orange-3-autel-x-st...",
+    "productModel": "TM5 SE",
+    "productRange": "2 KM",
+    "productControlType": "Remote Control",
+    "productResolution": "4K HD",
+    "productBatteries": "2 Hours",
+    "productDescription": "The optical flow positioning helps the drone achieve great performance...",
+    "productPrice": "$1579",
+    "productRating": "4",
+    "productPaymentPrice": "1579"
   }
 ]
