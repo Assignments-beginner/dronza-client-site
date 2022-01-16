@@ -63,239 +63,73 @@
     "productDescription": "The package came with two intelligent batteries, each can provide a max 28mins and total up to 56mins flight time; 5G FPV transmission distance can achieve 1900-3900ft; remote control range is as long as 4900ft.",
     "productPrice": "$1299",
     "productRating": "4.5",
-    "productPaymentPrice": "1299"    
-  }
-  {
-"productName":"Dowellin"
-"productImg":"https://png.pngitem.com/pimgs/s/490-4909411_top-rc-drones-for-dji-phan..."
-"productModel":"DWI C3"
-"productRange":"4 KM"
-"productControlType":"Remote Control"
-"productResolution":"HD 1080p"
-"productBatteries":"4 Hours"
-"productDescription":"The optical flow positioning helps the drone achieve great performance..."
-"productPrice":"$1579"
-"productRating":"3.5"
-"productPaymentPrice":"1579"
+    "productPaymentPrice": "1299"
   },
-{
-"productName":"SANROCK"
-"productImg":"https://png.pngitem.com/pimgs/s/491-4910958_helicopter-rotor-hd-png-do..."
-"productModel":"SCK 8F"
-"productRange":"3 KM"
-"productControlType":"Gesture Control"
-"productResolution":"FHD 1080p"
-"productBatteries":"2 Hours"
-"productDescription":"SANROCK foldable drone equipped with 1080P camera can take photos and ..."
-"productPrice":"$1299"
-"productRating":"3.5"
-"productPaymentPrice":"1299"
-},
-{
-"productName":"LARVENDER"
-"productImg":"https://png.pngitem.com/pimgs/s/50-507840_camera-drone-transparent-fil..."
-"productModel":"KF102"
-"productRange":"4 KM"
-"productControlType":"Gesture Control"
-"productResolution":"4K HD"
-"productBatteries":"5 Hours"
-"productDescription":"This drone with camera for adults 4k equipped with stable 2-axis gimba..."
-"productPrice":"$2399"
-"productRating":"3"
-"productPaymentPrice":"2399"
-},
+  {
+    "productName": "Dowellin",
+    "productImg": "https://png.pngitem.com/pimgs/s/490-4909411_top-rc-drones-for-dji-phantom-4-pro.png",
+    "productModel": "DWI C3",
+    "productRange": "4 KM",
+    "productControlType": "Remote Control",
+    "productResolution": "HD 1080p",
+    "productBatteries": "4 Hours",
+    "productDescription": "The optical flow positioning helps the drone achieve great performance in precise location and photograph, suitable for beginners and photographers. On altitude hold mode, you can accurately lock the height and location, stable take HD pictures and videos.",
+    "productPrice": "$1579",
+    "productRating": "3.5",
+    "productPaymentPrice": "1579"
+  },
+  {
+    "productName": "SANROCK",
+    "productImg": "https://png.pngitem.com/pimgs/s/491-4910958_helicopter-rotor-hd-png-download.png",
+    "productModel": "SCK 8F",
+    "productRange": "3 KM",
+    "productControlType": "Gesture Control",
+    "productResolution": "FHD 1080p",
+    "productBatteries": "2 Hours",
+    "productDescription": "SANROCK foldable drone equipped with 1080P camera can take photos and videos. You are able to see real time first-person-view on the App with WiFi transmission. The videos and pictures are automatically saved in your phone, you can share them on your social media at any time.",
+    "productPrice": "$1299",
+    "productRating": "3.5",
+    "productPaymentPrice": "1299"
+  },
+  {
+    "productName": "LARVENDER",
+    "productImg": "https://png.pngitem.com/pimgs/s/50-507840_camera-drone-transparent-file-drone-camera-images-png.png",
+    "productModel": "KF102",
+    "productRange": "4 KM",
+    "productControlType": "Gesture Control",
+    "productResolution": "4K HD",
+    "productBatteries": "5 Hours",
+    "productDescription": "This drone with camera for adults 4k equipped with stable 2-axis gimbal camera which reduces blurring, provides better image stability. The 4K HD camera capture amazing picutures and videos which makes you enjoy any views from the lens. Dual antenna fpv transmission makes the video more stable.",
+    "productPrice": "$2399",
+    "productRating": "3",
+    "productPaymentPrice": "2399"
+  },
 
-{
-"productName":"Synapse"
-"productImg":"https://png.pngitem.com/pimgs/s/491-4910890_u45wf-blue-jay-wifi-fpv-dr..."
-"productModel":"HR84"
-"productRange":"3 KM"
-"productControlType":"Remote Control"
-"productResolution":"4K HD"
-"productBatteries":"3 Hours"
-"productDescription":"Synapse drone with 4K HD camera is easy to control. Simply press one b..."
-"productPrice":"$1960"
-"productRating":"4.5"
-"productPaymentPrice":"1960"
-},
-"productName"
-:
-"Holy Stone"
-"productImg"
-:
-"https://png.pngitem.com/pimgs/s/194-1940890_phantom-4-pro-quadcopter-u..."
-"productModel"
-:
-"MG81"
-"productRange"
-:
-"2.5 KM"
-"productControlType"
-:
-"Remote Control"
-"productResolution"
-:
-"4K HD"
-"productBatteries"
-:
-"2.5 Hours"
-"productDescription"
-:
-"This drone can trace and follow you automatically, flying along a path..."
-"productPrice"
-:
-"$1600"
-"productRating"
-:
-"5"
-"productPaymentPrice"
-:
-"1600"
-_id
-:
-619bad0087c83c3687f82390
-"productName"
-:
-"HAVIC "
-"productImg"
-:
-"https://png.pngitem.com/pimgs/s/491-4911131_mavic-2-enterprise-dual-dr..."
-"productModel"
-:
-"MI 09"
-"productRange"
-:
-"3 KM"
-"productControlType"
-:
-"Gesture Control"
-"productResolution"
-:
-"FHD 1080p"
-"productBatteries"
-:
-"3 Hours"
-"productDescription"
-:
-"Smart and Powerful Performance - Orbit Mode, and Gesture Control free ..."
-"productPrice"
-:
-"$1299"
-"productRating"
-:
-"3"
-"productPaymentPrice"
-:
-"1299"
-_id
-:
-619badc687c83c3687f82391
-"productName"
-:
-"Aries"
-"productImg"
-:
-"https://png.pngitem.com/pimgs/s/491-4911075_aries-blackbird-x10-hd-png..."
-"productModel"
-:
-"A6E RI"
-"productRange"
-:
-"2 KM"
-"productControlType"
-:
-"Remote Control"
-"productResolution"
-:
-"4K HD"
-"productBatteries"
-:
-"4 Hours"
-"productDescription"
-:
-"Feel the thrill of immersive flight provided by the Aries A6E RI Goggl..."
-"productPrice"
-:
-"$2599"
-"productRating"
-:
-"4"
-"productPaymentPrice"
-:
-"2599"
-_id
-:
-619bae8287c83c3687f82392
-"productName"
-:
-"Protrone"
-"productImg"
-:
-"https://png.pngitem.com/pimgs/s/657-6572370_new-lily-drone-camera-prop..."
-"productModel"
-:
-"PTE 3M"
-"productRange"
-:
-"5 KM"
-"productControlType"
-:
-"Gesture Control"
-"productResolution"
-:
-"HD 720p"
-"productBatteries"
-:
-"5 Hours"
-"productDescription"
-:
-"Protrone drone is equipped with 4 Propeller Guards to protect you from..."
-"productPrice"
-:
-"$2199"
-"productRating"
-:
-"3"
-"productPaymentPrice"
-:
-"2199"
-_id
-:
-619baf1787c83c3687f82393
-"productName"
-:
-"Timberjam"
-"productImg"
-:
-"https://png.pngitem.com/pimgs/s/491-4911064_x-star-orange-3-autel-x-st..."
-"productModel"
-:
-"TM5 SE"
-"productRange"
-:
-"2 KM"
-"productControlType"
-:
-"Remote Control"
-"productResolution"
-:
-"4K HD"
-"productBatteries"
-:
-"2 Hours"
-"productDescription"
-:
-"The optical flow positioning helps the drone achieve great performance..."
-"productPrice"
-:
-"$1579"
-"productRating"
-:
-"4"
-"productPaymentPrice"
-:
-"1579"
-]
+  {
+    "productName": "Synapse",
+    "productImg": "https://png.pngitem.com/pimgs/s/491-4910890_u45wf-blue-jay-wifi-fpv-drone-with-camera.png",
+    "productModel": "HR84",
+    "productRange": "3 KM",
+    "productControlType": "Remote Control",
+    "productResolution": "4K HD",
+    "productBatteries": "3 Hours",
+    "productDescription": "Synapse drone with 4K HD camera is easy to control. Simply press one button to take off and land and return. One button takes off, smart voice control, altitude hold mode, the fascinating 360° flips & rolls, allow any beginers or experts accurately lock the height and location, stable hover and capture video or photos from any angle shooting.",
+    "productPrice": "$1960",
+    "productRating": "4.5",
+    "productPaymentPrice": "1960"
+  },
 
-
+  {
+    "productName": "Holy Stone",
+    "productImg": "https://png.pngitem.com/pimgs/s/194-1940890_phantom-4-pro-quadcopter-uav-drone-w-4k.png",
+    "productModel": "MG81",
+    "productRange": "2.5 KM",
+    "productControlType": "Remote Control",
+    "productResolution": "4K HD",
+    "productBatteries": "2.5 Hours",
+    "productDescription": "This drone can trace and follow you automatically, flying along a path you set, or fly around a point in circles, and when you pose to the camera it will take a photo or video, let you enjoy the wonderful flight experience.",
+    "productPrice": "$1600",
+    "productRating": "5",
+    "productPaymentPrice": "1600"
+  }
 ]
