@@ -21,7 +21,7 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
   }, [id]);
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     axios
       .post("https://morning-badlands-81993.herokuapp.com/allorders", data)
       .then((res) => {
