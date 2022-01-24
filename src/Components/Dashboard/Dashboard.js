@@ -7,7 +7,6 @@ import AddReview from "./AddReview/AddReview";
 import AddNewProduct from "./AddNewProduct/AddNewProduct";
 import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
-import Payment from "./Payment/Payment";
 import ManageAllProducts from "./ManageAllProducts/ManageAllProducts";
 import useAuth from "../../Hooks/useAuth";
 import AdminRoute from "../AdminRoute/AdminRoute";

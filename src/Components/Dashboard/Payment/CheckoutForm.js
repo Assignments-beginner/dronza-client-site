@@ -17,6 +17,7 @@ const CheckoutForm = ({ payment }) => {
 
   useEffect(() => {
     fetch(
+      // "http://localhost:5000/create-payment-intent",
       "https://morning-badlands-81993.herokuapp.com/create-payment-intent",
       {
         method: "POST",
@@ -26,7 +27,7 @@ const CheckoutForm = ({ payment }) => {
     )
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
-    // .then((data) => console.log(data));
+      // .then((data) => console.log("[clientSecret]", data)); 
   }, [paymentPrice]);
 
   const handleSubmit = async (e) => {
@@ -41,7 +42,8 @@ const CheckoutForm = ({ payment }) => {
     }
 
     setProcessing(true);
-    //Payment Intent
+
+    //Getting the Card information .... Payment Intent
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card,
@@ -52,8 +54,9 @@ const CheckoutForm = ({ payment }) => {
       setSuccess("");
     } else {
       setCardError("");
-      console.log("[PaymentMethod Information]", paymentMethod);
+      // console.log("[PaymentMethod Information]", paymentMethod);
     }
+
     const { paymentIntent, error: intentError } =
       await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -71,7 +74,8 @@ const CheckoutForm = ({ payment }) => {
     } else {
       setCardError("");
       setSuccess("Your payment processed successfully.");
-      console.log(paymentIntent);
+      // console.log(paymentIntent); 
+
       setProcessing(false);
 
       //Save to Mongo Database
@@ -81,7 +85,7 @@ const CheckoutForm = ({ payment }) => {
         last4: paymentMethod.card.last4,
         transaction: paymentIntent.client_secret.slice("_secret")[0],
       };
-      const url = `https://morning-badlands-81993.herokuapp.com/payment/${_id}`;
+      const url = `https://morning-badlands-81993.herokuapp.com/allorders/${_id}`;
       fetch(url, {
         method: "PUT",
         headers: {
@@ -90,7 +94,7 @@ const CheckoutForm = ({ payment }) => {
         body: JSON.stringify(payment),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) => console.log(data)); 
     }
   };
   return (
