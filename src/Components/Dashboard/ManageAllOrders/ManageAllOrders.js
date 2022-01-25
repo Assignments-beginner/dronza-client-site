@@ -86,7 +86,13 @@ const ManageAllOrders = () => {
                   <br />
                   <span className="table-text hidden-price">
                     {orders.singleProductPrice}
-                  </span>{" "}
+                    <br />
+                    {orders.payment ? (
+                      <span className="text-success text-center">Paid</span>
+                    ) : (
+                      <span className="text-danger text-white">Unpaid</span>
+                    )}
+                  </span>
                   <br />
                   <span className="table-text hidden-status">
                     {orders.bookedproductStatus}
@@ -94,6 +100,12 @@ const ManageAllOrders = () => {
                 </td>
                 <td className="table-text text-center price">
                   {orders.singleProductPrice}
+                  <br />
+                  {orders.payment ? (
+                    <span className="text-success text-center">Paid</span>
+                  ) : (
+                    <span className="text-danger text-white">Unpaid</span>
+                  )}
                 </td>
                 <td className="table-text text-center text-danger">
                   {orders.userName}
