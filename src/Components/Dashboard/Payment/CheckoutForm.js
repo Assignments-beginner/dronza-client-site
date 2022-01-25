@@ -17,8 +17,8 @@ const CheckoutForm = ({ payment }) => {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/create-payment-intent",
-      // "https://morning-badlands-81993.herokuapp.com/create-payment-intent",
+      // "http://localhost:5000/create-payment-intent",
+      "https://morning-badlands-81993.herokuapp.com/create-payment-intent",
       // "/create-payment-intent",
       {
         method: "POST",
