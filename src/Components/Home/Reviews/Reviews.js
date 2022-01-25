@@ -10,7 +10,7 @@ const Reviews = () => {
     centerMode: true,
     centerPadding: "40px",
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     dots: true,
     speed: 300,
     responsive: [

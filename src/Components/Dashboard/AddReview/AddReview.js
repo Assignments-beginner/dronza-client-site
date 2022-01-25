@@ -14,7 +14,7 @@ const AddReview = () => {
         if (res.data.insertedId) {
           reset();
           Swal.fire({
-            position: "top-center",
+            position: "center",
             icon: "success",
             title: "Your review has been posted.",
             showConfirmButton: false,

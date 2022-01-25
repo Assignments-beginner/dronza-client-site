@@ -23,7 +23,7 @@ const MakeAdmin = () => {
         if (data.modifiedCount) {
           console.log(data);
           Swal.fire({
-            position: "top-center",
+            position: "center",
             icon: "success",
             title: "Admin added successfully!",
             showConfirmButton: false,

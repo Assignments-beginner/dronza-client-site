@@ -48,7 +48,7 @@ const Contact = () => {
             <Col className="res-contact-details text-center d-grid">
               <div>
                 <strong className="text-dark text-uppercase">address</strong>{" "}
-                <i class="fas fa-map-marker-alt text-danger"></i>
+                <i className="fas fa-map-marker-alt text-danger"></i>
               </div>
               <span>2859 Wilkinson Street</span>
               <span>California St, Stockton, United States</span>

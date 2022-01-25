@@ -17,8 +17,9 @@ const CheckoutForm = ({ payment }) => {
 
   useEffect(() => {
     fetch(
-      // "http://localhost:5000/create-payment-intent",
-      "https://morning-badlands-81993.herokuapp.com/create-payment-intent",
+      "http://localhost:5000/create-payment-intent",
+      // "https://morning-badlands-81993.herokuapp.com/create-payment-intent",
+      // "/create-payment-intent",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -27,7 +28,7 @@ const CheckoutForm = ({ payment }) => {
     )
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
-      // .then((data) => console.log("[clientSecret]", data)); 
+    // .then((data) => console.log("[clientSecret]", data));
   }, [paymentPrice]);
 
   const handleSubmit = async (e) => {
@@ -73,8 +74,8 @@ const CheckoutForm = ({ payment }) => {
       setSuccess("");
     } else {
       setCardError("");
-      setSuccess("Your payment processed successfully.");
-      // console.log(paymentIntent); 
+      setSuccess("Thank you for purchasing our product.");
+      // console.log(paymentIntent);
 
       setProcessing(false);
 
@@ -94,7 +95,7 @@ const CheckoutForm = ({ payment }) => {
         body: JSON.stringify(payment),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data)); 
+        .then((data) => console.log(data));
     }
   };
   return (

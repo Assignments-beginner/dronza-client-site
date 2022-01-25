@@ -21,14 +21,14 @@ const BuyProduct = ({ backgroundColor = "#F6F6F6", children }) => {
   }, [id]);
 
   const onSubmit = (data) => {
-    // console.log(data);
+    // console.log(data);  //Single product details
     axios
       .post("https://morning-badlands-81993.herokuapp.com/allorders", data)
       .then((res) => {
         // console.log(res);
         if (res.data.insertedId) {
           Swal.fire({
-            position: "top-center",
+            position: "center",
             icon: "success",
             title: "Thank You ! Order Placed Successfully!",
             showConfirmButton: false,
