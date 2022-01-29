@@ -28,14 +28,14 @@ const Dashboard = () => {
             <Nav className="dash-nav">
               <NavLink
                 activeClassName="dashboard-navText-active"
-                className="dashboard-navText pt-5 mb-5 text-decoration-none text-uppercase pe-3"
+                className="dashboard-navText pt-5 mb-5 text-decoration-none text-uppercase"
                 to={`${url}/yourorders`}
               >
                 <div className="icons">
                   <i className="fas fa-shopping-cart"></i>
                 </div>{" "}
                 <span className="d-navText">Your&nbsp;</span>
-                <span className="d-navText">Orders</span>
+                <span className="d-navText">Orders&nbsp;&nbsp;&nbsp;&nbsp;</span>
               </NavLink>
 
               {/* <NavLink
@@ -73,7 +73,7 @@ const Dashboard = () => {
                   </NavLink>
                   <NavLink
                     activeClassName="dashboard-navText-active"
-                    className="dashboard-navText mb-5 text-decoration-none text-uppercase pe-3"
+                    className="dashboard-navText mb-5 text-decoration-none text-uppercase"
                     to={`${url}/manageallproducts`}
                   >
                     <div className="icons">
@@ -81,7 +81,7 @@ const Dashboard = () => {
                     </div>{" "}
                     <span className="d-navText">Manage&nbsp;</span>
                     <span className="d-navText">All&nbsp;</span>
-                    <span className="d-navText">Products</span>
+                    <span className="d-navText">Products&nbsp;&nbsp;&nbsp;</span>
                   </NavLink>
 
                   <NavLink
@@ -97,7 +97,7 @@ const Dashboard = () => {
 
                   <NavLink
                     activeClassName="dashboard-navText-active"
-                    className="dashboard-navText text-decoration-none text-uppercase pb-5"
+                    className="dashboard-navText text-decoration-none text-uppercase mb-5"
                     to={`${url}/makeadmin`}
                   >
                     <div className="icons">

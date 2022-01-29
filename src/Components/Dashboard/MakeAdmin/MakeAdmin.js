@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Swal from "sweetalert2";
+import axios from "axios";
 import "./MakeAdmin.css";
 const MakeAdmin = () => {
   const [email, setEmail] = useState("");
@@ -10,6 +11,33 @@ const MakeAdmin = () => {
   };
 
   const handleAdminSubmit = (e) => {
+    e.preventDefault();
+    const admin = { email: email };
+    axios
+      .put("https://shrouded-headland-08303.herokuapp.com/users/admin", admin)
+      .then((res) => {
+        console.log(res);
+        if (res.data.modifiedCount) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Admin added successfully!",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        } else {
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Admin already exist or User Does Not Exist",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        }
+      });
+  };
+
+  /* const handleAdminSubmit = (e) => {
     const user = { email };
     fetch("https://morning-badlands-81993.herokuapp.com/users/admin", {
       method: "PUT",
@@ -33,7 +61,7 @@ const MakeAdmin = () => {
       });
 
     e.preventDefault();
-  };
+  }; */
 
   return (
     <div style={{ height: "600px" }}>

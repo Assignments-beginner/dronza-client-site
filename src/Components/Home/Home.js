@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Carousel, FormControl, InputGroup } from "react-bootstrap";
 import Reviews from "./Reviews/Reviews";
 import slide1 from "../../Images/slide1.png";
@@ -12,6 +12,13 @@ import About from "./Pages/About/About";
 import Guideline from "./Pages/Guideline/Guideline";
 
 const Home = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setEmail("");
+  };
+
   return (
     <div id="home">
       <Carousel variant="dark">
@@ -88,11 +95,14 @@ const Home = () => {
           <FormControl
             placeholder="Enter Your Email"
             aria-label="Enter Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <Button
             className="text-uppercase"
             variant="danger px-4"
             id="button-addon2"
+            onClick={handleSubmit}
           >
             Subscribe
           </Button>
