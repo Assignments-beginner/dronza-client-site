@@ -70,7 +70,7 @@ const Registration = () => {
       <div className="empty-div"></div>
       <div xl={4} lg={4} sm={12} className="pt-4 px-5 border border-danger">
         <h1 className="text-light text-uppercase">
-          <span style={{ color: "#B91A1A" }}>Sign</span> up now{" "}
+          sign up now
           <span className="empty-text">Here</span>
         </h1>
         <Form>
@@ -112,10 +112,10 @@ const Registration = () => {
           </Form.Group>
           {/*  Having an account */}
           <div className="mb-3">
-            <span className="text-white">Already have an account?</span>
+            <span className="text-white fs-5">Already have an account?</span>
             &nbsp;
             <Link
-              className="text-white fw-bold"
+              className="text-white fs-5 fw-bold"
               onClick={removeError}
               to="/signin"
             >

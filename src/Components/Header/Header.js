@@ -71,7 +71,7 @@ const Header = () => {
               className="text-white navs me-3 text-decoration-none"
               to="/home#contactus"
             >
-              Contact Us
+              Contact
             </Nav.Link>
             {user?.email && (
               <Nav.Link

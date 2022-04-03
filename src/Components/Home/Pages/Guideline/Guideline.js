@@ -37,7 +37,10 @@ const Guideline = () => {
               </div>
               <Card.Body>
                 <Card.Title>Controller</Card.Title>
-                <Card.Text className="text-center">
+                <Card.Text
+                  style={{ fontSize: "14px" }}
+                  className="text-justify px-3"
+                >
                   Correctly connecting a drone to the controller ensures a
                   smooth flight of the drone as it goes about its job of
                   monitoring, performing inspections and other jobs.
@@ -45,7 +48,7 @@ const Guideline = () => {
               </Card.Body>
               <Card.Footer>
                 <strong className="text-danger text-center">
-                  How To Use Controller
+                  Use Controller
                 </strong>
               </Card.Footer>
             </Card>
@@ -59,7 +62,10 @@ const Guideline = () => {
 
               <Card.Body>
                 <Card.Title>Flying</Card.Title>
-                <Card.Text className="text-center">
+                <Card.Text
+                  style={{ fontSize: "14px" }}
+                  className="text-justify px-3"
+                >
                   Mount your electronic speed controllers. Attach the landing
                   gear. Connect LibrePilot to your drone. Take your drone for a
                   spin!
@@ -67,7 +73,7 @@ const Guideline = () => {
               </Card.Body>
               <Card.Footer>
                 <strong className="text-danger text-center">
-                  How To Fly Ready
+                  Fly Ready
                 </strong>
               </Card.Footer>
             </Card>
@@ -80,7 +86,10 @@ const Guideline = () => {
               </div>
               <Card.Body>
                 <Card.Title>Camera</Card.Title>
-                <Card.Text className="text-center">
+                <Card.Text
+                  style={{ fontSize: "14px" }}
+                  className="text-justify px-3"
+                >
                   For distances between the camera and the scene center shorter
                   than 120 meters, FULL HD (1920x1200) resolution will be
                   sufficient, but it is better to use a higher resolution
@@ -89,7 +98,7 @@ const Guideline = () => {
               </Card.Body>
               <Card.Footer>
                 <strong className="text-danger text-center">
-                  How To Record Video
+                  Record Video
                 </strong>
               </Card.Footer>
             </Card>
@@ -103,14 +112,17 @@ const Guideline = () => {
 
               <Card.Body>
                 <Card.Title>Battery</Card.Title>
-                <Card.Text className="text-center">
+                <Card.Text
+                  style={{ fontSize: "14px" }}
+                  className="text-justify px-3"
+                >
                   It comes with a USB cable that you can plug into your computer
                   USB port to charge it or you can use a USB wall charger.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <strong className="text-danger text-center">
-                  How To Charge Battery
+                  Charge Battery
                 </strong>
               </Card.Footer>
             </Card>

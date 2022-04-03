@@ -75,9 +75,8 @@ const LogIn = () => {
     <div className="signin-banner signin-form">
       <div className="empty-div"></div>
       <div lg={4} xl={4} sm={12} className="pt-4 border border-danger px-5">
-        <h1 className="text-uppercase">
-          <span style={{ color: "#B91A1A" }}>Please</span>&nbsp;
-          <span className="text-white">Sign In</span>{" "}
+        <h1 className="text-uppercase text-white">
+          Please <span style={{ color: "#B91A1A" }}>Sign</span> In
         </h1>
         <Form>
           {/* Email Field */}
@@ -106,10 +105,10 @@ const LogIn = () => {
           </Form.Group>
           {/* Not having an account */}
           <div className="mb-3">
-            <span className="text-white">Don't have an account?</span>
+            <span className="text-white fs-5">Don't have an account?</span>
             &nbsp; &nbsp;
             <Link
-              className="text-white fw-bold"
+              className="text-white fs-5 fw-bold"
               onClick={removeError}
               to="/registration"
             >
