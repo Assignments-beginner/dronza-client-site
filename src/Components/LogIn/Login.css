@@ -8,6 +8,13 @@
   overflow: hidden;
 }
 
+.signin-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 150px 0px 150px;
+}
+
 .form-control::placeholder {
   color: white !important;
 }

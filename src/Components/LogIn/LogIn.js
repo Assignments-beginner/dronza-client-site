@@ -72,11 +72,13 @@ const LogIn = () => {
   };
 
   return (
-    <div className="signin-banner d-flex align-items-start justify-content-between">
+    <div className="signin-banner signin-form">
       <div>
-        <h1 className="border border-danger text-white">NOTHING</h1>
+        <h1 className="d-none text-uppercase border border-danger text-white">
+          Empty Div
+        </h1>
       </div>
-      <div lg={4} xl={4} sm={12} className="border border-danger px-5">
+      <div lg={4} xl={4} sm={12} className="pt-4 border border-danger px-5">
         <h1 className="text-uppercase">
           <span style={{ color: "#B91A1A" }}>Please</span>&nbsp;
           <span className="text-white">Sign In</span>{" "}
@@ -121,10 +123,10 @@ const LogIn = () => {
           {/* Display Error */}
           <p className="text-danger">{error}</p>
           {/* Register Button */}
-          <Button onClick={signInHandler} variant="danger" type="submit">
+          <Button onClick={signInHandler} variant="outline-light" type="submit">
             Sign In
           </Button>
-        </Form> 
+        </Form>
         <div className="mt-3 mb-5 d-grid justify-items-center">
           {/* Button */}
           <button onClick={googleLoginHandler} className="mx-auto signin-btn">
