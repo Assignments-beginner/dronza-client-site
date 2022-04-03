@@ -21,7 +21,7 @@ const LogIn = () => {
   const location = useLocation();
   const history = useHistory();
   // console.log(location.state?.from);
-  const redirect_uri = location.state?.from || "/home";
+  const redirect_uri = location.state?.from || "/dashboard";
   /*-------------------------------------------------------------------------------*\
   /////////////////////////////// Google HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
@@ -73,11 +73,7 @@ const LogIn = () => {
 
   return (
     <div className="signin-banner signin-form">
-      <div>
-        <h1 className="d-none text-uppercase border border-danger text-white">
-          Empty Div
-        </h1>
-      </div>
+      <div className="empty-div"></div>
       <div lg={4} xl={4} sm={12} className="pt-4 border border-danger px-5">
         <h1 className="text-uppercase">
           <span style={{ color: "#B91A1A" }}>Please</span>&nbsp;
@@ -113,7 +109,7 @@ const LogIn = () => {
             <span className="text-white">Don't have an account?</span>
             &nbsp; &nbsp;
             <Link
-              className="text-danger"
+              className="text-white fw-bold"
               onClick={removeError}
               to="/registration"
             >

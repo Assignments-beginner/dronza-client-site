@@ -10,7 +10,12 @@ import "./Header.css";
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
-    <Navbar sticky="top" className="nav-font bg-dark py-3" collapseOnSelect expand="lg">
+    <Navbar
+      sticky="top"
+      className="nav-font bg-dark py-3"
+      collapseOnSelect
+      expand="lg"
+    >
       <Container>
         <Navbar.Brand>
           <img
@@ -68,15 +73,16 @@ const Header = () => {
             >
               Contact Us
             </Nav.Link>
-
-            <Nav.Link
-              as={HashLink}
-              activeclassname="navs-active"
-              className="text-white navs me-3 text-decoration-none"
-              to="/dashboard"
-            >
-              Dashboard
-            </Nav.Link>
+            {user?.email && (
+              <Nav.Link
+                as={HashLink}
+                activeclassname="navs-active"
+                className="text-white navs me-3 text-decoration-none"
+                to="/dashboard"
+              >
+                Dashboard
+              </Nav.Link>
+            )}
           </Nav>
           {/* User Profile */}
           <Nav className="d-flex align-items-center">
@@ -114,7 +120,7 @@ const Header = () => {
               <NavLink
                 activeclassname="navs-active"
                 className="navs ms-3 me-3 text-decoration-none fs-6"
-                to="/home"
+                to="/signin"
                 onClick={logOut}
               >
                 Log out
