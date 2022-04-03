@@ -124,7 +124,7 @@ const LogIn = () => {
           <Button onClick={signInHandler} variant="danger" type="submit">
             Sign In
           </Button>
-        </Form>
+        </Form> 
         <div className="mt-3 mb-5 d-grid justify-items-center">
           {/* Button */}
           <button onClick={googleLoginHandler} className="mx-auto signin-btn">
