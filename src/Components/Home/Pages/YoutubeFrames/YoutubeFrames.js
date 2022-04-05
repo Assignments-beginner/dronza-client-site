@@ -5,31 +5,34 @@ import FrameCard from "../YoutubeFrames/FrameCard/FrameCard";
 import accDrone1 from "../../../../Images/accDrone1.jpg";
 import accDrone2 from "../../../../Images/accDrone2.jpg";
 import accDrone3 from "../../../../Images/accDrone3.jpg";
+import "./YoutubeFrames.css";
 
 const YoutubeFrames = () => {
   const [videos, setvideos] = useState([]);
   const [active, setActive] = useState("firstCard");
 
   useEffect(() => {
-    fetch("./Data.json")
+    fetch("./FrameData.json")
       .then((res) => res.json())
       .then((data) => setvideos(data));
     // .then((data) => console.log(data));
   }, []);
 
   return (
-    <Container className="pt-4">
-      <h2 className="text-center text-dark text-uppercase mb-3">
+    <Container className="pt-5">
+      <h2 className="text-center text-dark text-uppercase mb-5">
         Check Out <span className="text-danger">accessories</span> Update
       </h2>
-      <Row className="border border-danger">
-        <Col className="m-4 border border-danger">
+      {/* <Row className="border border-danger"> */}
+      <Row className="pt-4">
+        {/* <Col className="m-4 border border-danger"> */}
+        <Col xl={6} lg={6} sm={12}>
           <Link
             to=""
             className="text-decoration-none text-dark"
             onClick={() => setActive("firstCard")}
           >
-            <Card className="flex-row align-items-center mb-4">
+            <Card className="hover-border flex-row align-items-center mb-4">
               <Card.Img
                 style={{ width: "175px", height: "135px" }}
                 src={accDrone1}
@@ -48,7 +51,7 @@ const YoutubeFrames = () => {
             className="text-decoration-none text-dark"
             onClick={() => setActive("secondCard")}
           >
-            <Card className="flex-row align-items-center mb-4">
+            <Card className="hover-border flex-row align-items-center mb-4">
               <Card.Img
                 style={{ width: "175px", height: "135px" }}
                 src={accDrone2}
@@ -68,7 +71,7 @@ const YoutubeFrames = () => {
             className="text-decoration-none text-dark"
             onClick={() => setActive("thirdCard")}
           >
-            <Card className="flex-row align-items-center">
+            <Card className="hover-border flex-row align-items-center">
               <Card.Img
                 style={{ width: "175px", height: "135px" }}
                 src={accDrone3}
@@ -84,7 +87,13 @@ const YoutubeFrames = () => {
             </Card>
           </Link>
         </Col>
-        <Col className="m-4 border border-danger d-flex align-items-center">
+        {/* <Col className="border border-danger d-flex align-items-center"> */}
+        <Col
+          xl={6}
+          lg={6}
+          sm={12}
+          className="res-frame d-flex align-items-center"
+        >
           {active === "firstCard" && (
             <FrameCard videos={videos} cardIndex={0} />
           )}
