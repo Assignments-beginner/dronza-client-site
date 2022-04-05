@@ -129,9 +129,6 @@ const Guideline = () => {
           </CardGroup>
         </div>
       </Container>
-      <div id="contactus" className="d-flex justify-content-center">
-        <span className="text-white pt-3">Contact-Hashlink</span>
-      </div>
     </div>
   );
 };

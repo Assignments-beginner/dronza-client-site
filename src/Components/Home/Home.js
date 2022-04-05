@@ -10,6 +10,7 @@ import "./Home.css";
 import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
 import Guideline from "./Pages/Guideline/Guideline";
+import YoutubeFrames from "../Home/Pages/YoutubeFrames/YoutubeFrames";
 
 const Home = () => {
   const [email, setEmail] = useState("");
@@ -77,13 +78,20 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
       <DisplayProducts></DisplayProducts>
-      <Reviews></Reviews>
+      <div id="about" className="d-flex justify-content-center">
+        <span className="text-white pt-3">About-Hashlink</span>
+      </div>
+      <About />
+      <Guideline />
+      <YoutubeFrames />
+      <Reviews />
 
       {/* NewsLetter  */}
       <div
         style={{ borderRadius: "10px", backgroundColor: "#F6F6F6" }}
-        className="res-newsletter mx-auto pb-4 pt-5 d-grid justify-content-center"
+        className="res-newsletter mx-auto mb-4 pb-4 pt-5 d-grid justify-content-center"
       >
         <div className="mb-4">
           <h5 className="text-dark text-uppercase text-center">
@@ -109,16 +117,9 @@ const Home = () => {
         </InputGroup>
       </div>
       {/* NewsLetter  */}
-      <div id="about" className="d-flex justify-content-center">
-        <span className="text-white pt-3">
-          About-Hashlink
-        </span>
+      <div id="contactus" className="d-flex justify-content-center">
+        <span className="text-white pt-3">Contact-Hashlink</span>
       </div>
-
-      <About></About>
-
-      <Guideline></Guideline>
-
       <Contact></Contact>
     </div>
   );

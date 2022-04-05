@@ -35,7 +35,9 @@ const Dashboard = () => {
                   <i className="fas fa-shopping-cart"></i>
                 </div>{" "}
                 <span className="d-navText">Your&nbsp;</span>
-                <span className="d-navText">Orders&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span className="d-navText">
+                  Orders&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
               </NavLink>
 
               {/* <NavLink
@@ -59,6 +61,28 @@ const Dashboard = () => {
                 </div>{" "}
                 <span className="d-navText">Add Review</span>
               </NavLink>
+
+              <NavLink
+                activeClassName="dashboard-navText-active"
+                className="dashboard-navText mb-5 text-decoration-none text-uppercase"
+                to={`${url}/addreview`}
+              >
+                <div className="icons">
+                  <i class="fas fa-tag"></i>
+                </div>{" "}
+                <span className="d-navText">Offers</span>
+              </NavLink>
+
+              <NavLink
+                activeClassName="dashboard-navText-active"
+                className="dashboard-navText mb-5 text-decoration-none text-uppercase"
+                to={`${url}/addreview`}
+              >
+                <div className="icons">
+                  <i className="fas fa-headset"></i>
+                </div>{" "}
+                <span className="d-navText">Help</span>
+              </NavLink>
               {admin && (
                 <Nav className="dash-nav">
                   <NavLink
@@ -81,7 +105,9 @@ const Dashboard = () => {
                     </div>{" "}
                     <span className="d-navText">Manage&nbsp;</span>
                     <span className="d-navText">All&nbsp;</span>
-                    <span className="d-navText">Products&nbsp;&nbsp;&nbsp;</span>
+                    <span className="d-navText">
+                      Products&nbsp;&nbsp;&nbsp;
+                    </span>
                   </NavLink>
 
                   <NavLink
@@ -124,7 +150,7 @@ const Dashboard = () => {
               <Route path={`${path}/addreview`}>
                 <AddReview></AddReview>
               </Route>
-              
+
               {/* <Route path={`${path}/payment/:paymentId`}>
                 <Payment></Payment>
               </Route> */}
