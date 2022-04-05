@@ -2,19 +2,19 @@
     [
         {
             "title":"1",
-            "name":"first card"
+            "img":"https://i.ibb.co/gTs526G/frame1.gif"
         }
     ],
     [
         {
             "title":"2",
-            "name":"second card"
+            "img":"https://i.ibb.co/3RkPBqt/frame2.gif"
         }
     ],
     [
         {
             "title":"3",
-            "name":"third card"
+            "img":"https://i.ibb.co/Yt8Mz7D/frame3.gif"
         }
     ]
 ]
