@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import FrameCard from "../YoutubeFrames/FrameCard/FrameCard";
 
 const YoutubeFrames = () => {
-  const [data, setData] = useState([]);
+  const [videos, setvideos] = useState([]);
+  const [active, setActive] = useState("firstCard");
 
   useEffect(() => {
     fetch("./Data.json")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => setvideos(data));
+    // .then((data) => console.log(data));
   }, []);
 
   return (
@@ -19,22 +22,37 @@ const YoutubeFrames = () => {
       <div className="d-flex justify-content-center border border-danger p-5">
         <div className="d-flex align-items-center">
           <div className="p-4">
-            <Button variant="outline-danger m-2">Click1</Button>
+            <Button
+              onClick={() => setActive("firstCard")}
+              variant="outline-danger m-2"
+            >
+              Click1
+            </Button>
             <br />
-            <Button variant="outline-danger m-2">Click2</Button>
+            <Button
+              onClick={() => setActive("secondCard")}
+              variant="outline-danger m-2"
+            >
+              Click2
+            </Button>
             <br />
-            <Button variant="outline-danger m-2">Click3</Button>
+            <Button
+              onClick={() => setActive("thirdCard")}
+              variant="outline-danger m-2"
+            >
+              Click3
+            </Button>
           </div>
           <div className="p-4">
-            <Card>
-              <Card.Body>This is some text within a card body.</Card.Body>
-            </Card>
-            <Card>
-              <Card.Body>This is some text within a card body.</Card.Body>
-            </Card>
-            <Card>
-              <Card.Body>This is some text within a card body.</Card.Body>
-            </Card>
+            {active === "firstCard" && (
+              <FrameCard videos={videos} cardIndex={0} />
+            )}
+            {active === "secondCard" && (
+              <FrameCard videos={videos} cardIndex={1} />
+            )}
+            {active === "thirdCard" && (
+              <FrameCard videos={videos} cardIndex={2} />
+            )}
           </div>
         </div>
       </div>

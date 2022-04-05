@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const frameCard = () => {
-    return (
-        <div>
-            
+const FrameCard = ({ videos, cardIndex }) => {
+  return (
+    <div>
+      {videos[cardIndex]?.map((video) => (
+        <div className="border border-danger">
+          <p>{video.title}</p>
+          <p>{video.name}</p>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
-export default frameCard;
+export default FrameCard;
