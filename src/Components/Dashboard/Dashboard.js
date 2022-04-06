@@ -5,6 +5,7 @@ import { Container, Nav } from "react-bootstrap";
 import YourOrders from "./YourOrders/YourOrders";
 import AddReview from "./AddReview/AddReview";
 import Help from "../Dashboard/Help/Help";
+import Offers from "../Dashboard/Offers/Offers";
 import AddNewProduct from "./AddNewProduct/AddNewProduct";
 import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
@@ -67,8 +68,8 @@ const Dashboard = () => {
                 <div>
                   <NavLink
                     activeClassName="dashboard-navText-active"
-                    className="dashboard-navText mb-5 text-decoration-none text-uppercase"
-                    to={`${url}/addreview`}
+                    className="offer-card dashboard-navText mb-5 text-decoration-none text-uppercase"
+                    to={`${url}/offers`}
                   >
                     <div className="icons">
                       <i class="fas fa-tag"></i>
@@ -158,6 +159,10 @@ const Dashboard = () => {
 
               <Route path={`${path}/help`}>
                 <Help></Help>
+              </Route>
+
+              <Route path={`${path}/offers`}>
+                <Offers></Offers>
               </Route>
 
               {/* <Route path={`${path}/payment/:paymentId`}>

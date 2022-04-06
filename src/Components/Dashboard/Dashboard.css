@@ -70,4 +70,7 @@ hr.new {
   .dashboard-text {
     font-size: 30px;
   }
+  .offer-card {
+    display: none;
+  }
 }
