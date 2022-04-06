@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { Container, Nav } from "react-bootstrap";
 import YourOrders from "./YourOrders/YourOrders";
 import AddReview from "./AddReview/AddReview";
+import Help from "../Dashboard/Help/Help";
 import AddNewProduct from "./AddNewProduct/AddNewProduct";
 import ManageAllOrders from "./ManageAllOrders/ManageAllOrders";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
@@ -62,27 +63,31 @@ const Dashboard = () => {
                 <span className="d-navText">Add Review</span>
               </NavLink>
 
-              <NavLink
-                activeClassName="dashboard-navText-active"
-                className="dashboard-navText mb-5 text-decoration-none text-uppercase"
-                to={`${url}/addreview`}
-              >
-                <div className="icons">
-                  <i class="fas fa-tag"></i>
-                </div>{" "}
-                <span className="d-navText">Offers</span>
-              </NavLink>
+              {!admin && (
+                <div>
+                  <NavLink
+                    activeClassName="dashboard-navText-active"
+                    className="dashboard-navText mb-5 text-decoration-none text-uppercase"
+                    to={`${url}/addreview`}
+                  >
+                    <div className="icons">
+                      <i class="fas fa-tag"></i>
+                    </div>{" "}
+                    <span className="d-navText">Offers</span>
+                  </NavLink>
 
-              <NavLink
-                activeClassName="dashboard-navText-active"
-                className="dashboard-navText mb-5 text-decoration-none text-uppercase"
-                to={`${url}/addreview`}
-              >
-                <div className="icons">
-                  <i className="fas fa-headset"></i>
-                </div>{" "}
-                <span className="d-navText">Help</span>
-              </NavLink>
+                  <NavLink
+                    activeClassName="dashboard-navText-active"
+                    className="dashboard-navText mb-5 text-decoration-none text-uppercase"
+                    to={`${url}/help`}
+                  >
+                    <div className="icons">
+                      <i className="fas fa-headset"></i>
+                    </div>{" "}
+                    <span className="d-navText">Help</span>
+                  </NavLink>
+                </div>
+              )}
               {admin && (
                 <Nav className="dash-nav">
                   <NavLink
@@ -149,6 +154,10 @@ const Dashboard = () => {
 
               <Route path={`${path}/addreview`}>
                 <AddReview></AddReview>
+              </Route>
+
+              <Route path={`${path}/help`}>
+                <Help></Help>
               </Route>
 
               {/* <Route path={`${path}/payment/:paymentId`}>

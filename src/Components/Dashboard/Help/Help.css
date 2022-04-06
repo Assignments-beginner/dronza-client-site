@@ -1,0 +1,21 @@
+.form-control::placeholder {
+  color: darkslategray !important;
+}
+
+.form-control {
+  color: darkslategray !important;
+}
+
+.help-form {
+  width: 75%;
+}
+
+/*-------------------------------------------------------------------------------*\
+  ///////////////////////////// media query \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+
+@media all and (max-width: 688px) {
+  .help-form {
+    width: 100%;
+  }
+}
