@@ -35,14 +35,14 @@ const Help = () => {
       <Form className="help-form mx-auto" onSubmit={sendEmail}>
         <div className="d-flex mb-3">
           <Form.Control
-            className="me-1 p-2"
+            className="help-input me-1 p-2"
             type="name"
             name="firstname"
             placeholder="First Name"
             required
           />
           <Form.Control
-            className="ms-1 p-2"
+            className="help-input ms-1 p-2"
             type="name"
             name="lastname"
             placeholder="Last Name"
@@ -52,14 +52,14 @@ const Help = () => {
 
         <div className="d-flex mb-3">
           <Form.Control
-            className="me-1 p-2"
+            className="help-input me-1 p-2"
             type="email"
             name="email"
             placeholder="Email"
             required
           />
           <Form.Control
-            className="ms-1 p-2"
+            className="help-input ms-1 p-2"
             type="text"
             name="phone"
             placeholder="Phone"
@@ -68,7 +68,7 @@ const Help = () => {
         </div>
 
         <Form.Control
-          className="mb-3 p-2"
+          className="help-input mb-3 p-2"
           as="textarea"
           name="message"
           placeholder="Describe Your Problem"

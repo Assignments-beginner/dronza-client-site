@@ -28,7 +28,7 @@ const YoutubeFrames = () => {
         {/* <Col className="m-4 border border-danger"> */}
         <Col xl={6} lg={6} sm={12}>
           <Link
-            to=""
+            to="#"
             className="text-decoration-none text-dark"
             onClick={() => setActive("firstCard")}
           >
@@ -47,7 +47,7 @@ const YoutubeFrames = () => {
             </Card>
           </Link>
           <Link
-            to=""
+            to="#"
             className="text-decoration-none text-dark"
             onClick={() => setActive("secondCard")}
           >
@@ -67,7 +67,7 @@ const YoutubeFrames = () => {
             </Card>
           </Link>
           <Link
-            to=""
+            to="#"
             className="text-decoration-none text-dark"
             onClick={() => setActive("thirdCard")}
           >
