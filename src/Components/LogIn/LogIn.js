@@ -116,7 +116,13 @@ const LogIn = () => {
             </Link>
           </div>
           {/* Display Error */}
-          <p className="text-danger">{error}</p>
+          {error && (
+            <div className="bg-white mb-3 p-1 border border-danger rounded d-flex align-items-center justify-content-center">
+              <i class="fas fa-exclamation-triangle text-warning fs-4"></i>
+              &nbsp;&nbsp;
+              <span className="text-danger">{error}</span>
+            </div>
+          )}
           {/* Register Button */}
           <Button onClick={signInHandler} variant="outline-light" type="submit">
             Sign In
