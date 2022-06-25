@@ -72,7 +72,7 @@ const Dashboard = () => {
                     to={`${url}/offers`}
                   >
                     <div className="icons">
-                      <i class="fas fa-tag"></i>
+                      <i className="fas fa-tag"></i>
                     </div>{" "}
                     <span className="d-navText">Offers</span>
                   </NavLink>
@@ -181,9 +181,9 @@ const Dashboard = () => {
                 <ManageAllOrders></ManageAllOrders>
               </AdminRoute>
 
-              <AdminRoute path={`${path}/makeadmin`}>
-                <MakeAdmin></MakeAdmin>
-              </AdminRoute>
+              {/* <AdminRoute path={`${path}/makeadmin`}> */}
+              <MakeAdmin></MakeAdmin>
+              {/* </AdminRoute> */}
             </Switch>
             {/* 2nd div */}
           </div>

@@ -16,7 +16,7 @@ const FrameCard = ({ videos, cardIndex }) => {
               rel="noopener noreferrer"
               className="text-decoration-none"
             >
-              <i class="fab fa-youtube text-danger"></i>
+              <i className="fab fa-youtube text-danger"></i>
             </a>
             &nbsp;Channel
           </Card.Title>

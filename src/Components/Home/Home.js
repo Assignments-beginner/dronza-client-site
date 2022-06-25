@@ -11,6 +11,7 @@ import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
 import Guideline from "./Pages/Guideline/Guideline";
 import YoutubeFrames from "../Home/Pages/YoutubeFrames/YoutubeFrames";
+// import Container from "../Container/Container";
 
 const Home = () => {
   const [email, setEmail] = useState("");
@@ -80,9 +81,11 @@ const Home = () => {
       </Carousel>
 
       <DisplayProducts></DisplayProducts>
+
       <div id="about" className="d-flex justify-content-center">
         <span className="text-white pt-3">About-Hashlink</span>
       </div>
+
       <About />
       <Guideline />
       <YoutubeFrames />

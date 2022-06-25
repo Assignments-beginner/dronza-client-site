@@ -128,7 +128,7 @@ const Registration = () => {
 
           {error && (
             <div className="mb-3 bg-white py-1 px-2 border border-danger rounded d-flex align-items-center justify-content-center">
-              <i class="fas fa-exclamation-triangle text-warning fs-4"></i>
+              <i className="fas fa-exclamation-triangle text-warning fs-4"></i>
               &nbsp;&nbsp;
               <span className="text-danger">{error}</span>
             </div>

@@ -118,7 +118,7 @@ const LogIn = () => {
           {/* Display Error */}
           {error && (
             <div className="bg-white mb-3 p-1 border border-danger rounded d-flex align-items-center justify-content-center">
-              <i class="fas fa-exclamation-triangle text-warning fs-4"></i>
+              <i className="fas fa-exclamation-triangle text-warning fs-4"></i>
               &nbsp;&nbsp;
               <span className="text-danger">{error}</span>
             </div>

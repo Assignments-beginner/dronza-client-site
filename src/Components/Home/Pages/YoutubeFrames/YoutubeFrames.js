@@ -23,9 +23,7 @@ const YoutubeFrames = () => {
       <h2 className="text-center text-dark text-uppercase mb-5">
         Check Out <span className="text-danger">accessories</span> Update
       </h2>
-      {/* <Row className="border border-danger"> */}
       <Row className="pt-4">
-        {/* <Col className="m-4 border border-danger"> */}
         <Col xl={6} lg={6} sm={12}>
           <Link
             to="#"
@@ -41,7 +39,8 @@ const YoutubeFrames = () => {
                 <Card.Text>12/04/2021</Card.Text>
                 <Card.Title>Smooth Flexible Rotation</Card.Title>
                 <Card.Text>
-                  <i class="fas fa-camera text-danger"></i> &nbsp;Motion Camera
+                  <i className="fas fa-camera text-danger"></i> &nbsp;Motion
+                  Camera
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -80,14 +79,14 @@ const YoutubeFrames = () => {
                 <Card.Text>02/04/2022</Card.Text>
                 <Card.Title>On Long Distance Range</Card.Title>
                 <Card.Text>
-                  <i class="fas fa-map-marker-alt text-danger"></i>{" "}
+                  <i className="fas fa-map-marker-alt text-danger"></i>{" "}
                   &nbsp;Location Track
                 </Card.Text>
               </Card.Body>
             </Card>
           </Link>
         </Col>
-        {/* <Col className="border border-danger d-flex align-items-center"> */}
+
         <Col
           xl={6}
           lg={6}
